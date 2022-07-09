@@ -18,20 +18,32 @@
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
         
         if (!isset($result[0])) {
-            $statement = $conn->prepare("insert into suggestion_neverHaveIEver (suggestion) values ( ? )");
+            $statement = $conn->prepare("select id from neverHaveIEver where question = ? ");
             $statement->execute([$_POST[$suggestion]]);
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            
+            if (!isset($result[0])) {
+                $statement = $conn->prepare("insert into suggestion_neverHaveIEver (suggestion) values ( ? )");
+                $statement->execute([$_POST[$suggestion]]);
 
-            $id = $conn->lastInsertId();
+                
+
+                //$id = $conn->lastInsertId();
 
 
-            print($id);
+                print("ok");
 
 
 
-            die();
+                die();
+            }
+            else {
+                print($result[0]["id"]);
+                die();
+            }
         }
         else {
-            print($result[0]["cardID"]);
+            print($result[0]["id"]);
             die();
         }
         

@@ -13,15 +13,15 @@
     }
 
     try {
-        $statement = $conn->prepare("select id from neverHaveIEver where question = ? ");
-        $statement->execute([$_POST[$question]]);
-        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        // $statement = $conn->prepare("select id from neverHaveIEver where question = ? ");
+        // $statement->execute([$_POST[$question]]);
+        // $result = $statement->fetchAll(PDO::FETCH_ASSOC);
         
-        if (!isset($result[0])) {
+        // if (!isset($result[0])) {
             $statement = $conn->prepare("insert into neverHaveIEver (question) values ( ? )");
             $statement->execute([$_POST[$question]]);
 
-            $id = $conn->lastInsertId();
+            //$id = $conn->lastInsertId();
 
 
             $statement = $conn->prepare("delete from suggestion_neverHaveIEver where id = ?");
@@ -33,11 +33,11 @@
 
 
             die();
-        }
-        else {
-            print($result[0]["id"]);
-            die();
-        }
+        // }
+        // else {
+        //     print($result[0]["id"]);
+        //     die();
+        // }
         
         //echo "\nInserted successfully";
     } catch(Exception $e) {
