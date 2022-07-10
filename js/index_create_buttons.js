@@ -1,9 +1,8 @@
 var path = '../sites/default_site.php';
-var id;
 
 window.onload = function() {
 
-    $.getJSON('../json/gamelist.json', function(json) {
+    $.getJSON('./json/gamelist.json', function(json) {
         // console.log( "success" );
 
 

@@ -14,7 +14,6 @@ body {
 #buttons_auto_apperance {
     background-color: gray;
     height: 300%;
-    
 }
 
 .div-styled {
@@ -55,6 +54,21 @@ body {
 }
 
 @media screen and (max-width: 992px) {
+    .div-styled {
+        width: 28%;
+        display: inline-block;
+        font-size: 10px;
+        padding: 7.22%;
+    }
+    #buttons_auto_apperance {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 50%;
+        transform: translate(0%, -50%);
+    }
+}
+
+@media screen and (max-width: 600px) {
     .div-styled {
         width: 28%;
         display: inline-block;

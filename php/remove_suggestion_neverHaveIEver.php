@@ -13,8 +13,8 @@
     }
 
     try {
-        $statement = $conn->prepare("delete from suggestion_neverHaveIEver where suggestion = ?");
-        $statement->execute([$_POST["suggestion"]]);
+        $stmt = $conn->prepare("delete from suggestion_never_have_i_ever where suggestion = ?");
+        $stmt->execute([$_POST["suggestion"]]);
 
         echo "ok";
 

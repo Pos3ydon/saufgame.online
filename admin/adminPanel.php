@@ -65,7 +65,7 @@
     <body>
         <div id="suggestionScrollDiv">
             <?php
-                $statement = $conn->prepare("select * from suggestion_neverHaveIEver");
+                $statement = $conn->prepare("select * from suggestion_never_have_i_ever");
                 $statement->execute();
                 $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
