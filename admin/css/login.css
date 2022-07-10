@@ -1,0 +1,34 @@
+#loginWindow {
+    background-color: grey;
+
+    height: 50%;
+    width: 30%;
+    margin-top: 25%;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 10px;
+}
+
+#loginForm {
+    
+}
+
+.loginDiv {
+    width: 30%;
+    padding: 10% 0 10% 0;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.input {
+    width: 100%;
+}
+
+#loginSubmit {
+    padding: 5% 10%;
+    margin-left: 50%;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    transform: translate(-50%, 0);
+}

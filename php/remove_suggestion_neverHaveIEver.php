@@ -13,17 +13,13 @@
     }
 
     try {
-        $statement = $conn->prepare("insert into neverHaveIEver (question) values ( ? )");
-        $statement->execute([$_POST["suggestion"]]);
-
         $statement = $conn->prepare("delete from suggestion_neverHaveIEver where suggestion = ?");
         $statement->execute([$_POST["suggestion"]]);
 
         echo "ok";
 
         exit();
-
-
+        
         //echo "\nInserted successfully";
     } catch(Exception $e) {
         echo "\nInsert failed: " . $e->getMessage();
