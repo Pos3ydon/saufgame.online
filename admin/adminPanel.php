@@ -63,6 +63,7 @@
     </head>
 
     <body>
+        <div id="sidebar"></div>
         <div id="suggestionScrollDiv">
             <?php
                 $statement = $conn->prepare("select * from suggestion_never_have_i_ever");
