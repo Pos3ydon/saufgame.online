@@ -1,4 +1,4 @@
-var path = '../sites/default_site.php';
+var path = './sites/default_site.php';
 
 window.onload = function() {
 
