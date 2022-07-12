@@ -13,7 +13,7 @@
     }
 
     try {
-        $stmt = $conn->prepare("delete from suggestion_never_have_i_ever where suggestion = ?");
+        $stmt = $conn->prepare("delete from suggestion_neverHaveIEver where suggestion = ?");
         $stmt->execute([$_POST["suggestion"]]);
 
         echo "ok";

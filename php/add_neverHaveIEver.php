@@ -13,10 +13,10 @@
     }
 
     try {
-        $statement = $conn->prepare("insert into never_have_i_ever (question) values ( ? )");
+        $statement = $conn->prepare("insert into neverHaveIEver (question) values ( ? )");
         $statement->execute([$_POST["suggestion"]]);
 
-        $stmt = $conn->prepare("delete from suggestion_never_have_i_ever where suggestion = ?");
+        $stmt = $conn->prepare("delete from suggestion_neverHaveIEver where suggestion = ?");
         $stmt->execute([$_POST["suggestion"]]);
 
         echo "ok";
