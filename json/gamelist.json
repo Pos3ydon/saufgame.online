@@ -1,8 +1,12 @@
 {
-    "Never Have I Ever": "neverHaveIEver",
-    "Truth or Dare": "truthOrDare",
-    "Never Hdave I Ever": "neverHaveIEver",
-    "Truth dor Dare": "truthOrDare",
-    "Never dHave I Ever": "neverHaveIEver",
-    "Truth ddor Dare": "truthOrDare"   
-}
+    "neverHaveIEver": {
+      "name": "Never Have I Ever",
+      "gamePath": "sites/neverHaveIEver.html",
+      "table": "never_have_i_ever"
+    },
+    "truthOrDare": {
+      "name": "Truth Or Dare",
+      "gamePath": "sites/truthOrDare.html",
+      "table": "truth_or_dare"
+    }
+  }

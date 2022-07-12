@@ -5,10 +5,10 @@ window.onload = function() {
     $.getJSON('../json/gamelist.json', function(json) {
         // console.log( "success" );
 
-        $.each( json, function( name, game ) {
+        $.each( json, function( game, data ) {
             var div = document.createElement('div');
             div.type = 'div';
-            div.innerHTML = '<b>' + name + '</b>';
+            div.innerHTML = '<b>' + data.name + '</b>';
             div.className = 'div-styled';
 
 

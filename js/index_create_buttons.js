@@ -22,11 +22,15 @@ window.onload = function() {
                 margin = 10;
         }
 
+        console.log(json);
+
         
-        $.each( json, function( name, game ) {
+        $.each( json, function( game, data ) {
+            console.log(game);
+
             var div = document.createElement('div');
             div.type = 'div';
-            div.innerHTML = '<b>' + name + '</b>';
+            div.innerHTML = '<b>' + data.name + '</b>';
             div.className = 'div-styled';
             div.style.marginLeft = margin + "%";
 
