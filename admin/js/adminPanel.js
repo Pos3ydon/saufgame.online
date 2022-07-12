@@ -21,7 +21,7 @@ window.onload = function() {
             var text = this.parentNode.children[0].innerHTML;
 
             $.ajax({
-                url: "../php/remove_suggestion_neverHaveIEver.php",
+                url: "./../php/remove_suggestion_neverHaveIEver.php",
                 type: "POST",
                 data: { suggestion: text }
             }).done(function(result) {

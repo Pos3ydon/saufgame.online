@@ -16,17 +16,17 @@
     try {
 
         $statement = $conn->prepare("select id from suggestion_neverHaveIEver where suggestion = ? ");
-        $statement->execute([$_POST[$suggestion]]);
+        $statement->execute([$_POST["suggestion"]]);
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
         
         if (!isset($result[0])) {
             $statement = $conn->prepare("select id from neverHaveIEver where question = ? ");
-            $statement->execute([$_POST[$suggestion]]);
+            $statement->execute([$_POST["suggestion"]]);
             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
             
             if (!isset($result[0])) {
                 $statement = $conn->prepare("insert into suggestion_neverHaveIEver (suggestion) values ( ? )");
-                $statement->execute([$_POST[$suggestion]]);
+                $statement->execute([$_POST["suggestion"]]);
 
                 
 
