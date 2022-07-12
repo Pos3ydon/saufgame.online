@@ -19,9 +19,8 @@
     try {
         
         $statement = $conn->prepare("select * from users where username = ? ");
-        $statement->execute([$_POST["username"]]);
+        $statement->execute([$_POST["username"]]);             //<-- ERROR ON THIS LINE IDK WHY...
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-
 
         if (!isset($result[0])) {
             echo "Benutzer nicht gefunden";
@@ -42,8 +41,6 @@
             $_SESSION["root"] = false;
         }
 
-        echo "passt olles";
-        
         //echo "\nInserted successfully";
     } catch(Exception $e) {
         echo "\nInsert failed: " . $e->getMessage();
