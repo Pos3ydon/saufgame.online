@@ -2,7 +2,7 @@ var path = './adminPanel.php';
 
 window.onload = function() {
 
-    $.getJSON('./json/adminlist.json', function(json) {
+    $.getJSON('./json/adminSitesList.json', function(json) {
         // console.log( "success" );
 
         $.each( json, function( name, game ) {
@@ -16,7 +16,7 @@ window.onload = function() {
                 window.location.href = path + '?section=' + game;
             }
 
-            $('#buttons_auto_apperance').append(div);
+            $('#sidebar').append(div);
         });
     });
 }

@@ -1,6 +1,6 @@
 window.onload = function() { 
 
-    $.getJSON('./../../json/gamelist.json', function(json) {
+    $.getJSON('./../json/gamelist.json', function(json) {
         // console.log( "success" );
 
         var selector = $("#selectGame");
