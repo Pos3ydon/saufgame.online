@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-    console.log("lol");
-
     $(".btn_yes").bind({
         click: function(e) {
             var text = this.parentNode.children[0].innerHTML;
