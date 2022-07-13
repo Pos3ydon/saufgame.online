@@ -2,11 +2,11 @@
     "neverHaveIEver": {
       "name": "Never Have I Ever",
       "gamePath": "sites/neverHaveIEver.html",
-      "table": "never_have_i_ever"
+      "table": "neverHaveIEver"
     },
     "truthOrDare": {
       "name": "Truth Or Dare",
       "gamePath": "sites/truthOrDare.html",
-      "table": "truth_or_dare"
+      "table": "truthOrDare"
     }
   }

@@ -9,17 +9,17 @@
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         //echo "Connected successfully";
     } catch(PDOException $e) {
-        echo "Connection failed: " . $e->getMessage();
+    //   echo "Connection failed: " . $e->getMessage();
     }
-
+    
     try {
-        $statement = $conn->prepare("insert into neverHaveIEver (question) values ( ? )");
-        $statement->execute([$_POST["suggestion"]]);
+        $statement = $conn->prepare("select * from " . $_POST["table"]);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-        $stmt = $conn->prepare("delete from suggestion_neverHaveIEver where suggestion = ? ");
-        $stmt->execute([$_POST["suggestion"]]);
+        //print_r($result);
 
-        echo "ok";
+        echo json_encode($result);
 
         exit();
 

@@ -1,21 +1,3 @@
-<?php
-    session_start();
-
-
-    $servername = "localhost";
-    $dbname = "saufgame";
-    $username = "root";
-    $password = "";
-    
-    try {
-      $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    } catch(PDOException $e) {
-        echo "Connection failed: " . $e->getMessage();
-    }
-?>
-
 <!DOCTYPE html>
 <html>
     
@@ -28,23 +10,8 @@
     </head>
 
     <body>
-        <div id="suggestionScrollDiv">
-            <?php
-                $statement = $conn->prepare("select * from suggestion_neverHaveIEver");
-                $statement->execute();
-                $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-                foreach ($result as $suggestion) {
-            ?>
-                <div class="suggestion">
-                    <p class="suggestionText"><?php echo $suggestion["suggestion"]; ?></p>
-                    <button class="btn_yes"></button>
-                    <button class="btn_no"></button>
-                </div>
-            <?php
-                }
-            ?>
-        </div>
+        <div id="tabButtons"></div>
+        <div id="suggestionScrollDiv"></div>
     </body>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.js"></script>
