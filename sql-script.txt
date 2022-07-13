@@ -8,13 +8,13 @@ Create table users (
     primary key (id)
 );
 
-Create table never_Have_I_Ever (
+Create table neverHaveIEver (
     id int not null auto_increment,
     question text not null,
     primary key (id)
 );
 
-Create table suggestion_never_Have_I_Ever (
+Create table suggestion_neverHaveIEver (
     id int not null auto_increment,
     suggestion text not null,
     primary key (id)

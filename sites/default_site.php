@@ -14,9 +14,7 @@
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script type="text/javascript" src="../js/default_site.js"></script>
-    <script type="text/javascript" src="../js/nHIE_create_Buttons.js"></script>
     <script>
         var GET = <?php echo json_encode($_GET); ?>;
-        console.log(GET);
     </script>
 </html>

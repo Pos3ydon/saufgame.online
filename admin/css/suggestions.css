@@ -1,0 +1,40 @@
+#suggestionScrollDiv {
+    overflow: unset;
+    width: 40%;
+    max-height: 20%;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.suggestion {
+    height: 10%;
+}
+
+.suggestionText {
+    float: left;
+
+    width: 50%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+}
+
+.btn_yes {
+    float: left;
+
+    height: 20px;
+    width: 20px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+}
+
+.btn_no {
+    float: left;
+
+    height: 20px;
+    width: 20px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+}

@@ -1,34 +1,54 @@
-window.onload = function() { 
+var path = './adminPanel.php';
 
-    $(".btn_yes").bind({
-        click: function(e) {
-            var text = this.parentNode.children[0].innerHTML;
+window.onload = function() {
 
-            $.ajax({
-                url: "../php/add_neverHaveIEver.php",
-                type: "POST",
-                data: { suggestion: text }
-            }).done(function(result) {
-                //console.log(result);
-            });
+    $.getJSON('./../json/adminSiteList.json', function(json) {
 
-            this.parentNode.remove();
-        }
+        $.each( json, function( name, site ) {
+            var child = document.createElement('div');
+            child.innerHTML = '<b>' + name + '</b>';
+            child.className = 'sitebarButton';
+
+
+            child.onclick = function() {
+                fetch(site + '.php')
+                .then(response=> response.text())
+                .then(text=> document.getElementById('content').innerHTML = text);
+            }
+
+            $('#sidebar').append(child);
+        });
     });
 
-    $(".btn_no").bind({
-        click: function(e) {
-            var text = this.parentNode.children[0].innerHTML;
+    // $(".btn_yes").bind({
+    //     click: function(e) {
+    //         var text = this.parentNode.children[0].innerHTML;
 
-            $.ajax({
-                url: "../php/remove_suggestion_neverHaveIEver.php",
-                type: "POST",
-                data: { suggestion: text }
-            }).done(function(result) {
-                //console.log(result);
-            });
+    //         $.ajax({
+    //             url: "../php/add_neverHaveIEver.php",
+    //             type: "POST",
+    //             data: { suggestion: text }
+    //         }).done(function(result) {
+    //             //console.log(result);
+    //         });
 
-            this.parentNode.remove();
-        }
-    });
+    //         this.parentNode.remove();
+    //     }
+    // });
+
+    // $(".btn_no").bind({
+    //     click: function(e) {
+    //         var text = this.parentNode.children[0].innerHTML;
+
+    //         $.ajax({
+    //             url: "../php/remove_suggestion_neverHaveIEver.php",
+    //             type: "POST",
+    //             data: { suggestion: text }
+    //         }).done(function(result) {
+    //             //console.log(result);
+    //         });
+
+    //         this.parentNode.remove();
+    //     }
+    // });
 }
