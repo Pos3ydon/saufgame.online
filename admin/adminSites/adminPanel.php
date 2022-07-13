@@ -32,6 +32,8 @@
             exit();
         }
 
+        $_SESSION["user"] = $result[0]["username"];
+
         if ($result[0]["username"] == "root") {
             $_SESSION["root"] = true;
         }
@@ -58,7 +60,20 @@
     </head>
 
     <body>
-        <div id="sidebar"></div>
+        <div id="sidebar">
+            <div id="profileDiv">
+                <p><?php echo $_SESSION["user"];?></p>
+            </div>
+            <div id="sidebarButtons">
+                <?php
+                    if ($_SESSION["root"]) {
+                ?>
+                        <div child="sidebarButton" onclick="$('#content').load('rootPanel.php');"><b>Root Panel</b></div>
+                <?php
+                    }
+                ?>
+            </div>
+        </div>
         <div id="content"></div>
     </body>
 
