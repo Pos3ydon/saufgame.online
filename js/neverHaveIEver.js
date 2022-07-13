@@ -1,9 +1,9 @@
-window.onload = function() {
+$(document).ready(function() {
     $.ajax({
         url: "./../php/getQuestion_neverHaveIEver.php",
         type: "POST",
-        data: data
+        data: {}
     }).done(function(result) {
         console.log(result);
     });
-}
+});
