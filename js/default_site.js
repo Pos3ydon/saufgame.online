@@ -1,6 +1,6 @@
 var path = '../sites/default_site.php';
 
-window.onload = function() {
+$(document).ready(function() {
 
     $.getJSON('../json/gamelist.json', function(json) {
 
@@ -24,4 +24,4 @@ window.onload = function() {
             $('#buttons_auto_apperance').append(div);
         });
     });
-}
+});
