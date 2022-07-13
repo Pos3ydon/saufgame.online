@@ -6,8 +6,8 @@ window.onload = function() {
         // console.log( "success" );
 
         fetch(GET.game + '.html')
-    .then(response=> response.text())
-    .then(text=> document.getElementById('content').innerHTML = text);
+        .then(response=> response.text())
+        .then(text=> document.getElementById('content').innerHTML = text);
 
         $.each( json, function( game, data ) {
             var div = document.createElement('div');

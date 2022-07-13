@@ -1,44 +1,3 @@
-#suggestionScrollDiv {
-    overflow: unset;
-    width: 40%;
-    max-height: 20%;
-    margin-left: 50%;
-    transform: translate(-50%, 0);
-}
-
-.suggestion {
-    height: 10%;
-}
-
-.suggestionText {
-    float: left;
-
-    width: 50%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    margin-left: 5%;
-}
-
-.btn_yes {
-    float: left;
-
-    height: 20px;
-    width: 20px;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    margin-left: 10%;
-}
-
-.btn_no {
-    float: left;
-
-    height: 20px;
-    width: 20px;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    margin-left: 10%;
-}
-
 #sidebar {
     position: fixed;
     z-index: 10000000;
@@ -46,7 +5,16 @@
     margin-top: 1%;
     margin-left: 0%;
     margin-right: auto;
-    width: 13%;
+    width: 15%;
     background-color: gray;
     float: left;
+}
+
+.sidebarButton {
+    cursor: pointer;
+}
+
+#content {
+    width: 75%;
+    float: right;
 }

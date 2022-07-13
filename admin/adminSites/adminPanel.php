@@ -34,7 +34,7 @@
 
         if ($result[0]["username"] == "root") {
             $_SESSION["root"] = true;
-            header("Location: rootPanel.php"); 
+            header("Location: adminSites/rootPanel.php");
             exit();
         }
         else {
@@ -56,30 +56,17 @@
         <title>Saufgame Admin</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" lang="de">
 
-        <link rel="stylesheet" href="css/adminPanel.css">
+        <link rel="stylesheet" href="./../css/adminPanel.css">
     </head>
 
     <body>
         <div id="sidebar"></div>
-        <div id="suggestionScrollDiv">
-            <?php
-                $statement = $conn->prepare("select * from suggestion_neverHaveIEver");
-                $statement->execute();
-                $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-                foreach ($result as $suggestion) {
-            ?>
-                <div class="suggestion">
-                    <p class="suggestionText"><?php echo $suggestion["suggestion"]; ?></p>
-                    <button class="btn_yes"></button>
-                    <button class="btn_no"></button>
-                </div>
-            <?php
-                }
-            ?>
-        </div>
+        <div id="content"></div>
     </body>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script type="text/javascript" src="js/adminPanel.js"></script>
+    <script>
+        var GET = <?php echo json_encode($_GET); ?>;
+    </script>
 </html>

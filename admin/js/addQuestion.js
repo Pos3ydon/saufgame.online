@@ -24,8 +24,6 @@ window.onload = function() {
                 suggestion: $("#questionInput")[0].value
             };
 
-            console.log(data);
-
             $.ajax({
                 url: "./../../php/add_suggestion_" + $("#selectGame")[0].value +".php",
                 type: "POST",

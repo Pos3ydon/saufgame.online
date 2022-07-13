@@ -1,4 +1,5 @@
 {
-    "Add New Question": "adminSites/addQuestion.html",
-    "Never Have I Ever": "neverHaveIEver"
+    "Add New Question": "addQuestion",
+    "Suggestions": "suggestions",
+    "Root Panel": "rootPanel"
 }
