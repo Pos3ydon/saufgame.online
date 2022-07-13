@@ -24,7 +24,7 @@
         <title>Saufgame Admin</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" lang="de">
 
-        <link rel="stylesheet" href="./../css/suggestions.css">
+        <link rel="stylesheet" href="./../css/manageSuggestions.css">
     </head>
 
     <body>
@@ -48,5 +48,5 @@
     </body>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <script type="text/javascript" src="./../js/suggestions.js"></script>
+    <script type="text/javascript" src="./../js/manageSuggestions.js"></script>
 </html>

@@ -22,7 +22,7 @@ $(document).ready(function() {
             };
 
             $.ajax({
-                url: "./../../php/add_suggestion_" + $("#selectGame")[0].value +".php",
+                url: "./../php/add_suggestion_" + $("#selectGame")[0].value +".php",
                 type: "POST",
                 data: data
             }).done(function(result) {
