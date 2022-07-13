@@ -2,7 +2,6 @@ var path = './adminPanel.php';
 
 window.onload = function() {
 
-
     $.getJSON('./json/adminSitesList.json', function(json) {
         // console.log( "success" );
 
