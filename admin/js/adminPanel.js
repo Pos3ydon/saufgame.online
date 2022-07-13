@@ -3,9 +3,10 @@ $(document).ready(function() {
     $.getJSON('./../json/adminSiteList.json', function(json) {
 
         $.each( json, function( name, site ) {
+
             var child = document.createElement('div');
-            child.innerHTML = '<b>' + name + '</b>';
-            child.className = 'sitebarButton';
+            child.innerHTML = '<p>' + name + '</p>';
+            child.className = 'sidebarButton';
 
 
             child.onclick = function() {
@@ -15,7 +16,7 @@ $(document).ready(function() {
                 $("#content").load(site + ".php");
             }
 
-            $('#sidebar').append(child);
+            $('#sidebarButtons').prepend(child);
         });
     });
 

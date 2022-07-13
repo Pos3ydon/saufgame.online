@@ -1,13 +1,11 @@
 window.onload = function() { 
 
-    $.getJSON('./../json/gamelist.json', function(json) {
-        // console.log( "success" );
+    $.getJSON('./../../json/gamelist.js', function(json) {
 
         var selector = $("#selectGame");
         
         $.each( json, function( name, game ) {
             var child = document.createElement('option');
-            //child.type = 'option';
             child.innerHTML = '<b>' + name + '</b>';
             child.className = 'gameOption';
 

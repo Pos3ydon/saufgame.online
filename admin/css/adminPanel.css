@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 #sidebar {
     position: fixed;
     z-index: 10000000;
@@ -5,14 +9,49 @@
     margin-top: 1%;
     margin-left: 0%;
     margin-right: auto;
-    width: 15%;
+    margin: 0;
+    width: 20%;
     background-color: gray;
     float: left;
 }
 
+#profileDiv {
+    background-color: rgb(76, 76, 76);
+    padding: 15px 0;
+}
+
+#profileDiv p {
+    font-size: 15pt;
+
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+}
+
 .sidebarButton {
     cursor: pointer;
+
+    padding: 10px 0;
 }
+
+.sidebarButton:hover {
+    background-color: rgb(153, 153, 153);
+}
+
+.sidebarButton  p {
+    width: fit-content;
+    margin: 0;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#selected {
+    border: 2px black;
+}
+
+
 
 #content {
     width: 75%;
