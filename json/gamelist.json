@@ -7,7 +7,7 @@
     "truthOrDare": {
       "name": "Truth Or Dare",
       "gamePath": "sites/truthOrDare.html",
-      "table": "truth_or_dare"
+      "table": "truthOrDare"
     },
     "neverHaveI234Ever": {
       "name": "Never Have I Ever",
