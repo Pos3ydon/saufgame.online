@@ -24,14 +24,14 @@ $(document).ready(function() {
 
                         var btn_yes = document.createElement('button');
                         btn_yes.className = "btn_yes";
-                        btn_yes.click = function(e) {
+                        btn_yes.onclick = function(e) {
                             accept_suggestion(this.parentNode.children[0].innerHTML);
                             this.parentNode.remove();
                         }
 
                         var btn_no = document.createElement('button');
                         btn_no.className = "btn_no";
-                        btn_no.click = function(e) {
+                        btn_no.onclick = function(e) {
                             reject_suggestion(this.parentNode.children[0].innerHTML);
                             this.parentNode.remove();
                         }
@@ -53,42 +53,6 @@ $(document).ready(function() {
             $('#tabButtons').append(child);
         });
     });
-
-
-
-    // $(".btn_yes").bind({
-    //     click: function(e) {
-    //         var text = this.parentNode.children[0].innerHTML;
-
-    //         console.log("lol");
-
-    //         $.ajax({
-    //             url: "./../php/add_neverHaveIEver.php",
-    //             type: "POST",
-    //             data: { suggestion: text }
-    //         }).done(function(result) {
-    //             console.log(result);
-    //         });
-
-    //         this.parentNode.remove();
-    //     }
-    // });
-
-    // $(".btn_no").bind({
-    //     click: function(e) {
-    //         var text = this.parentNode.children[0].innerHTML;
-
-    //         $.ajax({
-    //             url: "./../php/remove_suggestion_neverHaveIEver.php",
-    //             type: "POST",
-    //             data: { suggestion: text }
-    //         }).done(function(result) {
-    //             console.log(result);
-    //         });
-
-    //         this.parentNode.remove();
-    //     }
-    // });
 });
 
 function accept_suggestion(suggestion) {
@@ -97,7 +61,7 @@ function accept_suggestion(suggestion) {
         type: "POST",
         data: { suggestion: suggestion }
     }).done(function(result) {
-        console.log(result);
+        //console.log(result);
     });
 }
 
@@ -107,6 +71,6 @@ function reject_suggestion(suggestion) {
         type: "POST",
         data: { suggestion: suggestion }
     }).done(function(result) {
-        console.log(result);
+        //console.log(result);
     });
 }
