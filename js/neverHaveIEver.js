@@ -4,6 +4,6 @@ window.onload = function() {
         type: "POST",
         data: data
     }).done(function(result) {
-        echo(result);
+        console.log(result);
     });
 }
