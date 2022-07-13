@@ -8,5 +8,35 @@
       "name": "Truth Or Dare",
       "gamePath": "sites/truthOrDare.html",
       "table": "truth_or_dare"
+    },
+    "neverHaveI234Ever": {
+      "name": "Never Have I Ever",
+      "gamePath": "sites/neverHaveIEver.html",
+      "table": "never_have_i_ever"
+    },
+    "truthOrDasare": {
+      "name": "Truth Or Dare",
+      "gamePath": "sites/truthOrDare.html",
+      "table": "truth_or_dare"
+    },
+    "neverHa2342veIEver": {
+      "name": "Never Have I Ever",
+      "gamePath": "sites/neverHaveIEver.html",
+      "table": "never_have_i_ever"
+    },
+    "truthO324321213rDare": {
+      "name": "Truth Or Dare",
+      "gamePath": "sites/truthOrDare.html",
+      "table": "truth_or_dare"
+    },
+    "neverHav1231232312eI234Ever": {
+      "name": "Never Have I Ever",
+      "gamePath": "sites/neverHaveIEver.html",
+      "table": "never_have_i_ever"
+    },
+    "truthOr13123Dasare": {
+      "name": "Truth Or Dare",
+      "gamePath": "sites/truthOrDare.html",
+      "table": "truth_or_dare"
     }
-  }
+}
