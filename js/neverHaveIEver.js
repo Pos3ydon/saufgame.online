@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("#nextQuestionButton").click();
+    $("#nextQuestionButton").trigger('click');
 
 
     $("#nextQuestionButton").bind({
