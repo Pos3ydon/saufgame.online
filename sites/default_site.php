@@ -3,7 +3,7 @@
     <head>
         <title>Saufgame</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" lang="de">
-        <link rel="stylesheet" href="../css/neverHaveIEverStyle.css">
+        <link rel="stylesheet" href="./../css/defaultSiteStyle.css">
     </head>
     <body>
         <div id="sidebar">
