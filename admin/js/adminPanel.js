@@ -1,6 +1,4 @@
-var path = './adminPanel.php';
-
-window.onload = function() {
+$(document).ready(function() {
 
     $.getJSON('./../json/adminSiteList.json', function(json) {
 
@@ -11,9 +9,10 @@ window.onload = function() {
 
 
             child.onclick = function() {
-                fetch(site + '.php')
-                .then(response=> response.text())
-                .then(text=> document.getElementById('content').innerHTML = text);
+                // fetch(site + '.php')
+                // .then(response=> response.text())
+                // .then(text=> document.getElementById('content').innerHTML = text);
+                $("#content").load(site + ".php");
             }
 
             $('#sidebar').append(child);
@@ -51,4 +50,4 @@ window.onload = function() {
     //         this.parentNode.remove();
     //     }
     // });
-}
+});

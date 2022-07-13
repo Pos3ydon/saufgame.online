@@ -48,5 +48,5 @@
     </body>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <script type="text/javascript" src="./../js/suggestion.js"></script>
+    <script type="text/javascript" src="./../js/suggestions.js"></script>
 </html>

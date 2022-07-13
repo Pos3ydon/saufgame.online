@@ -1,4 +1,4 @@
-window.onload = function() {
+$(document).ready(function() {
 
     console.log("lol");
 
@@ -11,7 +11,7 @@ window.onload = function() {
                 type: "POST",
                 data: { suggestion: text }
             }).done(function(result) {
-                console.log(result);
+                //console.log(result);
             });
 
             this.parentNode.remove();
@@ -27,10 +27,10 @@ window.onload = function() {
                 type: "POST",
                 data: { suggestion: text }
             }).done(function(result) {
-                console.log(result);
+                //console.log(result);
             });
 
             this.parentNode.remove();
         }
     });
-}
+});

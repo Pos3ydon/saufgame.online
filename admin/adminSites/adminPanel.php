@@ -19,7 +19,7 @@
     try {
         
         $statement = $conn->prepare("select * from users where username = ? ");
-        $statement->execute([$_POST["username"]]);             //<-- ERROR ON THIS LINE IDK WHY...
+        $statement->execute([$_POST["username"]]);
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
         if (!isset($result[0])) {

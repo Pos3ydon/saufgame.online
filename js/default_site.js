@@ -3,11 +3,12 @@ var path = '../sites/default_site.php';
 window.onload = function() {
 
     $.getJSON('../json/gamelist.json', function(json) {
-        // console.log( "success" );
 
-        fetch(GET.game + '.html')
-        .then(response=> response.text())
-        .then(text=> document.getElementById('content').innerHTML = text);
+        // fetch(GET.game + '.html')
+        // .then(response=> response.text())
+        // .then(text=> document.getElementById('content').innerHTML = text);
+
+        $("#content").load(GET.game + ".html");
 
         $.each( json, function( game, data ) {
             var div = document.createElement('div');
