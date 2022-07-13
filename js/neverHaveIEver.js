@@ -1,6 +1,4 @@
 $(document).ready(function() {
-    $("#nextQuestionButton").trigger('click');
-
 
     $("#nextQuestionButton").bind({
         click: function(e) {
@@ -14,6 +12,9 @@ $(document).ready(function() {
             });
         }
     });
+
+    
+    $("#nextQuestionButton").click();
 });
 
 
