@@ -34,8 +34,6 @@
 
         if ($result[0]["username"] == "root") {
             $_SESSION["root"] = true;
-            header("Location: adminSites/rootPanel.php");
-            exit();
         }
         else {
             $_SESSION["root"] = false;
