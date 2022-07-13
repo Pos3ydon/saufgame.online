@@ -1,3 +1,21 @@
+<?php
+    session_start();
+
+
+    $servername = "localhost";
+    $dbname = "saufgame";
+    $username = "root";
+    $password = "";
+    
+    try {
+      $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    } catch(PDOException $e) {
+        echo "Connection failed: " . $e->getMessage();
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     
@@ -6,7 +24,7 @@
         <title>Saufgame Admin</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" lang="de">
 
-        <link rel="stylesheet" href="css/suggestions.css">
+        <link rel="stylesheet" href="./../css/suggestions.css">
     </head>
 
     <body>

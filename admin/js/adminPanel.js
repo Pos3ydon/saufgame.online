@@ -2,16 +2,7 @@ var path = './adminPanel.php';
 
 window.onload = function() {
 
-<<<<<<< Updated upstream
-=======
-    fetch('adminSites/' + GET.site + '.html')
-        .then(response=> response.text())
-        .then(text=> document.getElementById('content').innerHTML = text);
-
-
->>>>>>> Stashed changes
-    $.getJSON('./json/adminSitesList.json', function(json) {
-        // console.log( "success" );
+    $.getJSON('./../json/adminSiteList.json', function(json) {
 
         $.each( json, function( name, site ) {
             var child = document.createElement('div');
