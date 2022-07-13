@@ -4,6 +4,7 @@ $(document).ready(function() {
 
     $.getJSON('../json/gamelist.json', function(json) {
 
+        console.log(json);
         // fetch(GET.game + '.html')
         // .then(response=> response.text())
         // .then(text=> document.getElementById('content').innerHTML = text);

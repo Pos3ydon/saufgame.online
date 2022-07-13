@@ -6,10 +6,12 @@
         <link rel="stylesheet" href="./../css/defaultSiteStyle.css">
     </head>
     <body>
+        <div id='all-main'>
         <div id="sidebar">
             <div id="buttons_auto_apperance"></div>
         </div>
         <div id="content"></div>
+        </div>
     </body>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.js"></script>

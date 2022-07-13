@@ -3,6 +3,8 @@ body {
 }
 
 #sidebar {
+    position: fixed;
+    z-index: 10000000;
     margin-top: 1%;
     margin-left: 0%;
     margin-right: auto;
