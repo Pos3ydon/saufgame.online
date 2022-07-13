@@ -21,5 +21,5 @@
     </body>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <script src="./../js/addSuggestion.js"></script>
+    <script type="text/javascript" src="./../js/addSuggestion.js"></script>
 </html>
