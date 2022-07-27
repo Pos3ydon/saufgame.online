@@ -45,7 +45,7 @@ body {
 
 .sidebarButton:hover {
     background-color: rgb(85, 139, 204);
-    padding-right: 10%;
+    padding-right: 1%;
     /* color: white; */
 }
 
