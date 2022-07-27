@@ -17,6 +17,10 @@
     }
 
     try {
+        if (!isset($_POST["username"])) {
+            header("Location: ./../login.html");
+            exit;
+        }
         
         $statement = $conn->prepare("select * from users where username = ? ");
         $statement->execute([$_POST["username"]]);
@@ -68,11 +72,12 @@
                 <?php
                     if ($_SESSION["root"]) {
                 ?>
-                        <div child="sidebarButton" onclick="$('#content').load('rootPanel.php');"><b>Root Panel</b></div>
+                        <div class="sidebarButton" onclick="$('#content').load('rootPanel.php');"><p>Root Panel</p></div>
                 <?php
                     }
                 ?>
             </div>
+            <div id="logoutButton" class="sidebarButton"><p>Logout</p></div>
         </div>
         <div id="content"></div>
     </body>

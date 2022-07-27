@@ -20,6 +20,12 @@ $(document).ready(function() {
         });
     });
 
+    $("#logoutButton").bind({
+        click: function(e) {
+            window.location.href = "./../php/logout.php";
+        }
+    });
+
     // $(".btn_yes").bind({
     //     click: function(e) {
     //         var text = this.parentNode.children[0].innerHTML;

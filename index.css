@@ -1,51 +1,63 @@
 body {
+    background-color: rgb(64, 101, 145);
     margin: 0;
 }
 
 #logo {
-    margin-top: 1%;
+    background-image: url("./images/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 1);
+    background-position: center;
+
+    position: absolute;
+    width: 40%;
+    height: 20%;
+    /* min-height: 200px; */
+    margin-top: 2%;
+    top: 2%;
     margin-left: 50%;
-    /* margin-right: 50%; */
     transform: translate(-50%, 0%);
-    background-color: green;
-    display: inline-block;
+
+    border-radius: 150px;
+    border: solid 30px rgba(255, 255, 255, 0.5);
+    background-clip: padding-box;
 }
 
 #buttons_auto_apperance {
-    background-color: gray;
-    height: 300%;
+    /* background-color: black; */
+    height: 100%;
 }
 
-.div-styled {
+.gameButton {
     font-size: 1vw;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: lightgray;
-    border-radius: 10px 10px 10px 10px;
+    background-color: rgb(113, 143, 177);
+    border-radius: 10px;
     cursor: pointer;
     text-align: center;
-    height: 200%;
+    /* height: 50%; */
     padding-top: 3%;
     padding-bottom: 3%;
     width: 20%;
-    border: solid;
+    /* border: solid;
     border-width: 1px;
-    border-color: black;
+    border-color: black; */
     margin-top: 5%;
     /* transform: translate(-50%, 0%); */
 }
 
-.div-styled:hover {
-    background-color: rgb(0, 0, 0);
-    color: white;
+.gameButton:hover {
+    transform: scale(1.2);
 }
 
 @media screen and (max-width: 2048px){
-    .div-styled {
+    .gameButton {
         display: inline-block;
     }
 
     #buttons_auto_apperance {
-        margin-top: 20%;
+        margin-top: 25%;
         margin-left: 15%;
         margin-right: 15%;
         transform: translate(0%, -50%);
@@ -54,7 +66,12 @@ body {
 }
 
 @media screen and (max-width: 992px) {
-    .div-styled {
+    #logo {
+        height: 10%;
+        border-radius: 50px;
+        border: solid 10px rgba(255, 255, 255, 0.5);
+    }
+    .gameButton {
         width: 28%;
         display: inline-block;
         font-size: 10px;
@@ -63,13 +80,18 @@ body {
     #buttons_auto_apperance {
         width: 100%;
         margin-left: 0;
-        margin-top: 50%;
+        margin-top: 80%;
         transform: translate(0%, -50%);
     }
 }
 
 @media screen and (max-width: 600px) {
-    .div-styled {
+    #logo {
+        height: 5%;
+        border-radius: 30px;
+        border: solid 10px rgba(255, 255, 255, 0.5);
+    }
+    .gameButton {
         width: 28%;
         display: inline-block;
         font-size: 10px;
@@ -78,7 +100,13 @@ body {
     #buttons_auto_apperance {
         width: 100%;
         margin-left: 0;
-        margin-top: 50%;
+        margin-top: 80%;
         transform: translate(0%, -50%);
     }
+}
+
+
+#footer {
+    position: absolute;
+    bottom: 0;
 }

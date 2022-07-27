@@ -28,18 +28,17 @@ window.onload = function() {
         $.each( json, function( game, data ) {
             console.log(game);
 
-            var div = document.createElement('div');
-            div.type = 'div';
-            div.innerHTML = '<b>' + data.name + '</b>';
-            div.className = 'div-styled';
-            div.style.marginLeft = margin + "%";
+            var child = document.createElement('div');
+            child.innerHTML = '<b>' + data.name + '</b>';
+            child.className = 'gameButton';
+            child.style.marginLeft = margin + "%";
 
 
-            div.onclick = function() {
+            child.onclick = function() {
                 window.location.href = path + '?game=' + game;
             }
 
-            $('#buttons_auto_apperance').append(div);
+            $('#buttons_auto_apperance').append(child);
         });
     });
 }

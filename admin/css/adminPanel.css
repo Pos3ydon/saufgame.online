@@ -5,22 +5,19 @@ body {
 #sidebar {
     position: fixed;
     z-index: 10000000;
-    padding-bottom: 44%;
-    margin-top: 1%;
-    margin-left: 0%;
-    margin-right: auto;
     margin: 0;
     width: 20%;
+    height: 100%;
     background-color: gray;
 }
 
 #profileDiv {
     background-color: rgb(76, 76, 76);
-    padding: 15px 0;
+    padding: 20px 0;
 }
 
 #profileDiv p {
-    font-size: 15pt;
+    font-size: 25px;
 
     width: fit-content;
     padding: 0;
@@ -29,22 +26,33 @@ body {
     transform: translate(-50%, 0);
 }
 
+
 .sidebarButton {
     cursor: pointer;
 
     padding: 10px 0;
+    width: 100%;
 }
 
 .sidebarButton:hover {
     background-color: rgb(153, 153, 153);
+    padding-right: 10%;
 }
 
 .sidebarButton  p {
-    width: fit-content;
+    font-size: 23px;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
     margin: 0;
-    margin-left: 50%;
-    transform: translate(-50%, 0);
 }
+
+
+#logoutButton {
+    position: absolute;
+    bottom: 0;
+}
+
 
 #selected {
     border: 2px black;

@@ -12,17 +12,17 @@ $(document).ready(function() {
         $("#content").load(GET.game + ".html");
 
         $.each( json, function( game, data ) {
-            var div = document.createElement('div');
-            div.type = 'div';
-            div.innerHTML = '<b>' + data.name + '</b>';
-            div.className = 'div-styled';
+            var child = document.createElement('div');
+            // child.type = 'div';
+            child.innerHTML = '<b>' + data.name + '</b>';
+            child.className = 'sidebarButton';
 
 
-            div.onclick = function() {
+            child.onclick = function() {
                 window.location.href = path + '?game=' + game;
             }
 
-            $('#buttons_auto_apperance').append(div);
+            $('#buttons_auto_apperance').append(child);
         });
     });
 });
