@@ -2,8 +2,16 @@ body {
     margin: 0;
     padding: 0cm;
 }
+
+#main {
+    margin-left: 50%;
+    margin-top: 25%;
+    transform: translate(-50%, -50%);
+    /* background-color: green; */
+}
+
 #randomNeverHaveIEverText {
-    background-color: lightgray;
+    /* background-color: lightgray; */
     margin-left: 50%;
     transform: translate(-50%, 0%);
     width: 50%;
@@ -15,29 +23,19 @@ body {
 }
 
 #nextQuestionButton {
-    display: inline-block;
+    background-color: rgb(85, 139, 204);
+
+    /* display: inline-block; */
     margin-left: 50%;
-    padding: 2%;
     transform: translate(-50%, 0%);
-    margin-top: 1%;
-    background-color: lightgray;
-    color: black;
-    border-radius: 10px 10px 10px 10px;
+    margin-top: 5%;
+    padding: 5% 1%;
+    border-radius: 10px;
     cursor: pointer;
-    border: solid;
-    border-width: 1px;
-    border-color: black;
+    text-align: center;
 }
 #nextQuestionButton:hover {
-    background-color: black;
-    color: white;
-}
-#main {
-    float: left;
-    margin-left: 13.1%;
-    margin-top: 25%;
-    transform: translate(0%, -50%);
-    background-color: green;
-    width: 86.9%;
-    height: 100%;
+    /* background-color: black;
+    color: white; */
+    background-color: rgb(62, 100, 146);
 }
