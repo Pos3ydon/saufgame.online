@@ -1,13 +1,14 @@
 body {
-    background-color: rgb(64, 101, 145);
+    background-color: #001828;
     margin: 0;
 }
+@import url('http://fonts.cdnfonts.com/css/bahnschrift');
 
 #logo {
     background-image: url("./images/logo.png");
     background-size: contain;
     background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 1);
+    /*background-color: #001828;*/
     background-position: center;
 
     position: absolute;
@@ -29,11 +30,11 @@ body {
     height: 100%;
 }
 
-.gameButton {
-    font-size: 1vw;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(113, 143, 177);
-    border-radius: 10px;
+.btns{
+    color: white;
+    font-size: 1.2vw;
+    font-family: 'Bahnschrift', Bold;
+    border-radius: 150px;
     cursor: pointer;
     text-align: center;
     /* height: 50%; */
@@ -45,11 +46,23 @@ body {
     border-color: black; */
     margin-top: 5%;
     /* transform: translate(-50%, 0%); */
+    transition: all 0.3s ease;
+}
+
+
+.gameButton {
+    background: linear-gradient(to right,#764ba2  0%, #667eea 50%,  #667eea 50%);
+    background-size: 200% 100%;
+    background-position: left;
+    transition: all .75s;
 }
 
 .gameButton:hover {
-    transform: scale(1.2);
+    color: #fff;
+    background-position: right;
+    transform: scale(1.1);
 }
+
 
 @media screen and (max-width: 2048px){
     .gameButton {

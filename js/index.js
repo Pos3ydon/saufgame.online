@@ -30,7 +30,7 @@ window.onload = function() {
 
             var child = document.createElement('div');
             child.innerHTML = '<b>' + data.name + '</b>';
-            child.className = 'gameButton';
+            child.className = 'gameButton btns';
             child.style.marginLeft = margin + "%";
 
 
