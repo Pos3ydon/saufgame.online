@@ -51,8 +51,8 @@ body {
 
 
 #content {
-    background-color: rgb(52, 74, 102);
-    
+    background-color: #001828;
+    color: white;
     position: absolute;
     right: 0;
     width: 85%;
