@@ -1,8 +1,19 @@
+/**********************************/
+/*******       Import       *******/
+/**********************************/
+
+@import url('http://fonts.cdnfonts.com/css/bahnschrift');
+
+
+/*************************************/
+/*******       Main Site       *******/
+/*************************************/
+
 body {
     background-color: #001828;
     margin: 0;
 }
-@import url('http://fonts.cdnfonts.com/css/bahnschrift');
+
 
 #logo {
     background-image: url("./images/logo.png");
@@ -118,6 +129,9 @@ body {
     }
 }
 
+
+
+
 /***************************************/
 /***************************************/
 /*******         Computer        *******/
@@ -133,8 +147,7 @@ body {
 }
 
 #footer-container{
-    background-color: yellow;
-    height: 1000px;
+    height: 100%;
 }
 
 /**************************************/

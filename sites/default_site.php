@@ -14,6 +14,38 @@
             </div>
             <div id="content"></div>
         </div>
+        
+        <!------Footer------>
+        <footer id="footer">
+            <div id="footer-container">
+                <div id="top-footer">
+                    <a>LETS MAKE SOME FUN BOYZ...</a>
+                </div>
+                <div id="mid-footer">
+                    <div id="beschreibung">
+                        <a id="description-split">BESCHREIBUNG</a>
+                        <div id="footer-line"></div>
+                        <a id="beschreibunt_text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lobortis feugiat nulla, non interdum enim ullamcorper sit amet.
+                    </div>
+                    <div id="nuetzliche-links">
+                        <a id="link-split">NÜTZLICHE LINKS</a>
+                        <div id="footer-line"></div>
+                        <a id="links_text">Hilfe</a>
+                        <a id="links_text">Dein Account</a>
+                        <a id="links_text">Privacy Policy</a>
+                    </div>
+                    <div id="kontakte">
+                        <a id="contakt-split">KONTAKTE</a>
+                        <div id="footer-line"></div>
+                        <a id="kontakte_text">joel.fischnaller@gmail.com</a>
+                    </div>
+                </div>
+                <div id="copyright">
+                    <a id="copyright_text">@2022 Copyright. Saufgame.online</a>
+                </div>
+            </div>
+        </footer>
     </body>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.js"></script>
