@@ -118,6 +118,12 @@ body {
     }
 }
 
+/***************************************/
+/***************************************/
+/*******         Computer        *******/
+/*******      Footer Things      *******/
+/***************************************/
+/***************************************/
 
 #footer {
     position: absolute;
@@ -131,12 +137,17 @@ body {
     height: 1000px;
 }
 
+/**************************************/
+/*******       Footer Top       *******/
+/**************************************/
+
 #top-footer{
     background-color: #667eea;
     width: 100%;
     padding-top: 1%;
     padding-bottom: 1%;
 }
+
 #top-footer a{
     color: white;
     text-align: left;
@@ -145,12 +156,18 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
+/**************************************/
+/*******       Footer Mid       *******/
+/**************************************/
+
 #mid-footer{
     width: 100%;
     background-color: #001828;
     display: flex;
-    padding-bottom: 10%;
+    padding-bottom: 1%;
 }
+
 #beschreibung{
     margin-top: 1%;
     margin-left: 8%;
@@ -163,9 +180,17 @@ body {
     padding-right: 2%;
 }
 
+#description-split, #contakt-split, #link-split{
+    padding-top: 1%;
+    font-family: Verdana;
+    color: white;
+    font-size: 20px;
+    font-weight:normal
+}
+
 
 #beschreibung a, #kontakte a, #nuetzliche-links a{
-    size: 20px;
+    size: 14px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
 }
@@ -180,7 +205,30 @@ body {
 }
 
 #links_text{
+    cursor: pointer;
     size: 14px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
+    display: flex;
+    margin-bottom: 5%;
+}
+
+/********************************************/
+/*******       Footer Copyright       *******/
+/********************************************/
+
+#copyright{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: #030f16;
+    width: 100%;
+    display: flex;
+}
+
+#copyright a{
+    color: white;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 50%;
+    transform: translate(-50%, 0%);
 }
