@@ -1,5 +1,4 @@
 {
-    "Add New Question": "addQuestion",
-    "Suggestions": "suggestions",
-    "Root Panel": "rootPanel"
+    "Add New Suggestion": "addSuggestion",
+    "Manage Suggestions": "manageSuggestions"
 }

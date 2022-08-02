@@ -7,20 +7,19 @@
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
         //echo "Connected successfully";
     } catch(PDOException $e) {
-        echo "Connection failed: " . $e->getMessage();
+    //   echo "Connection failed: " . $e->getMessage();
     }
-
+    
     try {
-        $stmt = $conn->prepare("select question from neverHaveIEver order by rand() limit 1");
-        $stmt->execute();
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $statement = $conn->prepare("select * from " . $_POST["table"]);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-        // print_r($result);
+        //print_r($result);
 
-        echo $result[0]['question'];
+        echo json_encode($result);
 
         exit();
 

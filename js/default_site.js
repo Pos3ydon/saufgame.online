@@ -1,26 +1,28 @@
 var path = '../sites/default_site.php';
 
-window.onload = function() {
+$(document).ready(function() {
 
     $.getJSON('../json/gamelist.json', function(json) {
-        // console.log( "success" );
 
-        fetch(GET.game + '.html')
-        .then(response=> response.text())
-        .then(text=> document.getElementById('content').innerHTML = text);
+        console.log(json);
+        // fetch(GET.game + '.html')
+        // .then(response=> response.text())
+        // .then(text=> document.getElementById('content').innerHTML = text);
+
+        $("#content").load(GET.game + ".html");
 
         $.each( json, function( game, data ) {
-            var div = document.createElement('div');
-            div.type = 'div';
-            div.innerHTML = '<b>' + data.name + '</b>';
-            div.className = 'div-styled';
+            var child = document.createElement('div');
+            // child.type = 'div';
+            child.innerHTML = '<b>' + data.name + '</b>';
+            child.className = 'sidebarButton';
 
 
-            div.onclick = function() {
+            child.onclick = function() {
                 window.location.href = path + '?game=' + game;
             }
 
-            $('#buttons_auto_apperance').append(div);
+            $('#buttons_auto_apperance').append(child);
         });
     });
-}
+});

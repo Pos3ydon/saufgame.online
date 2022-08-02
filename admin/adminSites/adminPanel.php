@@ -8,18 +8,22 @@
     $password = "";
     
     try {
-      $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     //   echo "Connected successfully";
     } catch(PDOException $e) {
-    //   echo "Connection failed: " . $e->getMessage();
+        echo "Connection failed: " . $e->getMessage();
     }
 
     try {
+        if (!isset($_POST["username"])) {
+            header("Location: ./../login.html");
+            exit;
+        }
         
         $statement = $conn->prepare("select * from users where username = ? ");
-        $statement->execute([$_POST["username"]]);             //<-- ERROR ON THIS LINE IDK WHY...
+        $statement->execute([$_POST["username"]]);
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
         if (!isset($result[0])) {
@@ -32,10 +36,10 @@
             exit();
         }
 
+        $_SESSION["user"] = $result[0]["username"];
+
         if ($result[0]["username"] == "root") {
             $_SESSION["root"] = true;
-            header("Location: adminSites/rootPanel.php");
-            exit();
         }
         else {
             $_SESSION["root"] = false;
@@ -60,7 +64,21 @@
     </head>
 
     <body>
-        <div id="sidebar"></div>
+        <div id="sidebar">
+            <div id="profileDiv">
+                <p><?php echo $_SESSION["user"];?></p>
+            </div>
+            <div id="sidebarButtons">
+                <?php
+                    if ($_SESSION["root"]) {
+                ?>
+                        <div class="sidebarButton" onclick="$('#content').load('rootPanel.php');"><p>Root Panel</p></div>
+                <?php
+                    }
+                ?>
+            </div>
+            <div id="logoutButton" class="sidebarButton"><p>Logout</p></div>
+        </div>
         <div id="content"></div>
     </body>
 

@@ -50,7 +50,6 @@ body {
 }
 
 .gameButton {
-    box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.5);
     background: linear-gradient(to right,#764ba2  0%, #667eea 50%,  #667eea 50%);
     background-size: 200% 100%;
     background-position: left;
@@ -127,60 +126,13 @@ body {
 }
 
 #footer-container{
+    text-align: left;
+    
+    
     background-color: yellow;
-    height: 1000px;
 }
 
 #top-footer{
     background-color: #667eea;
     width: 100%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-#top-footer a{
-    color: white;
-    text-align: left;
-    padding-left: 8%;
-    size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-#mid-footer{
-    width: 100%;
-    background-color: #001828;
-    display: flex;
-    padding-bottom: 10%;
-}
-#beschreibung{
-    margin-top: 1%;
-    margin-left: 8%;
-    width: 400px;
-    padding-right: 2%;
-}
-#kontakte, #nuetzliche-links{
-    margin-top: 1%;
-    width: 400px;
-    padding-right: 2%;
-}
-
-
-#beschreibung a, #kontakte a, #nuetzliche-links a{
-    size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-}
-
-#footer-line{
-    border-radius: 50px;
-    background-color: #667eea;
-    height: 2px;
-    width: 17.5%;
-    margin-top: 2.5%;
-    margin-bottom: 5%;
-}
-
-#links_text{
-    size: 14px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
 }
