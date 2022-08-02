@@ -42,17 +42,21 @@ body {
 }
 
 .gameButton {
-    margin-left: 50%;
-    transform: translate(-50%, 0%);
     color: white;
     font-size: 1.2vw;
     font-family: 'Bahnschrift', Bold;
     border-radius: 150px;
     cursor: pointer;
     text-align: center;
+    /* height: 50%; */
     padding-top: 3%;
     padding-bottom: 3%;
     width: 20%;
+    /* border: solid;
+    border-width: 1px;
+    border-color: black; */
+    margin-top: 5%;
+    /* transform: translate(-50%, 0%); */
     box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.5);
     background: linear-gradient(to right,#764ba2  0%, #667eea 50%,  #667eea 50%);
     background-size: 200% 100%;
