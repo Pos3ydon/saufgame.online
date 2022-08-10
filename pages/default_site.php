@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
-    
     <head>
-        <link rel="icon" type="image/jpg" href="https://image.spreadshirtmedia.net/image-server/v1/mp/products/T1459A839PA4459PT28D15661520FS4058/views/1,width=378,height=378,appearanceId=839,backgroundColor=F2F2F2/icons-saufen.jpg"/>
         <title>Saufgame</title>
+        <link rel="icon" type="image/jpg" href="./../images/icon.png"/>
         <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" lang="de">
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="./../css/defaultSiteStyle.css">
     </head>
-
     <body>
-        <div id="logo"></div>
-        <div id="buttons_auto_apperance"></div>
-
-
+        <div id='all-main'>
+            <div id="sidebar">
+                <div id="sidebarLogo" onclick="window.location.href = './../index.html'"></div>
+                <div id="buttons_auto_apperance"></div>
+            </div>
+            <div id="content"></div>
+        </div>
+        
         <!------Footer------>
         <div id="loadFooter">
             <!-- <footer id="footer"> -->
@@ -48,8 +50,9 @@
         </div>
     </body>
 
-    <!-- Scripts -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <script type="text/javascript" src="./js/index.js"></script>
-
+    <script type="text/javascript" src="../js/default_site.js"></script>
+    <script>
+        var GET = <?php echo json_encode($_GET); ?>;
+    </script>
 </html>
