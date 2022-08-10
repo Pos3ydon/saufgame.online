@@ -14,8 +14,7 @@ $(document).ready(function() {
 
         $.each( json, function( game, data ) {
             var child = document.createElement('div');
-            // child.type = 'div';
-            child.innerHTML = '<b>' + data.name + '</b>';
+            child.innerHTML = '<p>' + data.name + '</p>';
             child.className = 'sidebarButton';
 
 

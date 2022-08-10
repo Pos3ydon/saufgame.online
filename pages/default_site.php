@@ -9,44 +9,18 @@
     <body>
         <div id='all-main'>
             <div id="sidebar">
-                <div id="sidebarLogo" onclick="window.location.href = './../index.html'"></div>
+                <div id="sidebarLogo" onclick="window.location.href = './../index.html'">Home</div>
                 <div id="buttons_auto_apperance"></div>
+                <div id="management_buttons">
+                    <div id="btn_suggestion" class="sidebarButton"><p>Send in Suggestion</p></div>
+                    <div id="btn_login" class="sidebarButton"><p>Login</p></div>
+                </div>
             </div>
             <div id="content"></div>
         </div>
         
         <!------Footer------>
         <div id="loadFooter">
-            <!-- <footer id="footer"> -->
-                <!-- <div id="footer-container">
-                    <div id="top-footer">
-                        <a>LETS MAKE SOME FUN BOYZ...</a>
-                    </div>
-                    <div id="mid-footer">
-                        <div id="beschreibung">
-                            <a id="description-split">BESCHREIBUNG</a>
-                            <div id="footer-line"></div>
-                            <a id="beschreibunt_text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lobortis feugiat nulla, non interdum enim ullamcorper sit amet.
-                        </div>
-                        <div id="nuetzliche-links">
-                            <a id="link-split">NÜTZLICHE LINKS</a>
-                            <div id="footer-line"></div>
-                            <a id="links_text">Hilfe</a>
-                            <a id="links_text">Dein Account</a>
-                            <a id="links_text">Privacy Policy</a>
-                        </div>
-                        <div id="kontakte">
-                            <a id="contakt-split">KONTAKTE</a>
-                            <div id="footer-line"></div>
-                            <a id="kontakte_text">joel.fischnaller@gmail.com</a>
-                        </div>
-                    </div>
-                    <div id="copyright">
-                        <a id="copyright_text">@2022 Copyright. Saufgame.online</a>
-                    </div>
-                </div> -->
-            <!-- </footer> --> -->
         </div>
     </body>
 

@@ -8,6 +8,8 @@ body {
     transform: translate(0%, -50%);
     width: 100%;
     text-align: center;
+    align-content: center;
+    align-items: centerS;
 }
 
 #randomNeverHaveIEverText {
@@ -24,8 +26,7 @@ body {
 }
 
 #nextQuestionButton {
-    margin-left: 50%;
-    transform: translate(-50%, 0%);
+    margin: auto;
     color: white;
     font-size: 1.8vw;
     font-family: 'Bahnschrift', Bold;
@@ -41,6 +42,10 @@ body {
     background-size: 200% 100%;
     background-position: left;
     transition: all .75s;
+
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
 }
 #nextQuestionButton:hover {
     color: #fff;
