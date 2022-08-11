@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "particle";
+    src: url("./../fonts/Particle-Regular.otf");
+}
+
+@import url('http://fonts.cdnfonts.com/css/bahnschrift');
+
+
 body {
     margin: 0;
     background-color: #001828;
@@ -20,24 +28,27 @@ body {
 
 
 #sidebarLogo {
-    background-color: rgba(255, 255, 255, 0.3);
+    /* background-color: rgba(255, 255, 255, 0.3);
     background-image: url(./../images/logo.png);
     background-size: contain;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    background-position: center;
+    background-repeat: no-repeat; */
+    /* background-position: center; */
+    /* cursor: pointer;
 
     width: 100%;
-    height: 60px;
+    height: 60px; */
 }
 
 .sidebarButton {
     /* float: left; */
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: particle;
+    font-size: 20px;
+    letter-spacing: 4px;
     cursor: pointer;
-    text-align: center;
+    text-align: left;
     padding: 5% 0;
-    width: 100%;
+    padding-left: 10%;
+    width: 90%;
     transition: all .75s;
 
     -moz-user-select: none;
@@ -51,7 +62,7 @@ body {
 }
 
 .activeButton {
-    background-color: #667eea;
+    color: #A7A7A7;
 }
 
 #management_buttons {
