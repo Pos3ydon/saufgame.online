@@ -9,7 +9,7 @@
     <body>
         <div id='all-main'>
             <div id="sidebar">
-                <div id="sidebarLogo" onclick="window.location.href = './../index.html'">nicht final</div>
+                <div id="sidebarLogo" class="sidebarButton" onclick="window.location.href = './../index.html'">Home</div>
                 <div id="buttons_auto_apperance"></div>
                 <div id="management_buttons">
                     <!-- <div id="btn_suggestion" class="sidebarButton" onclick="window.location.href = './sendInSuggestion.html'"><p>Send in Suggestion</p></div> -->
