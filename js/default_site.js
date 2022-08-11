@@ -1,4 +1,4 @@
-var path = '../sites/default_site.php';
+var path = '../pages/default_site.php';
 
 $(document).ready(function() {
 
@@ -9,7 +9,7 @@ $(document).ready(function() {
         // .then(response=> response.text())
         // .then(text=> document.getElementById('content').innerHTML = text);
 
-        $("#content").load(GET.game + ".html");
+        $("#content").load(window.sessionStorage.getItem("page"));
         $("#loadFooter").load("../pages/footer.html");
 
         $.each( json, function( game, data ) {
@@ -19,10 +19,16 @@ $(document).ready(function() {
 
 
             child.onclick = function() {
-                window.location.href = path + '?game=' + game;
+                // window.location.href = path + '?game=' + game;
+                loadPage(game + ".html");
             }
 
             $('#buttons_auto_apperance').append(child);
         });
     });
 });
+
+function loadPage(path) {
+    $("#content").load(path);
+    window.sessionStorage.setItem("page", path)
+}

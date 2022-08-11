@@ -24,7 +24,6 @@ window.onload = function() {
                 margin = 10;
         }
 
-        console.log(json);
 
         
         $.each( json, function( game, data ) {
@@ -37,7 +36,8 @@ window.onload = function() {
 
 
             child.onclick = function() {
-                window.location.href = path + '?game=' + game;
+                window.sessionStorage.setItem("page", game + ".html");
+                window.location.href = path/* + '?game=' + game*/;
             }
 
             $('#buttons_auto_apperance').append(child);

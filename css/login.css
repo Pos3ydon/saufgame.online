@@ -1,18 +1,19 @@
 #loginWindow {
+    position: absolute;
     background-color: grey;
 
     height: 50%;
     width: 30%;
-    margin-top: 25%;
-    margin-left: 50%;
-    transform: translate(0, -50%);
+    /* margin-top: 25%;
+    margin-left: 50%; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     border-radius: 10px;
-}
 
-/* #loginForm {
-    
-} */
+    color: black;
+}
 
 .loginDiv {
     width: 30%;
@@ -31,4 +32,9 @@
     margin-bottom: 10%;
     margin-top: 10%;
     transform: translate(-50%, 0);
+
+    
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
 }

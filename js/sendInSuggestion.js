@@ -1,17 +1,14 @@
-window.onload = function() {
-
-    $("#loadFooter").load("../pages/footer.html");
+$(document).ready(function() {
 
     $.getJSON('./../json/gamelist.json', function(json) {
-        var selector = $("#selectGame");
-        
-        $.each( json, function( name, game ) {
+
+        $.each( json, function( game, data ) {
             var child = document.createElement('option');
-            child.innerHTML = '<p>' + game.name + '</p>';
-            child.value = game.table;
+            child.innerHTML = '<p>' + data.name + '</p>';
+            child.value = data.table;
             child.className = 'gameOption';
 
-            selector.append(child);
+            $("#selectGame").append(child);
         });
     });
 
@@ -37,4 +34,4 @@ window.onload = function() {
             $("#suggestionText").val("");
         }
     });
-}
+});

@@ -4,6 +4,6 @@
     $_SESSION["user"] = null;
     $_SESSION["root"] = false;
 
-    header("Location: ./../login.html");
+    header("Location: ./../../index.html");
     exit;
 ?>
