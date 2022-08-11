@@ -1,6 +1,6 @@
 var path = '../pages/default_site.php';
 
-$(document).ready(function() {
+window.onload = function() {
 
     $.getJSON('../json/gamelist.json', function(json) {
 
@@ -43,7 +43,7 @@ $(document).ready(function() {
     //         }
     //     });
     // }, 300);
-});
+}
 
 function loadPage(path, sender) {
     $(".activeButton").removeClass("activeButton");
