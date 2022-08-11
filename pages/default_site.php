@@ -9,12 +9,12 @@
     <body>
         <div id='all-main'>
             <div id="sidebar">
-                <div id="sidebarLogo" onclick="window.location.href = './../index.html'">Home</div>
+                <div id="sidebarLogo" onclick="window.location.href = './../index.html'">nicht final</div>
                 <div id="buttons_auto_apperance"></div>
                 <div id="management_buttons">
                     <!-- <div id="btn_suggestion" class="sidebarButton" onclick="window.location.href = './sendInSuggestion.html'"><p>Send in Suggestion</p></div> -->
-                    <div id="btn_suggestion" class="sidebarButton" onclick="loadPage('./sendInSuggestion.html')"><p>Send in Suggestion</p></div>
-                    <div id="btn_login" class="sidebarButton" onclick="loadPage('.//login.html')"><p>Login</p></div>
+                    <div id="btn_suggestion" class="sidebarButton" onclick="loadPage('./sendInSuggestion.html', this)"><p>Send in Suggestion</p></div>
+                    <div id="btn_login" class="sidebarButton" onclick="loadPage('./login.html', this)"><p>Login</p></div>
                 </div>
             </div>
             <div id="content"></div>

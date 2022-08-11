@@ -50,6 +50,10 @@ body {
     padding-right: 5%;
 }
 
+.activeButton {
+    background-color: #667eea;
+}
+
 #management_buttons {
     position: absolute;
     top: 100vh;

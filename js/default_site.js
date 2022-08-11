@@ -8,8 +8,12 @@ $(document).ready(function() {
         // fetch(GET.game + '.html')
         // .then(response=> response.text())
         // .then(text=> document.getElementById('content').innerHTML = text);
+        var activePage = window.sessionStorage.getItem("page");
 
-        $("#content").load(window.sessionStorage.getItem("page"));
+        if(activePage == null)
+            window.location.href = "../index.html";
+        else
+            $("#content").load(activePage);
         $("#loadFooter").load("../pages/footer.html");
 
         $.each( json, function( game, data ) {
@@ -17,18 +21,33 @@ $(document).ready(function() {
             child.innerHTML = '<p>' + data.name + '</p>';
             child.className = 'sidebarButton';
 
+            
+            if (activePage.search(game) != -1)
+                $(child).addClass("activeButton");
+
 
             child.onclick = function() {
-                // window.location.href = path + '?game=' + game;
-                loadPage(game + ".html");
+                loadPage(game + ".html", this);
             }
 
             $('#buttons_auto_apperance').append(child);
         });
     });
+
+    // setTimeout(function(){
+    //     $.each($(".sidebarButton"), function(index, object) {
+    //         if (String(object.onclick).search(window.sessionStorage.getItem("page")) != -1) {
+    //             $(object).addClass("activeButton");
+    //             console.log(object);
+    //             return;
+    //         }
+    //     });
+    // }, 300);
 });
 
-function loadPage(path) {
+function loadPage(path, sender) {
+    $(".activeButton").removeClass("activeButton");
+    $(sender).addClass("activeButton");
     $("#content").load(path);
     window.sessionStorage.setItem("page", path)
 }
