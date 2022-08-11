@@ -1,0 +1,83 @@
+body {
+    background-color: #001828;
+
+    margin: 0;
+}
+
+#selectGameDiv {
+    position: relative;
+    background-color: #001016;
+
+    height: 300px;
+    margin-left: 50%;
+    margin-top: 25%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 150px;
+}
+
+#selectGame {
+    position: absolute;
+    background-color: #001828;
+    font-size: 15px;
+
+    float: left;
+    margin: 10% 0;
+    margin-left: 25%;
+    padding: 10px;
+    transform: translate(-50%, 0);
+    
+    color: white;
+}
+
+#suggestionText {
+    position: absolute;
+    background-color: #001828;
+    font-size: 15px;
+    
+    float: left;
+    height: 80px;
+    overflow-y: visible;
+    margin: 5% 0;
+    margin-left: 75%;
+    padding: 10px;
+    transform: translate(-50%, 0);
+    
+    color: white;
+}
+
+#submitSuggestion {
+    position: absolute;
+    background-color: #001828;
+    
+    /* float: left; */
+    /* top: 90%; */
+    bottom: 10%;
+    left: calc(50% - 12.5%);
+    /* margin-left: auto; */
+    /* margin: 0 5%;
+    margin-left: 50%; */
+    /* transform: translate(-50%, 0); */
+    padding: 10px;
+    
+    color: white;
+
+    font-family: 'Bahnschrift', Bold;
+    border-radius: 150px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    width: 25%;
+    box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to right,#764ba2  0%, #667eea 50%,  #667eea 50%);
+    background-size: 200% 100%;
+    background-position: left;
+    transition: all .75s;
+}
+
+#submitSuggestion:hover {
+    /* background-color: #667EEA; */
+    background-position: right;
+    transform: scale(1.1);
+}

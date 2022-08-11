@@ -4,7 +4,7 @@ $(document).ready(function(){
 
     
     window.addEventListener("wheel", function(e) {
-        e.preventDefault();
+        //e.preventDefault();
         // console.log($("#footer-container").height());
         // console.log($("#top-footer").height());
         // console.log($("#mid-footer").height());
