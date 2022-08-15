@@ -1,40 +1,48 @@
 #loginWindow {
     position: absolute;
-    background-color: grey;
 
-    height: 50%;
-    width: 30%;
+    height: 100%;
+    width: 100%;
     /* margin-top: 25%;
     margin-left: 50%; */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    border-radius: 10px;
 
     color: black;
 }
 
 .loginDiv {
-    width: 30%;
-    padding: 10% 0 10% 0;
+    width:440px;
+    margin-top: 42px;
     margin-left: 50%;
     transform: translate(-50%, 0);
 }
 
 .input {
-    width: 100%;
+    font-size: 20px;
+    padding-left: 10px;
+    width: 440px;
+    border-radius: 50px;
+    height: 75px;
+    
 }
 
 #loginSubmit {
-    padding: 5% 10%;
-    margin-left: 50%;
-    margin-bottom: 10%;
-    margin-top: 10%;
-    transform: translate(-50%, 0);
+    width: 455px;
+    border-radius: 50px;
+    height: 75px;
+    font-size: 20px;
+    
 
     
     -moz-user-select: none;
     -khtml-user-select: none;
     -webkit-user-select: none;
+}
+
+#loginForm{
+    margin-top: 25%;
+    transform: translate(0, -50%);
+}
+
+.input::placeholder{
+    font-size: 20px;
 }

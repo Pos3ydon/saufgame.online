@@ -13,14 +13,15 @@
         <div id="loginWindow">
             <form id="loginForm" action="./../admin/adminSites/adminPanel.php" method="POST">
                 <div id="loginDivUsername" class="loginDiv">
-                    <label >Username</label>
-                    <input id="inputUsername" class="input" type="text" name="username">
+                    <input placeholder="Benutzername" id="inputUsername" class="input" type="text" name="username">
                 </div>
                 <div id="loginDivPassword" class="loginDiv">
-                    <label>Password</label> 
-                    <input id="inputPassword" class="input" type="password" name="password">
+                    <input placeholder="Password" id="inputPassword" class="input" type="password" name="password">
                 </div>
-                <input id="loginSubmit" type="submit">
+                <div class="loginDiv">
+                    <input id="loginSubmit" type="submit">
+                </div>
+                
             </form>
         </div>
     </body>

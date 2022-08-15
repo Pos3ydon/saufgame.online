@@ -8,12 +8,9 @@ $(document).ready(function() {
                 data: {}
             }).done(function(result) {
                 document.getElementById("randomNeverHaveIEverText").innerHTML = "<a>" +  result + "</a>";
-                //console.log(result);
             });
         }
     });
-
-    
     $("#nextQuestionButton").click();
 });
 

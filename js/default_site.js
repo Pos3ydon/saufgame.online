@@ -1,19 +1,13 @@
 var path = '../pages/default_site.php';
 
-$(document).ready(function() {
+window.onload = function() {
 
     $.getJSON('../json/gamelist.json', function(json) {
-
-        //console.log(json);
-        // fetch(GET.game + '.html')
-        // .then(response=> response.text())
-        // .then(text=> document.getElementById('content').innerHTML = text);
         var activePage = window.sessionStorage.getItem("page");
 
-        if(activePage == null)
-            window.location.href = "../index.html";
-        else
-            $("#content").load(activePage);
+        if(activePage == null) window.location.href = "../index.html";
+        if(activePage!= null) $("#content").load(activePage);
+
         $("#loadFooter").load("../pages/footer.html");
 
         $.each( json, function( game, data ) {
@@ -22,9 +16,7 @@ $(document).ready(function() {
             child.className = 'sidebarButton';
 
             
-            if (activePage.search(game) != -1)
-                $(child).addClass("activeButton");
-
+            if (activePage.search(game) != -1) $(child).addClass("activeButton");
 
             child.onclick = function() {
                 loadPage(game + ".html", this);
@@ -33,7 +25,6 @@ $(document).ready(function() {
             $('#buttons_auto_apperance').append(child);
         });
     });
-
     // setTimeout(function(){
     //     $.each($(".sidebarButton"), function(index, object) {
     //         if (String(object.onclick).search(window.sessionStorage.getItem("page")) != -1) {
@@ -43,8 +34,8 @@ $(document).ready(function() {
     //         }
     //     });
     // }, 300);
-});
 
+}
 function loadPage(path, sender) {
     $(".activeButton").removeClass("activeButton");
     $(sender).addClass("activeButton");
