@@ -8,72 +8,76 @@ body {
     position: relative;
     /* background-color: yellow; */
 
-    width: 300px;
-    height: 300px;
+    width: 50%;
+    height: fit-content;
     margin-left: 50%;
     margin-top: 25%;
     transform: translate(-50%, -50%);
+
+    text-align: center;
+    align-content: center;
+    align-items: center;
 }
 
 #selectGame {
-    position: absolute;
-    background-color: #001016;
-    font-size: 15px;
+    background-color: white;
+    font-size: 20px;
 
-    width: 80%;
-    left: 50%;
+    width: 440px;
+    height: 75px;
     padding: 15px;
-    transform: translate(-50%, 0);
+    margin-bottom: 5%;
+
     border: 0;
     border-radius: 150px;
     
-    color: white;
+    color: #001016;
+    font-weight: bold;
 
     -moz-user-select: none;
     -khtml-user-select: none;
     -webkit-user-select: none;
 }
 
-#suggestionText {
-    position: absolute;
+#suggestionText, #username {
     background-color: white;
-    font-size: 15px;
     
-    width: 80%;
-    height: 5%;
-    top: 50%;
-    left: 50%;
-    padding: 15px;
-    transform: translate(-50%, 0);
+    width: calc(440px - (2*20px));
+    height: 75px;
+    margin-top: 5%;
+    padding: 0 20px;
+
     border: 0;
     border-radius: 150px;
     
-    color: #B2B2B2;
+    font-family: 'Bahnschrift';
+    color: black;
+    font-size: 20px;
     font-weight: bold;
-
 }
 
 #submitSuggestion {
-    position: absolute;
     background-color: #001828;
-    top: 100%;
-    left: 10%;
-    padding: 10px;
-    color: white;
 
-    font-family: 'Bahnschrift', Bold;
-    border-radius: 150px;
-    cursor: pointer;
+    width: 440px;
+    height: 75px;
+    margin-top: 5%;
+
+    font-family: 'Bahnschrift';
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
     text-align: center;
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
-    padding: 15px;
-    width: 80%;
+    cursor: pointer;
+
     box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.5);
     background: linear-gradient(to right,#764ba2  0%, #667eea 50%,  #667eea 50%);
     background-size: 200% 100%;
     background-position: left;
     transition: all .75s;
+    border: 0;
+    border-radius: 150px;
+    
     
     -moz-user-select: none;
     -khtml-user-select: none;

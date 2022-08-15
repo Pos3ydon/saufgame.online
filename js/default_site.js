@@ -34,8 +34,8 @@ window.onload = function() {
     //         }
     //     });
     // }, 300);
-
 }
+
 function loadPage(path, sender) {
     $(".activeButton").removeClass("activeButton");
     $(sender).addClass("activeButton");
