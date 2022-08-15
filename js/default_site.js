@@ -25,15 +25,6 @@ window.onload = function() {
             $('#buttons_auto_apperance').append(child);
         });
     });
-    // setTimeout(function(){
-    //     $.each($(".sidebarButton"), function(index, object) {
-    //         if (String(object.onclick).search(window.sessionStorage.getItem("page")) != -1) {
-    //             $(object).addClass("activeButton");
-    //             console.log(object);
-    //             return;
-    //         }
-    //     });
-    // }, 300);
 }
 
 function loadPage(path, sender) {
