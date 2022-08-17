@@ -55,21 +55,21 @@ $(document).ready(function() {
     });
 });
 
-function accept_suggestion(suggestion) {
+function accept_suggestion(suggestion, table) {
     $.ajax({
         url: "./../php/add_neverHaveIEver.php",
         type: "POST",
-        data: { suggestion: suggestion }
+        data: { suggestion: suggestion, table: table }
     }).done(function(result) {
         //console.log(result);
     });
 }
 
-function reject_suggestion(suggestion) {
+function reject_suggestion(suggestion, table) {
     $.ajax({
         url: "./../php/remove_suggestion_neverHaveIEver.php",
         type: "POST",
-        data: { suggestion: suggestion }
+        data: { suggestion: suggestion, table: table }
     }).done(function(result) {
         //console.log(result);
     });
