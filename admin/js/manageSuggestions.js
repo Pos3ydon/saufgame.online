@@ -4,12 +4,12 @@ $(document).ready(function() {
         $.each( json, function( game, data ) {
             var child = document.createElement('button');
             child.innerHTML = data.name;
-            child.className = 'tabButton';
+            child.className = game;
 
 
             child.onclick = function() {
                 $("#suggestionScrollDiv").empty();
-
+                console.log(data.table);
                 $.ajax({
                     url: "./../php/getSuggestions.php",
                     type: "POST",

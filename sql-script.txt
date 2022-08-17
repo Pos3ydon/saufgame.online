@@ -19,3 +19,17 @@ Create table suggestion_neverHaveIEver (
     suggestion text not null,
     primary key (id)
 );
+
+Create table suggestion_truthOrDare (
+    id int not null auto_increment,
+    suggestion text not null,
+    type text not null,
+    primary key(id)
+);
+
+Create table truthOrDare (
+    id int not null auto_increment,
+    suggestion text not null,
+    type text not null,
+    primary key(id)
+);
