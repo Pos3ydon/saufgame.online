@@ -25,6 +25,31 @@ window.onload = function() {
             $('#buttons_auto_apperance').append(child);
         });
     });
+
+    var sidebarOpened = false;
+    $("#btn_openSidebar").bind({
+        click: function() {
+            // if (sidebarOpened) {
+            //     $("#sidebar").animate({left: "0%"}, 500);
+            //     sidebarOpened = false;
+            // }
+            // else {
+                setTimeout(function() {
+                    $("#sidebar").animate({left: "0%"}, 500);
+                    sidebarOpened = true;
+                }, 50);
+            // }
+        }
+    });
+
+    $(window).bind({
+        click: function() {
+            if (sidebarOpened) {
+                $("#sidebar").animate({left: "-20%"}, 500);
+                sidebarOpened = false;
+            }
+        }
+    })
 }
 
 function loadPage(path, sender) {

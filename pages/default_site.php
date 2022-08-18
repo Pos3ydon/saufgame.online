@@ -8,12 +8,13 @@
     </head>
     <body>
         <div id='all-main'>
+            <div id="btn_openSidebar"></div>
             <div id="sidebar">
                 <div id="sidebarLogo" class="sidebarButton" onclick="window.location.href = './../index.html'"><p>Home</p></div>
                 <div id="buttons_auto_apperance"></div>
                 <div id="management_buttons">
                     <!-- <div id="btn_suggestion" class="sidebarButton" onclick="window.location.href = './sendInSuggestion.html'"><p>Send in Suggestion</p></div> -->
-                    <div id="btn_suggestion" class="sidebarButton" onclick="loadPage('./sendInSuggestion.html', this)"><p>Send in Suggestion</p></div>
+                    <div id="btn_suggestion" class="sidebarButton" onclick="loadPage('./sendInSuggestion.html', this)" disabled><p>Send in Suggestion</p></div>
                     <div id="btn_login" class="sidebarButton" onclick="loadPage('./login.html', this)"><p>Login</p></div>
                 </div>
             </div>
