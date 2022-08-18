@@ -54,21 +54,21 @@ $(document).ready(function() {
     });
 });
 
-function accept_suggestion(suggestion, table) {
+function accept_suggestion(suggestion) {
     $.ajax({
         url: "./../php/add_neverHaveIEver.php",
         type: "POST",
-        data: { suggestion: suggestion, table: table }
+        data: { suggestion: suggestion}
     }).done(function(result) {
         //console.log(result);
     });
 }
 
-function reject_suggestion(suggestion, table) {
+function reject_suggestion(suggestion) {
     $.ajax({
         url: "./../php/remove_suggestion_neverHaveIEver.php",
         type: "POST",
-        data: { suggestion: suggestion, table: table }
+        data: { suggestion: suggestion}
     }).done(function(result) {
         //console.log(result);
     });
