@@ -54,3 +54,4 @@ function loadPage(path, sender) {
     $("#content").load(path);
     window.sessionStorage.setItem("page", path)
 }
+

@@ -8,7 +8,7 @@ body {
     position: relative;
     /* background-color: yellow; */
 
-    width: 50%;
+    width: 30%;
     height: fit-content;
     margin-left: 50%;
     margin-top: 25%;
@@ -22,7 +22,6 @@ body {
 #selectGame {
     background-color: white;
     font-size: 20px;
-
     width: 440px;
     height: 75px;
     padding: 15px;
@@ -54,6 +53,10 @@ body {
     color: black;
     font-size: 20px;
     font-weight: bold;
+}
+
+.selectGameText{
+    display: none;
 }
 
 #submitSuggestion {

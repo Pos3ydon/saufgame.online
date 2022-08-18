@@ -30,5 +30,4 @@
     <script type="text/javascript" src="../js/default_site.js"></script>
     <script>
         var GET = <?php echo json_encode($_GET); ?>;
-    </script>
 </html>

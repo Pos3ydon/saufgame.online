@@ -108,3 +108,10 @@ body {
     height: 100%;
 }
 
+#btn_openSidebar{
+    transition: all .30s;
+}
+#btn_openSidebar:hover{
+    transform: scale(1.2);
+}
+
