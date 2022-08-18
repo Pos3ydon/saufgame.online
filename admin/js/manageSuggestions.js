@@ -9,7 +9,6 @@ $(document).ready(function() {
 
             child.onclick = function() {
                 $("#suggestionScrollDiv").empty();
-                console.log(data.table);
                 $.ajax({
                     url: "./../php/getSuggestions.php",
                     type: "POST",
