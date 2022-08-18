@@ -21,13 +21,14 @@ body {
     background-image: url("./images/logo.png");
     background-size: contain;
     background-repeat: no-repeat;
-    /*background-color: #001828;*/
-    background-size: 18%;
+    background-color: #998115;
+    background-size: 22%;
     background-position: 50px;
+    filter: invert(100%);
 
     position: absolute;
     width: 40%;
-    height: 20%;
+    height: 25%;
     /* min-height: 200px; */
     margin-top: 2%;
     top: 2%;
@@ -35,7 +36,6 @@ body {
     transform: translate(-50%, 0%);
 
     border-radius: 150px;
-    border: solid 30px rgba(255, 255, 255, 0.5);
     background-clip: padding-box;
 }
 
@@ -51,6 +51,8 @@ body {
 
     margin: 0;
     padding: 0;
+
+    /* color: white; */
 }
 
 #buttons_auto_apperance {
