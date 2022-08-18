@@ -29,16 +29,12 @@ window.onload = function() {
     var sidebarOpened = false;
     $("#btn_openSidebar").bind({
         click: function() {
-            // if (sidebarOpened) {
-            //     $("#sidebar").animate({left: "0%"}, 500);
-            //     sidebarOpened = false;
-            // }
-            // else {
+            if (!sidebarOpened) {
                 setTimeout(function() {
                     $("#sidebar").animate({left: "0%"}, 500);
                     sidebarOpened = true;
                 }, 50);
-            // }
+            }
         }
     });
 
