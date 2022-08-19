@@ -8,28 +8,34 @@ Create table users (
     primary key (id)
 );
 
+
 Create table neverHaveIEver (
     id int not null auto_increment,
-    question text not null,
+    content text not null,
+    username varchar(255),
     primary key (id)
 );
 
 Create table suggestion_neverHaveIEver (
     id int not null auto_increment,
-    suggestion text not null,
+    content text not null,
+    username varchar(255),
     primary key (id)
+);
+
+
+Create table truthOrDare (
+    id int not null auto_increment,
+    content text not null,
+    type varchar(5) not null,
+    username varchar(255),
+    primary key(id)
 );
 
 Create table suggestion_truthOrDare (
     id int not null auto_increment,
-    suggestion text not null,
-    type text not null,
-    primary key(id)
-);
-
-Create table truthOrDare (
-    id int not null auto_increment,
-    suggestion text not null,
-    type text not null,
+    content text not null,
+    type varchar(5) not null,
+    username varchar(255),
     primary key(id)
 );

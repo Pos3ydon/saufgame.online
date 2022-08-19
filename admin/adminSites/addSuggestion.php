@@ -14,10 +14,10 @@
             <select id="selectGame" name="game">
                 <option class="gameOption">Select Game</option>
             </select>
-
-            <textarea id="questionInput"></textarea>
-            <button id="submitQuestion"></button>
         </div>
+
+        <textarea id="questionInput"></textarea>
+        <button id="submitQuestion"></button>
     </body>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.js"></script>

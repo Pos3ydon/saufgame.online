@@ -4,11 +4,12 @@ $(document).ready(function() {
         $.each( json, function( game, data ) {
             var child = document.createElement('button');
             child.innerHTML = data.name;
-            child.className = game;
+            child.className = data.table;
 
 
             child.onclick = function() {
                 $("#suggestionScrollDiv").empty();
+
                 $.ajax({
                     url: "./../php/getSuggestions.php",
                     type: "POST",
@@ -18,8 +19,14 @@ $(document).ready(function() {
 
                     $.each(result, function(index, suggestion) {
                         var div = document.createElement('div');
-                        div.innerHTML = "<p class='suggestionText'>" + suggestion.suggestion + "</p>";//<button class='btn_yes'></button><button class='btn_no'></button>";
-                        div.className = "suggestion";
+
+                        if (data.table == "neverHaveIEver" || data.table == "Select Game") {
+                            div.innerHTML = "<p class='suggestionText'>" + suggestion.content + "</p>";
+                        }
+                        else if (game == "truthOrDare") {
+                            div.innerHTML = "<p class='suggestionText'>" + suggestion.type + " - " + suggestion.content + "</p>";
+                        }
+                        div.id = "suggestionDiv";
 
                         var btn_yes = document.createElement('button');
                         btn_yes.className = "btn_yes";
