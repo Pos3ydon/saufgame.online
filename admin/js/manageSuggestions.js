@@ -24,7 +24,7 @@ $(document).ready(function() {
                             div.innerHTML = "<p class='suggestionText'>" + suggestion.content + "</p>";
                         }
                         else if (game == "truthOrDare") {
-                            div.innerHTML = "<p class='suggestionText'>" + suggestion.type + " - " + suggestion.content + "</p>";
+                            div.innerHTML = "<p class='suggestionText'>" + suggestion.content +  "</p>";
                         }
                         div.id = "suggestionDiv";
 
@@ -67,7 +67,7 @@ function accept_suggestion(table, content) {
     $.ajax({
         url: "./../php/add_" + table + ".php",
         type: "POST",
-        data: { content: content}
+        data: { type: table, content: content}
     }).done(function(result) {
         console.log(result);
     });
@@ -77,7 +77,7 @@ function reject_suggestion(table, content) {
     $.ajax({
         url: "./../php/remove_suggestion_" + table + ".php",
         type: "POST",
-        data: { content: content}
+        data: { type: table, content: content}
     }).done(function(result) {
         console.log(result);
     });
