@@ -1,0 +1,48 @@
+#loginWindow {
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+    /* margin-top: 25%;
+    margin-left: 50%; */
+
+    color: black;
+}
+
+.loginDiv {
+    width:440px;
+    margin-top: 42px;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.input {
+    font-size: 20px;
+    padding-left: 10px;
+    width: 440px;
+    border-radius: 50px;
+    height: 75px;
+    
+}
+
+#loginSubmit {
+    width: 455px;
+    border-radius: 50px;
+    height: 75px;
+    font-size: 20px;
+    
+
+    
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}
+
+#loginForm{
+    margin-top: 25%;
+    transform: translate(0, -50%);
+}
+
+.input::placeholder{
+    font-size: 20px;
+}

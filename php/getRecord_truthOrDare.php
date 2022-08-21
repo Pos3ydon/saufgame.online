@@ -7,19 +7,24 @@
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
         //echo "Connected successfully";
     } catch(PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
     }
 
     try {
-        $statement = $conn->prepare("insert into neverHaveIEver (content) values ( ? )");
-        $statement->execute([$_POST["content"]]);
+        // $stmt;
+        if ($_POST["type"] == "truth")
+            $stmt = $conn->prepare("select content from truthOrDare where type = 'truth' order by rand() limit 1");
+        else if ($_POST["type"] == "dare")
+            $stmt = $conn->prepare("select content from truthOrDare where type = 'dare' order by rand() limit 1");
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        $stmt = $conn->prepare("delete from suggestion_neverHaveIEver where content = ? ");
-        $stmt->execute([$_POST["content"]]);
+        // print_r($result);
 
-        echo "ok";
+        echo $result[0]['content'];
 
         exit();
 

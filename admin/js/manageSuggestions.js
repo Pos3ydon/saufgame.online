@@ -4,7 +4,7 @@ $(document).ready(function() {
         $.each( json, function( game, data ) {
             var child = document.createElement('button');
             child.innerHTML = data.name;
-            child.className = 'tabButton';
+            child.className = data.table;
 
 
             child.onclick = function() {
@@ -19,20 +19,28 @@ $(document).ready(function() {
 
                     $.each(result, function(index, suggestion) {
                         var div = document.createElement('div');
-                        div.innerHTML = "<p class='suggestionText'>" + suggestion.suggestion + "</p>";//<button class='btn_yes'></button><button class='btn_no'></button>";
-                        div.className = "suggestion";
+
+                        if (data.table == "neverHaveIEver" || data.table == "Select Game") {
+                            div.innerHTML = "<p class='suggestionText'>" + suggestion.content + "</p>";
+                        }
+                        else if (game == "truthOrDare") {
+                            div.innerHTML = "<p class='suggestionText'>" + suggestion.type + " - " + suggestion.content + "</p>";
+                        }
+                        div.id = "suggestionDiv";
 
                         var btn_yes = document.createElement('button');
                         btn_yes.className = "btn_yes";
                         btn_yes.onclick = function(e) {
-                            accept_suggestion(this.parentNode.children[0].innerHTML);
+                            accept_suggestion(data.table, this.parentNode.children[0].innerHTML);
+                            console.log(this.parentNode.children[0].innerHTML);
                             this.parentNode.remove();
                         }
 
                         var btn_no = document.createElement('button');
                         btn_no.className = "btn_no";
                         btn_no.onclick = function(e) {
-                            reject_suggestion(this.parentNode.children[0].innerHTML);
+                            reject_suggestion(data.table, this.parentNode.children[0].innerHTML);
+                            console.log(this.parentNode.children[0].innerHTML);
                             this.parentNode.remove();
                         }
 
@@ -55,22 +63,22 @@ $(document).ready(function() {
     });
 });
 
-function accept_suggestion(suggestion) {
+function accept_suggestion(table, content) {
     $.ajax({
-        url: "./../php/add_neverHaveIEver.php",
+        url: "./../php/add_" + table + ".php",
         type: "POST",
-        data: { suggestion: suggestion }
+        data: { content: content}
     }).done(function(result) {
-        //console.log(result);
+        console.log(result);
     });
 }
 
-function reject_suggestion(suggestion) {
+function reject_suggestion(table, content) {
     $.ajax({
-        url: "./../php/remove_suggestion_neverHaveIEver.php",
+        url: "./../php/remove_suggestion_" + table + ".php",
         type: "POST",
-        data: { suggestion: suggestion }
+        data: { content: content}
     }).done(function(result) {
-        //console.log(result);
+        console.log(result);
     });
 }

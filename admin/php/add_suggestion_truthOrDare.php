@@ -15,18 +15,18 @@
 
     try {
 
-        $statement = $conn->prepare("select id from suggestion_neverHaveIEver where content = ? ");
+        $statement = $conn->prepare("select id from suggestion_truthOrDare where content = ? ");
         $statement->execute([$_POST["suggestion"]]);
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
         
         if (!isset($result[0])) {
-            $statement = $conn->prepare("select id from neverHaveIEver where content = ? ");
+            $statement = $conn->prepare("select id from truthOrDare where content = ? ");
             $statement->execute([$_POST["suggestion"]]);
             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
             
             if (!isset($result[0])) {
-                $statement = $conn->prepare("insert into suggestion_neverHaveIEver (content) values ( ? )");
-                $statement->execute([$_POST["suggestion"]]);
+                $statement = $conn->prepare("insert into suggestion_truthOrDare (content, type) values ( ? , ? )");
+                $statement->execute([$_POST["suggestion"], $_POST["type"]]);
 
                 
 

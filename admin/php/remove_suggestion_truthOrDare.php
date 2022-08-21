@@ -13,8 +13,11 @@
     }
 
     try {
-        $stmt = $conn->prepare("delete from suggestion_neverHaveIEver where content = ?");
-        $stmt->execute([$_POST["suggestion"]]);
+        $content = explode("-", $_POST["content"]);
+        $suggestion = trim($content[1]);
+
+        $stmt = $conn->prepare("delete from suggestion_truthOrDare where content = ?");
+        $stmt->execute([$suggestion]);
 
         echo "ok";
 

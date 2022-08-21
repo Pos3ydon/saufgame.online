@@ -10,9 +10,6 @@ $(document).ready(function() {
 
 
             child.onclick = function() {
-                // fetch(site + '.php')
-                // .then(response=> response.text())
-                // .then(text=> document.getElementById('content').innerHTML = text);
                 $("#content").load(site + ".php");
             }
 
@@ -25,36 +22,4 @@ $(document).ready(function() {
             window.location.href = "./../php/logout.php";
         }
     });
-
-    // $(".btn_yes").bind({
-    //     click: function(e) {
-    //         var text = this.parentNode.children[0].innerHTML;
-
-    //         $.ajax({
-    //             url: "../php/add_neverHaveIEver.php",
-    //             type: "POST",
-    //             data: { suggestion: text }
-    //         }).done(function(result) {
-    //             //console.log(result);
-    //         });
-
-    //         this.parentNode.remove();
-    //     }
-    // });
-
-    // $(".btn_no").bind({
-    //     click: function(e) {
-    //         var text = this.parentNode.children[0].innerHTML;
-
-    //         $.ajax({
-    //             url: "../php/remove_suggestion_neverHaveIEver.php",
-    //             type: "POST",
-    //             data: { suggestion: text }
-    //         }).done(function(result) {
-    //             //console.log(result);
-    //         });
-
-    //         this.parentNode.remove();
-    //     }
-    // });
 });

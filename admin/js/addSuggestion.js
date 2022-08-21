@@ -3,31 +3,66 @@ $(document).ready(function() {
     $.getJSON('./../../json/gamelist.json', function(json) {
         var selector = $("#selectGame");
         
-        $.each( json, function( name, game ) {
+        $.each( json, function( game, data ) {
             var child = document.createElement('option');
-            child.innerHTML = '<p>' + name + '</p>';
+            child.innerHTML = '<p>' + data.name + '</p>';
+            child.value = data.table;
             child.className = 'gameOption';
+            child.id = "btn_" + data.table;
 
             selector.append(child);
         });
     });
 
+
     $("#submitQuestion").bind({
         click: function(e) {
-            if ($("#selectGame")[0].value == "Select Game")
-                return;
+            var game = $("#selectGame")[0].value;
+            var data = {};
 
-            var data = {
-                suggestion: $("#questionInput")[0].value
-            };
+            if (game == "Select Game")
+                return;
+            else if (game == "neverHaveIEver") {
+                data = {
+                    suggestion: $("#questionInput")[0].value
+                };
+            }
+            else if (game == "truthOrDare") {
+                data = {
+                    suggestion: $("#questionInput")[0].value,
+                    type: $("#appendedSelect")[0].value
+                };
+            }
+
+            console.log(data);
 
             $.ajax({
-                url: "./../php/add_suggestion_" + $("#selectGame")[0].value +".php",
+                url: "./../php/add_suggestion_" + game +".php",
                 type: "POST",
                 data: data
             }).done(function(result) {
                 console.log(result);
             });
+        }
+    });
+
+    $("#selectGame").bind({
+        change: function(e) {
+            var game = $("#selectGame")[0].value;
+            var newContent;
+            
+            if (game == "neverHaveIEver" || game == "Select Game") {
+                $("#appendedSelect").remove();
+            }
+            else if (game == "truthOrDare") {
+                newContent = `
+                    <select id='appendedSelect'>
+                        <option class='appendedOption' value='truth'>Truth</option>
+                        <option class='appendedOption' value='dare'>Dare</option>
+                    </select>`;
+
+                $("#selectGameDiv").append(newContent);
+            }
         }
     });
 });

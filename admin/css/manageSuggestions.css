@@ -20,6 +20,7 @@
 }
 
 .btn_yes {
+    background-color: green;
     float: left;
 
     height: 20px;
@@ -27,9 +28,12 @@
     margin-top: 5%;
     margin-bottom: 5%;
     margin-left: 10%;
+
+    cursor: pointer;
 }
 
 .btn_no {
+    background-color: red;
     float: left;
 
     height: 20px;
@@ -37,4 +41,6 @@
     margin-top: 5%;
     margin-bottom: 5%;
     margin-left: 10%;
+
+    cursor: pointer;
 }

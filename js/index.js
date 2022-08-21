@@ -1,29 +1,17 @@
-var path = './sites/default_site.php';
+var path = './pages/default_site.php';
 
 window.onload = function() {
 
+    $("#loadFooter").load("../pages/footer.html");
+
     $.getJSON('./json/gamelist.json', function(json) {
-        // console.log( "success" );
 
-
-        var margin;
+        var margin = 10;
         var gameCount = Object.keys(json).length;
-        if (navigator.userAgentData.mobile) { //Margin calculator for mobile
-            margin = (100 - (gameCount * 28)) / (gameCount + 1);
+
+        margin = (100 - (gameCount * 20)) / (gameCount + 1);
     
-            if (margin < 5)
-                margin = 5;
-
-        }
-        else { //Margin calculator for deskt
-            margin = (100 - (gameCount * 20)) / (gameCount + 1);
-    
-            if (margin < 10)
-                margin = 10;
-        }
-
-        console.log(json);
-
+        if (margin < 10) margin = 10;
         
         $.each( json, function( game, data ) {
             console.log(game);
@@ -35,7 +23,8 @@ window.onload = function() {
 
 
             child.onclick = function() {
-                window.location.href = path + '?game=' + game;
+                window.sessionStorage.setItem("page", game + ".html");
+                window.location.href = path/* + '?game=' + game*/;
             }
 
             $('#buttons_auto_apperance').append(child);

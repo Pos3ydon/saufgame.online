@@ -1,28 +1,57 @@
-var path = '../sites/default_site.php';
+var path = '../pages/default_site.php';
 
-$(document).ready(function() {
+window.onload = function() {
 
     $.getJSON('../json/gamelist.json', function(json) {
+        var activePage = window.sessionStorage.getItem("page");
 
-        console.log(json);
-        // fetch(GET.game + '.html')
-        // .then(response=> response.text())
-        // .then(text=> document.getElementById('content').innerHTML = text);
+        if(activePage == null) window.location.href = "../index.html";
+        if(activePage!= null) $("#content").load(activePage);
 
-        $("#content").load(GET.game + ".html");
+        $("#loadFooter").load("../pages/footer.html");
 
         $.each( json, function( game, data ) {
             var child = document.createElement('div');
-            // child.type = 'div';
-            child.innerHTML = '<b>' + data.name + '</b>';
+            child.innerHTML = '<p>' + data.name + '</p>';
             child.className = 'sidebarButton';
 
+            
+            if (activePage.search(game) != -1) $(child).addClass("activeButton");
 
             child.onclick = function() {
-                window.location.href = path + '?game=' + game;
+                loadPage(game + ".html", this);
             }
 
             $('#buttons_auto_apperance').append(child);
         });
     });
-});
+
+    var sidebarOpened = false;
+    $("#btn_openSidebar").bind({
+        click: function() {
+            if (!sidebarOpened) {
+                setTimeout(function() {
+                    $("#sidebar").animate({left: "0%"}, 500);
+                    sidebarOpened = true;
+                }, 50);
+            }
+        }
+    });
+
+    $(window).bind({
+        click: function() {
+            if (sidebarOpened) {
+                $("#sidebar").animate({left: "-20%"}, 500);
+                sidebarOpened = false;
+            }
+        }
+    })
+}
+
+function loadPage(path, sender) {
+    $(".activeButton").removeClass("activeButton");
+    $(sender).addClass("activeButton");
+    $("#content").load(path);
+    window.sessionStorage.setItem("page", path)
+}
+

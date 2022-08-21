@@ -14,13 +14,13 @@
     }
 
     try {
-        $stmt = $conn->prepare("select question from neverHaveIEver order by rand() limit 1");
+        $stmt = $conn->prepare("select content from neverHaveIEver order by rand() limit 1");
         $stmt->execute();
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         // print_r($result);
 
-        echo $result[0]['question'];
+        echo $result[0]['content'];
 
         exit();
 

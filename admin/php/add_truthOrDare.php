@@ -13,11 +13,15 @@
     }
 
     try {
-        $statement = $conn->prepare("insert into neverHaveIEver (content) values ( ? )");
-        $statement->execute([$_POST["content"]]);
+        $content = explode("-", $_POST["content"]);
+        $suggestion = trim($content[1]);
+        $type = trim($content[0]);
 
-        $stmt = $conn->prepare("delete from suggestion_neverHaveIEver where content = ? ");
-        $stmt->execute([$_POST["content"]]);
+        $statement = $conn->prepare("insert into truthOrDare (content, type) values ( ? , ? )");
+        $statement->execute([$suggestion, $type]);
+
+        $stmt = $conn->prepare("delete from suggestion_truthOrDare where content = ? ");
+        $stmt->execute([$suggestion]);
 
         echo "ok";
 

@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    padding: 0cm;
+    padding: 0;
 }
 
 #main {
@@ -9,10 +9,10 @@ body {
     width: 100%;
     text-align: center;
     align-content: center;
-    align-items: centerS;
+    align-items: center;
 }
 
-#randomNeverHaveIEverText {
+#randomText {
     /* background-color: lightgray; */
     width: 100%;
     margin-left: 50%;
@@ -20,12 +20,12 @@ body {
     width: 100%;
     text-align: center;
 }
-#randomNeverHaveIEverText a{
+#randomText a{
     font-size:  30px;
 
 }
 
-#nextQuestionButton {
+.randomButtonText {
     margin: auto;
     color: white;
     font-size: 1.8vw;
@@ -47,12 +47,12 @@ body {
     -khtml-user-select: none;
     -webkit-user-select: none;
 }
-#nextQuestionButton:hover {
+.randomButtonText:hover {
     color: #fff;
     background-position: right;
     transform: scale(1.1);
 }
 
-#button{
+#btn_generateRandom {
     width: 100%;
 }

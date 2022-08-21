@@ -1,54 +1,104 @@
+@font-face {
+    font-family: "particle";
+    src: url("./../fonts/Particle-Regular.otf");
+}
+
+@import url('http://fonts.cdnfonts.com/css/bahnschrift');
+
+
 body {
     margin: 0;
     background-color: #001828;
 }
 
 
+#btn_openSidebar {
+    background-image: url("./../images/menu_icon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(100%);
+    
+    z-index: 10;
+    position: absolute;
+    
+    height: 40px;
+    width: 40px;
+    top: 50px;
+    left: 50px;
+
+    cursor: pointer;
+}
+
+
 #sidebar {
+    background-color: #001016;
+
     position: fixed;
-    z-index: 10000000;
+    z-index: 20;
+    
+    width: 20%;
+    height: 100vh;
+    left: -20%;
+
     padding-bottom: 44%;
     margin-top: 1%;
     margin-left: 0%;
     margin-right: auto;
     margin: 0;
-    width: 15%;
-    background-color: rgb(64, 101, 145);
+
+    color: white;
 }
 
 
 #sidebarLogo {
-    background-color: rgba(255, 255, 255, 0.3);
+    /* background-color: rgba(255, 255, 255, 0.3);
     background-image: url(./../images/logo.png);
     background-size: contain;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    background-position: center;
+    background-repeat: no-repeat; */
+    /* background-position: center; */
+    /* cursor: pointer;
 
     width: 100%;
-    height: 60px;
+    height: 60px; */
 }
 
 .sidebarButton {
     /* float: left; */
-    font-family: Arial, Helvetica, sans-serif;
-    /* background-color: lightgray; */
+    font-family: particle;
+    font-size: 20px;
+    letter-spacing: 4px;
     cursor: pointer;
-    text-align: center;
-    /* padding-top: 13%;
-    padding-bottom: 13%; */
-    padding: 10% 0;
-    width: 100%;
-    /* border: solid;
-    border-width: 1px;
-    border-color: black; */
+    text-align: left;
+    padding: 5% 0;
+    padding-left: 10%;
+    width: 90%;
+    transition: all .60s;
+
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
 }
 
 .sidebarButton:hover {
-    background-color: rgb(85, 139, 204);
-    padding-right: 1%;
-    /* color: white; */
+    background-color: #667eea;
+    transform: scaleY(1.1);
+    box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.5);
 }
+
+.activeButton {
+    color: #A7A7A7;
+}
+
+#management_buttons {
+    position: absolute;
+    top: 100vh;
+
+    width: 100%;
+
+    transform: translate(0, -100%);
+}
+
 
 
 #content {
@@ -56,122 +106,14 @@ body {
     color: white;
     position: absolute;
     right: 0;
-    width: 85%;
+    width: 100%;
     height: 100%;
 }
 
-
-
-/***************************************/
-/***************************************/
-/*******         Computer        *******/
-/*******      Footer Things      *******/
-/***************************************/
-/***************************************/
-
-#footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
+#btn_openSidebar{
+    transition: all .30s;
+}
+#btn_openSidebar:hover{
+    transform: scale(1.2);
 }
 
-#footer-container{
-    height: 100%;
-}
-
-/**************************************/
-/*******       Footer Top       *******/
-/**************************************/
-
-#top-footer{
-    background-color: #667eea;
-    width: 100%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-
-#top-footer a{
-    color: white;
-    text-align: left;
-    padding-left: 8%;
-    size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-
-/**************************************/
-/*******       Footer Mid       *******/
-/**************************************/
-
-#mid-footer{
-    width: 100%;
-    background-color: #001828;
-    display: flex;
-    padding-bottom: 1%;
-}
-
-#beschreibung{
-    margin-top: 1%;
-    margin-left: 8%;
-    width: 400px;
-    padding-right: 2%;
-}
-#kontakte, #nuetzliche-links{
-    margin-top: 1%;
-    width: 400px;
-    padding-right: 2%;
-}
-
-#description-split, #contakt-split, #link-split{
-    padding-top: 1%;
-    font-family: Verdana;
-    color: white;
-    font-size: 20px;
-    font-weight:normal
-}
-
-
-#beschreibung a, #kontakte a, #nuetzliche-links a{
-    size: 14px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-}
-
-#footer-line{
-    border-radius: 50px;
-    background-color: #667eea;
-    height: 2px;
-    width: 17.5%;
-    margin-top: 2.5%;
-    margin-bottom: 5%;
-}
-
-#links_text{
-    cursor: pointer;
-    size: 14px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-    display: flex;
-    margin-bottom: 5%;
-}
-
-/********************************************/
-/*******       Footer Copyright       *******/
-/********************************************/
-
-#copyright{
-    padding-top: 1%;
-    padding-bottom: 1%;
-    background-color: #030f16;
-    width: 100%;
-    display: flex;
-}
-
-#copyright a{
-    color: white;
-    font-size: 16px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-left: 50%;
-    transform: translate(-50%, 0%);
-}
