@@ -30,6 +30,7 @@ $(document).ready(function() {
 
                         var btn_yes = document.createElement('button');
                         btn_yes.className = "btn_yes";
+                        btn_yes.innerText = "✔";
                         btn_yes.onclick = function(e) {
                             accept_suggestion(data.table, this.parentNode.children[0].innerHTML);
                             console.log(this.parentNode.children[0].innerHTML);
@@ -38,6 +39,7 @@ $(document).ready(function() {
 
                         var btn_no = document.createElement('button');
                         btn_no.className = "btn_no";
+                        btn_no.innerText = "❌";
                         btn_no.onclick = function(e) {
                             reject_suggestion(data.table, this.parentNode.children[0].innerHTML);
                             console.log(this.parentNode.children[0].innerHTML);

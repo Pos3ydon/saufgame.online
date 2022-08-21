@@ -2,13 +2,13 @@ $(document).ready(function() {
 
     $("#nextTruthButton").bind({
         click: function(e) {
-            getRecord("truth");
+            getRecord("Truth");
         }
     });
     
     $("#nextDareButton").bind({
         click: function(e) {
-            getRecord("dare");
+            getRecord("Dare");
         }
     });
 });
