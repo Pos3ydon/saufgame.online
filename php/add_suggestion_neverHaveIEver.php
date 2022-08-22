@@ -1,4 +1,6 @@
 <?php
+    die;
+
     $servername = "localhost";
     $dbname = "saufgame";
     $username = "root";
