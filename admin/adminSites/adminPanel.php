@@ -1,5 +1,10 @@
 <?php
     session_start();
+    
+    if (!isset($_POST["username"])) {
+        header("Location: ./../../index.html");
+        exit;
+    }
 
 
     $servername = "localhost";
@@ -17,11 +22,6 @@
     }
 
     try {
-        if (!isset($_POST["username"])) {
-            header("Location: ./../login.html");
-            exit;
-        }
-        
         $statement = $conn->prepare("select * from users where username = ? ");
         $statement->execute([$_POST["username"]]);
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);

@@ -1,14 +1,16 @@
 <?php
+
     session_start();
-
-
-
-    if ($_SESSION["root"] == false) {
-        header("Location: ./../login.html");
-        exit();
+ 
+    if (!isset($_POST["username"])) {
+        header("Location: ./../../index.html");
+        exit;
     }
 
-
+    if ($_SESSION["root"] == false) {
+        header("Location: ./../../index.html");
+        exit();
+    }
 ?>
 
 <!DOCTYPE html>
