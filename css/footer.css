@@ -43,6 +43,8 @@ body {
     background-color: #001828;
     display: flex;
     padding-bottom: 1%;
+
+    overflow: hidden;
 }
 
 #beschreibung{

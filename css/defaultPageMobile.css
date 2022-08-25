@@ -1,0 +1,19 @@
+@media screen and (max-width: 426px) {
+    
+    :root {
+        touch-action: pan-x pan-y;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    
+    #btn_openSidebar {
+        top: 5vw;
+        left: 5vw;
+    }
+    
+    #sidebar {
+        width: 60vw;
+        left: -60vw;
+    }
+}

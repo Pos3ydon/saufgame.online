@@ -1,0 +1,108 @@
+/* @media screen and (max-width: 2048px){
+
+    .gameButton {
+        display: inline-block;
+    }
+
+    #buttons_auto_apperance {
+        margin-top: 25%;
+        margin-left: 15%;
+        margin-right: 15%;
+        transform: translate(0%, -50%);
+    }
+
+} */
+
+@media screen and (max-width: 992px) {
+    #logo {
+        height: 10%;
+        border-radius: 50px;
+        border: solid 10px rgba(255, 255, 255, 0.5);
+    }
+    .gameButton {
+        width: 28%;
+        display: inline-block;
+        font-size: 10px;
+        padding: 7.22%;
+    }
+    #buttons_auto_apperance {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 80%;
+        transform: translate(0%, -50%);
+    }
+}
+
+@media screen and (max-width: 426px) {
+    :root {
+        touch-action: pan-x pan-y;
+        height: 100%;
+        overflow: hidden;
+    }
+
+
+    body {
+        width: 100vw;
+        height: 100vh;
+
+        margin: 0;
+        padding: 0;
+
+        position: absolute;
+        top: 0;
+    }
+
+    #logo {
+        position: relative;
+        background-size: 22%;
+        background-position: 10%;
+    
+        width: 70vw;
+        height: 15%;
+        top: 5%;
+        left: 15vw;
+        /* margin: auto; */
+        transform: translate(0vw, 0%);
+        margin: 0;
+        padding: 0;
+    
+        border-radius: 150px;
+        /* background-clip: padding-box; */
+        border: 0;
+    }
+
+    #logo p {
+    
+        font-size: 8vw;
+        font-weight: bold;
+    
+        /* right: calc(82% - 10% - 50px); */
+        left: 25vw;
+        top: 50%;
+        transform: translate(0, -50%);
+    
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+
+    .gameButton {
+        width: 30vw;
+        display: inline-block;
+        font-size: 10px;
+        padding: 7vw 10vw;
+        margin: 0;
+        margin-top: 5vh;
+    }
+    #buttons_auto_apperance {
+        position: absolute;
+
+        width: 50vw;
+        top: 25vh;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin: 0;
+    }
+}

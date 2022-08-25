@@ -27,10 +27,12 @@ window.onload = function() {
     });
 
     var sidebarOpened = false;
+    var sidebarLeft = 0;
     $("#btn_openSidebar").bind({
         click: function() {
             if (!sidebarOpened) {
                 setTimeout(function() {
+                    sidebarLeft = $("#sidebar").offset().left;
                     $("#sidebar").animate({left: "0%"}, 500);
                     sidebarOpened = true;
                 }, 50);
@@ -41,7 +43,7 @@ window.onload = function() {
     $(window).bind({
         click: function() {
             if (sidebarOpened) {
-                $("#sidebar").animate({left: "-20%"}, 500);
+                $("#sidebar").animate({left: sidebarLeft}, 500);
                 sidebarOpened = false;
             }
         }
