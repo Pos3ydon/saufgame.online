@@ -26,7 +26,10 @@ function getRecord(type) {
     }).done(function(result) {
         console.log(result);
         $("#randomText").html(result);
-        $("#truthOrDareType").html(data.type);
+        if (data.type == "Truth")
+            $("#truthOrDareType").html("Wahrheit");
+        else
+            $("#truthOrDareType").html("Pflicht");
     });
 }
 
