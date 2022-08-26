@@ -85,17 +85,7 @@
         padding: 0;
     }
 
-
-
-
-    .gameButton {
-        width: 30vw;
-        display: inline-block;
-        font-size: 10px;
-        padding: 7vw 10vw;
-        margin: 0;
-        margin-top: 5vh;
-    }
+    
     #buttons_auto_apperance {
         position: absolute;
 
@@ -104,5 +94,14 @@
         left: 50%;
         transform: translate(-50%, 0);
         margin: 0;
+    }
+
+    .gameButton {
+        width: 30vw;
+        display: inline-block;
+        font-size: 10px;
+        padding: 7vw 10vw;
+        margin: 0;
+        margin-top: 5vh;
     }
 }
