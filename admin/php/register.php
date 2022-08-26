@@ -1,7 +1,5 @@
 <?php
-    die();
-
-    /*session_start();
+    session_start();
         
     if (!isset($_POST["username"])) {
         header("Location: ./../../index.html");
@@ -11,7 +9,7 @@
     if ($_SESSION["root"] == false) {
         header("Location: ./../../index.html");
         exit();
-    }*/
+    }
 
     $servername = "localhost";
     $dbname = "saufgame";
