@@ -1,3 +1,7 @@
+<?php
+    die();
+?>
+
 <!DOCTYPE html>
 <html>
     

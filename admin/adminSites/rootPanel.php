@@ -2,7 +2,7 @@
 
     session_start();
  
-    if (!isset($_POST["username"])) {
+    if (!isset($_SESSION["user"])) {
         header("Location: ./../../index.html");
         exit;
     }

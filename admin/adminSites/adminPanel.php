@@ -1,19 +1,13 @@
 <?php
     session_start();
-    
-    if (!isset($_POST["username"])) {
-        header("Location: ./../../index.html");
-        exit;
-    }
-
 
     $servername = "localhost";
     $dbname = "saufgame";
-    $username = "root";
-    $password = "";
+    $dbusername = "root";
+    $dbpassword = "";
     
     try {
-        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $dbusername, $dbpassword);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     //   echo "Connected successfully";
@@ -22,28 +16,31 @@
     }
 
     try {
-        $statement = $conn->prepare("select * from users where username = ? ");
-        $statement->execute([$_POST["username"]]);
-        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-        if (!isset($result[0])) {
-            echo "Benutzer nicht gefunden";
-            exit();
-        }
-
-        if (!password_verify($_POST["password"], $result[0]["password"])) {
-            echo "Falsches Password";
-            exit();
-        }
-
-        $_SESSION["user"] = $result[0]["username"];
-
-        if ($result[0]["username"] == "root") {
+        if ($_POST["username"] == $dbusername && $_POST["password"] == $dbpassword) {
+            $_SESSION["user"] = $dbusername;
             $_SESSION["root"] = true;
         }
         else {
+            echo "not root";
+            $statement = $conn->prepare("select * from users where username = ? ");
+            $statement->execute([$_POST["username"]]);
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+            if (!isset($result[0])) {
+                echo "Benutzer nicht gefunden";
+                exit();
+            }
+    
+            if (!password_verify($_POST["password"], $result[0]["password"])) {
+                echo "Falsches Password";
+                exit();
+            }
+    
+            $_SESSION["user"] = $result[0]["username"];
             $_SESSION["root"] = false;
         }
+
 
         //echo "\nInserted successfully";
     } catch(Exception $e) {
