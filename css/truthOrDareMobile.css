@@ -1,9 +1,9 @@
 @media screen and (max-width: 426px) {
     body {
         margin: 0;
-        padding: 0cm;
+        padding: 0;
     }
-    
+
     #main {
         margin-top: 25%;
         transform: translate(0%, -50%);
@@ -11,24 +11,21 @@
         text-align: center;
         align-content: center;
         align-items: center;
-        font-size:  30px;
     }
-    
-    #randomNeverHaveIEverText {
+
+    #randomText ,
+    #truthOrDareType{
         /* background-color: lightgray; */
         width: 100%;
         margin-left: 50%;
         transform: translate(-50%, 0%);
         width: 100%;
         text-align: center;
-    }
-    #randomNeverHaveIEverText a{
-        margin-top: 5%;
         font-size:  3.8vw;
-    
     }
-    
-    #nextQuestionButton {
+
+
+    .randomButtonText {
         margin: auto;
         color: white;
         font-size: 3.8vw;
@@ -45,18 +42,25 @@
         background-size: 200% 100%;
         background-position: left;
         transition: all .75s;
-    
+
         -moz-user-select: none;
         -khtml-user-select: none;
         -webkit-user-select: none;
     }
-    #nextQuestionButton:hover {
+    .randomButtonText:hover {
         color: #fff;
         background-position: right;
         transform: scale(1.1);
     }
-    
-    #button{
+
+    #btn_generateRandom {
         width: 100%;
+    }
+
+    #nextTruthButton{
+        margin-right: 1.5%;
+    }
+    #nextDareButton{
+        margin-left: 1.5%;
     }
 }
