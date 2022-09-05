@@ -24,7 +24,7 @@
         </div>
 
         <textarea id="questionInput"></textarea>
-        <button id="submitQuestion"></button>
+        <button id="submitQuestion">Submit</button>
     </body>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.js"></script>

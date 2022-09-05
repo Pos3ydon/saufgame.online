@@ -22,51 +22,63 @@
     }
 
     try {
+        if (str_contains($_POST["suggestion"], ";")) {
+            $contents = trim($_POST["suggestion"], " ;");
+            $contents = explode(";", $contents);
+            print_r($contents);
+            
+            foreach ($contents as $content) {
+                $statement = $conn->prepare("select id from suggestion_truthOrDare where content = ? ");
+                $statement->execute([$content]);
+                $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+                
+                if (!isset($result[0])) {
+                    $statement = $conn->prepare("select id from truthOrDare where content = ? ");
+                    $statement->execute([$content]);
+                    $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+                    
+                    if (!isset($result[0])) {
+                        $statement = $conn->prepare("insert into suggestion_truthOrDare (content, type) values ( ? , ? )");
+                        $statement->execute([$content, $_POST["type"]]);
 
-        $statement = $conn->prepare("select id from suggestion_truthOrDare where content = ? ");
-        $statement->execute([$_POST["suggestion"]]);
-        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-        
-        if (!isset($result[0])) {
-            $statement = $conn->prepare("select id from truthOrDare where content = ? ");
+
+                        
+                        echo "ok";
+                    }
+                    else {
+                        print($result[0]["id"]);
+                    }
+                }
+                else {
+                    print($result[0]["id"]);
+                }
+            }
+        }
+        else {
+            $statement = $conn->prepare("select id from suggestion_truthOrDare where content = ? ");
             $statement->execute([$_POST["suggestion"]]);
             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
             
             if (!isset($result[0])) {
-                if (str_contains($_POST["suggestion"], ";")) {
-                    $contents = explode(";", $_POST["suggestion"]);
-                    $sql = "insert into suggestion_truthOrDare (content, type) values ";
-
-                    foreach ($contents as $content) {
-                        $sql .= ("('" . trim($content) . "', '" . $_POST["type"] . "'), ");
-                    }
-
-                    $conn->query(trim($sql, ", "));
-                }
-                else {
+                $statement = $conn->prepare("select id from truthOrDare where content = ? ");
+                $statement->execute([$_POST["suggestion"]]);
+                $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+                
+                if (!isset($result[0])) {
                     $statement = $conn->prepare("insert into suggestion_truthOrDare (content, type) values ( ? , ? )");
                     $statement->execute([$_POST["suggestion"], $_POST["type"]]);
+
+                    echo "ok";
                 }
-
-                
-
-                //$id = $conn->lastInsertId();
-
-
-                print("ok");
-
-
-
-                die();
+                else {
+                    print($result[0]["id"]);
+                    die();
+                }
             }
             else {
                 print($result[0]["id"]);
                 die();
             }
-        }
-        else {
-            print($result[0]["id"]);
-            die();
         }
         
         //echo "\nInserted successfully";
