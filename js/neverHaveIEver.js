@@ -7,7 +7,7 @@ $(document).ready(function() {
                 type: "POST",
                 data: {}
             }).done(function(result) {
-                document.getElementById("randomNeverHaveIEverText").innerHTML = "<a>" +  result + "</a>";
+                document.getElementById("randomNeverHaveIEverText").innerHTML = "<a>Ich habe noch nie " +  result + ".</a>";
             });
         }
     });

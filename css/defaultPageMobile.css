@@ -16,4 +16,18 @@
         width: 60vw;
         left: -60vw;
     }
+
+
+    #management_buttons {
+        position: fixed;
+        width: 60vw;
+        bottom: 10vh;
+        /* transform: translateY(-100%); */
+    }
+
+    #btn_login {
+        display: none;
+        height: 0;
+
+    }
 }

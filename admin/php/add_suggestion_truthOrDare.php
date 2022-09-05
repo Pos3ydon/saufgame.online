@@ -2,7 +2,7 @@
 
     session_start();
         
-    if (!isset($_POST["username"])) {
+    if (!isset($_SESSION["user"])) {
         header("Location: ./../../index.html");
         exit;
     }
@@ -33,8 +33,20 @@
             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
             
             if (!isset($result[0])) {
-                $statement = $conn->prepare("insert into suggestion_truthOrDare (content, type) values ( ? , ? )");
-                $statement->execute([$_POST["suggestion"], $_POST["type"]]);
+                if (str_contains($_POST["suggestion"], ";")) {
+                    $contents = explode(";", $_POST["suggestion"]);
+                    $sql = "insert into suggestion_truthOrDare (content, type) values ";
+
+                    foreach ($contents as $content) {
+                        $sql .= ("('" . trim($content) . "', '" . $_POST["type"] . "'), ");
+                    }
+
+                    $conn->query(trim($sql, ", "));
+                }
+                else {
+                    $statement = $conn->prepare("insert into suggestion_truthOrDare (content, type) values ( ? , ? )");
+                    $statement->execute([$_POST["suggestion"], $_POST["type"]]);
+                }
 
                 
 

@@ -34,7 +34,6 @@ $(document).ready(function() {
                 };
             }
 
-            console.log(data);
 
             $.ajax({
                 url: "./../php/add_suggestion_" + game +".php",
