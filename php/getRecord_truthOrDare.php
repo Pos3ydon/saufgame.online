@@ -14,17 +14,22 @@
     }
 
     try {
-        // $stmt;
-        if ($_POST["type"] == "Truth")
-            $stmt = $conn->prepare("select content from truthOrDare where type = 'truth' order by rand() limit 1");
-        else if ($_POST["type"] == "Dare")
-            $stmt = $conn->prepare("select content from truthOrDare where type = 'dare' order by rand() limit 1");
-        $stmt->execute();
+        $stmt = $conn->prepare("SELECT * FROM truthOrDare WHERE type = ? ORDER BY rand() LIMIT 1");
+        $stmt->execute([$_POST["type"]]);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         // print_r($result);
 
+        echo $result[0]['id'];
+        echo ",";
         echo $result[0]['content'];
+
+        $stmt = $conn->prepare("SELECT count(id) AS count FROM truthOrDare WHERE type = ? ");
+        $stmt->execute([$_POST["type"]]);
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        echo ",";
+        echo $result[0]['count'];
 
         exit();
 

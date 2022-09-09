@@ -2,7 +2,7 @@
 
     session_start();
         
-    if (!isset($_POST["username"])) {
+    if (!isset($_SESSION["user"])) {
         header("Location: ./../../index.html");
         exit;
     }
@@ -22,7 +22,7 @@
 
     try {
         $stmt = $conn->prepare("delete from suggestion_neverHaveIEver where content = ?");
-        $stmt->execute([$_POST["suggestion"]]);
+        $stmt->execute([$_POST["content"]]);
 
         echo "ok";
 

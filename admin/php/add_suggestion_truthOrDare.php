@@ -22,7 +22,7 @@
     }
 
     try {
-        if (str_contains($_POST["suggestion"], ";")) {
+        if (stripos($_POST["suggestion"], ";") !== false) {
             $contents = trim($_POST["suggestion"], " ;");
             $contents = explode(";", $contents);
             print_r($contents);

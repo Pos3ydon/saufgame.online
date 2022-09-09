@@ -2,18 +2,19 @@ $(document).ready(function() {
 
     $("#nextTruthButton").bind({
         click: function(e) {
-            getRecord("Truth");
+            getRecord("truth");
         }
     });
     
     $("#nextDareButton").bind({
         click: function(e) {
-            getRecord("Dare");
+            getRecord("dare");
         }
     });
 });
 
 
+var alreadyUsed = [];
 function getRecord(type) {
     var data = {
         type: type
@@ -25,11 +26,26 @@ function getRecord(type) {
         data: data
     }).done(function(result) {
         console.log(result);
-        $("#randomText").html(result);
-        if (data.type == "Truth")
-            $("#truthOrDareType").html("Wahrheit");
-        else
-            $("#truthOrDareType").html("Pflicht");
+        
+        result = result.split(",");
+
+        if (alreadyUsed.length.toString() == result[2] || alreadyUsed.length > 100)
+            alreadyUsed = [];
+            
+        if (alreadyUsed.find(element => element == result[0]) == undefined) {
+            alreadyUsed.push(result[0]);
+            console.log(alreadyUsed);
+            $("#randomText").html(result[1]);
+
+            if (data.type == "truth")
+                $("#truthOrDareType").html("Wahrheit");
+            else
+                $("#truthOrDareType").html("Pflicht");
+        }
+        else {
+            console.log(type.charAt(0).toUpperCase() + type.slice(1));
+            $("#next" + (type.charAt(0).toUpperCase() + type.slice(1)) + "Button").click();
+        }
     });
 }
 

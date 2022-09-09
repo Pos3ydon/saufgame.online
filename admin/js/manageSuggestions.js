@@ -24,7 +24,7 @@ $(document).ready(function() {
                             div.innerHTML = "<p class='suggestionText'>" + suggestion.content + "</p>";
                         }
                         else if (game == "truthOrDare") {
-                            div.innerHTML = "<p class='suggestionText'>" + suggestion.content +  "</p>";
+                            div.innerHTML = "<p class='suggestionText'>" + suggestion.type + " - "  + suggestion.content +  "</p>";
                         }
                         div.id = "suggestionDiv";
 
