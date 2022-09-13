@@ -22,7 +22,6 @@
             $_SESSION["root"] = true;
         }
         else {
-            echo "not root";
             $statement = $conn->prepare("select * from users where username = ? ");
             $statement->execute([$_POST["username"]]);
             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
