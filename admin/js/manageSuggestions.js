@@ -20,24 +20,25 @@ $(document).ready(function() {
 
                     $.each(result, function(index, suggestion) {
                         var div = document.createElement('div');
-                        var input = document.createElement('input');
+                        div.id = "suggestionDiv";
+                        
+
+                        var currentValue = "";
 
                         if (data.table == "neverHaveIEver" || data.table == "Select Game") {
-                            input.type = "text";
-                            input.className = "suggestionText";
-                            input.value = suggestion.content;
-                            input.disabled = true;
-                            div.append(input);
+                            currentValue = suggestion.content;
                         }
                         else if (data.table == "truthOrDare") {
-                            // div.innerHTML = "<p class='suggestionText'>" + suggestion.type + " - "  + suggestion.content +  "</p>";
-                            input.type = "text";
-                            input.className = "suggestionText";
-                            input.value = suggestion.type + " - " + suggestion.content;
-                            input.disabled = true;
-                            div.append(input);
+                            currentValue = suggestion.type + " - " + suggestion.content;
                         }
-                        div.id = "suggestionDiv";
+
+
+                        var input = document.createElement('input');
+                        input.type = "text";
+                        input.className = "suggestionText";
+                        input.value = currentValue;
+                        input.disabled = true;
+                        div.append(input);
 
                         var btn_edit = document.createElement('button');
                         btn_edit.className = "btn_edit";
@@ -51,7 +52,7 @@ $(document).ready(function() {
                         var btn_yes = document.createElement('button');
                         btn_yes.className = "btn_yes";
                         btn_yes.onclick = function(e) {
-                            accept_suggestion(data.table, input.value);
+                            accept_suggestion(data.table, currentValue);
                             //console.log(this.parentNode.children[0].innerHTML);
                             this.parentNode.remove();
                         }
@@ -59,7 +60,7 @@ $(document).ready(function() {
                         var btn_no = document.createElement('button');
                         btn_no.className = "btn_no";
                         btn_no.onclick = function(e) {
-                            reject_suggestion(data.table, input.value);
+                            reject_suggestion(data.table, currentValue);
                             //console.log(this.parentNode.children[0].innerHTML);
                             this.parentNode.remove();
                         }
@@ -85,11 +86,11 @@ $(document).ready(function() {
     });
 });
 
-function accept_suggestion(table, content) {
+function accept_suggestion(table, content, toRemove) {
     $.ajax({
         url: "./../php/add_" + table + ".php",
         type: "POST",
-        data: { table: table, content: content}
+        data: { table: table, content: content, toRemove: toRemove}
     }).done(function(result) {
         console.log(result);
     });
