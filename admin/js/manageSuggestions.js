@@ -4,11 +4,12 @@ $(document).ready(function() {
         $.each( json, function( game, data ) {
             var child = document.createElement('button');
             child.innerHTML = data.name;
-            child.className = data.table;
+            child.id = "btn_" + data.table;
 
 
             child.onclick = function() {
                 $("#suggestionScrollDiv").empty();
+                $("#suggestionScrollDiv").prop("hidden", false);
 
                 $.ajax({
                     url: "./../php/getSuggestions.php",
@@ -19,39 +20,58 @@ $(document).ready(function() {
 
                     $.each(result, function(index, suggestion) {
                         var div = document.createElement('div');
+                        var input = document.createElement('input');
 
                         if (data.table == "neverHaveIEver" || data.table == "Select Game") {
-                            div.innerHTML = "<p class='suggestionText'>" + suggestion.content + "</p>";
+                            input.type = "text";
+                            input.className = "suggestionText";
+                            input.value = suggestion.content;
+                            input.disabled = true;
+                            div.append(input);
                         }
-                        else if (game == "truthOrDare") {
-                            div.innerHTML = "<p class='suggestionText'>" + suggestion.type + " - "  + suggestion.content +  "</p>";
+                        else if (data.table == "truthOrDare") {
+                            // div.innerHTML = "<p class='suggestionText'>" + suggestion.type + " - "  + suggestion.content +  "</p>";
+                            input.type = "text";
+                            input.className = "suggestionText";
+                            input.value = suggestion.type + " - " + suggestion.content;
+                            input.disabled = true;
+                            div.append(input);
                         }
                         div.id = "suggestionDiv";
 
+                        var btn_edit = document.createElement('button');
+                        btn_edit.className = "btn_edit";
+                        btn_edit.onclick = function(e) {
+                            $(".suggestionText").each(function() {
+                                $(this).prop("disabled", true);
+                            });
+                            input.disabled = !(input.disabled);
+                        }
+
                         var btn_yes = document.createElement('button');
                         btn_yes.className = "btn_yes";
-                        btn_yes.innerText = "✔";
                         btn_yes.onclick = function(e) {
-                            accept_suggestion(data.table, this.parentNode.children[0].innerHTML);
-                            console.log(this.parentNode.children[0].innerHTML);
+                            accept_suggestion(data.table, input.value);
+                            //console.log(this.parentNode.children[0].innerHTML);
                             this.parentNode.remove();
                         }
 
                         var btn_no = document.createElement('button');
                         btn_no.className = "btn_no";
-                        btn_no.innerText = "❌";
                         btn_no.onclick = function(e) {
-                            reject_suggestion(data.table, this.parentNode.children[0].innerHTML);
-                            console.log(this.parentNode.children[0].innerHTML);
+                            reject_suggestion(data.table, input.value);
+                            //console.log(this.parentNode.children[0].innerHTML);
                             this.parentNode.remove();
                         }
 
+                        div.append(btn_edit);
                         div.append(btn_yes);
                         div.append(btn_no);
 
 
                         $("#suggestionScrollDiv").append(div);
                     });
+                    
                 });
 
                 $.each(this.parentNode.children, function(index, child) {
@@ -69,7 +89,7 @@ function accept_suggestion(table, content) {
     $.ajax({
         url: "./../php/add_" + table + ".php",
         type: "POST",
-        data: { type: table, content: content}
+        data: { table: table, content: content}
     }).done(function(result) {
         console.log(result);
     });
@@ -79,7 +99,7 @@ function reject_suggestion(table, content) {
     $.ajax({
         url: "./../php/remove_suggestion_" + table + ".php",
         type: "POST",
-        data: { type: table, content: content}
+        data: { table: table, content: content}
     }).done(function(result) {
         console.log(result);
     });

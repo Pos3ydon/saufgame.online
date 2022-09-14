@@ -1,4 +1,5 @@
 {
     "Add New Suggestion": "addSuggestion",
-    "Manage Suggestions": "manageSuggestions"
+    "Manage Suggestions": "manageSuggestions",
+    "Search in Database": "searchInDB"
 }

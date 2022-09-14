@@ -17,27 +17,30 @@
 
     try {
 
-        if ($_POST["username"] == $dbusername && $_POST["password"] == $dbpassword) {
-            $_SESSION["user"] = $dbusername;
-            $_SESSION["root"] = true;
-        }
-        else {
-            $statement = $conn->prepare("select * from users where username = ? ");
-            $statement->execute([$_POST["username"]]);
-            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        if (!isset($_SESSION["user"])) {
+            if ($_POST["username"] == $dbusername && $_POST["password"] == $dbpassword) {
+                $_SESSION["user"] = $dbusername;
+                $_SESSION["root"] = true;
+            }
+            else {
+                $statement = $conn->prepare("select * from users where username = ? ");
+                $statement->execute([$_POST["username"]]);
+                $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-            if (!isset($result[0])) {
-                echo "Benutzer nicht gefunden";
-                exit();
+                if (!isset($result[0])) {
+                    echo "Benutzer nicht gefunden";
+                    exit();
+                }
+        
+                if (!password_verify($_POST["password"], $result[0]["password"])) {
+                    echo "Falsches Password";
+                    exit();
+                }
+        
+                $_SESSION["user"] = $result[0]["username"];
+                $_SESSION["root"] = false;
             }
-    
-            if (!password_verify($_POST["password"], $result[0]["password"])) {
-                echo "Falsches Password";
-                exit();
-            }
-    
-            $_SESSION["user"] = $result[0]["username"];
-            $_SESSION["root"] = false;
+            
         }
 
 

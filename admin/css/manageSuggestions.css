@@ -1,6 +1,11 @@
+#tabButtons {
+    
+}
+
 #suggestionScrollDiv {
-    overflow: unset;
-    width: 40%;
+    overflow-y: scroll;
+    width: 60vw;
+    height: 80vh;
     max-height: 20%;
     margin-left: 50%;
     transform: translate(-50%, 0);
@@ -19,12 +24,35 @@
     margin-left: 5%;
 }
 
+.btn_edit {
+    background-image: url("./../../images/pencil-square.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+    background-color: transparent;
+    float: left;
+
+    height: 30px;
+    width: 30px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+
+    border: 0;
+
+    cursor: pointer;
+}
+
 .btn_yes {
+    background-image: url("./../../images/check.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
     background-color: green;
     float: left;
 
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     margin-top: 5%;
     margin-bottom: 5%;
     margin-left: 10%;
@@ -33,11 +61,15 @@
 }
 
 .btn_no {
+    background-image: url("./../../images/x.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
     background-color: red;
     float: left;
 
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     margin-top: 5%;
     margin-bottom: 5%;
     margin-left: 10%;
