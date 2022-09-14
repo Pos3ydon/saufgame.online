@@ -29,17 +29,17 @@
             
             foreach ($contents as $content) {
                 $statement = $conn->prepare("select id from suggestion_truthOrDare where content = ? ");
-                $statement->execute([$content]);
+                $statement->execute([trim($content)]);
                 $result = $statement->fetchAll(PDO::FETCH_ASSOC);
                 
                 if (!isset($result[0])) {
                     $statement = $conn->prepare("select id from truthOrDare where content = ? ");
-                    $statement->execute([$content]);
+                    $statement->execute([trim($content)]);
                     $result = $statement->fetchAll(PDO::FETCH_ASSOC);
                     
                     if (!isset($result[0])) {
                         $statement = $conn->prepare("insert into suggestion_truthOrDare (content, type) values ( ? , ? )");
-                        $statement->execute([$content, $_POST["type"]]);
+                        $statement->execute([trim($content), $_POST["type"]]);
 
 
                         
@@ -56,17 +56,17 @@
         }
         else {
             $statement = $conn->prepare("select id from suggestion_truthOrDare where content = ? ");
-            $statement->execute([$_POST["suggestion"]]);
+            $statement->execute([trim($_POST["suggestion"])]);
             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
             
             if (!isset($result[0])) {
                 $statement = $conn->prepare("select id from truthOrDare where content = ? ");
-                $statement->execute([$_POST["suggestion"]]);
+                $statement->execute([trim($_POST["suggestion"])]);
                 $result = $statement->fetchAll(PDO::FETCH_ASSOC);
                 
                 if (!isset($result[0])) {
                     $statement = $conn->prepare("insert into suggestion_truthOrDare (content, type) values ( ? , ? )");
-                    $statement->execute([$_POST["suggestion"], $_POST["type"]]);
+                    $statement->execute([trim($_POST["suggestion"]), $_POST["type"]]);
 
                     echo "ok";
                 }

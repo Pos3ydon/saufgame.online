@@ -21,11 +21,8 @@
     }
 
     try {
-        $content = explode("-", $_POST["content"]);
-        $suggestion = trim($content[1]);
-
-        $stmt = $conn->prepare("delete from suggestion_truthOrDare where content = ?");
-        $stmt->execute([$suggestion]);
+        $stmt = $conn->prepare("DELETE FROM suggestion_truthOrDare WHERE content = ? ");
+        $stmt->execute([$_POST["content"]]);
 
         echo "ok";
 

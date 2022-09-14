@@ -23,20 +23,20 @@ $(document).ready(function() {
                         div.id = "suggestionDiv";
                         
 
-                        var currentValue = "";
+                        var value = "";
 
                         if (data.table == "neverHaveIEver" || data.table == "Select Game") {
-                            currentValue = suggestion.content;
+                            value = suggestion.content;
                         }
                         else if (data.table == "truthOrDare") {
-                            currentValue = suggestion.type + " - " + suggestion.content;
+                            value = suggestion.type + " - " + suggestion.content;
                         }
 
 
                         var input = document.createElement('input');
                         input.type = "text";
                         input.className = "suggestionText";
-                        input.value = currentValue;
+                        input.value = value;
                         input.disabled = true;
                         div.append(input);
 
@@ -52,7 +52,7 @@ $(document).ready(function() {
                         var btn_yes = document.createElement('button');
                         btn_yes.className = "btn_yes";
                         btn_yes.onclick = function(e) {
-                            accept_suggestion(data.table, currentValue);
+                            accept_suggestion(data.table, input.value, suggestion.content);
                             //console.log(this.parentNode.children[0].innerHTML);
                             this.parentNode.remove();
                         }
@@ -60,7 +60,7 @@ $(document).ready(function() {
                         var btn_no = document.createElement('button');
                         btn_no.className = "btn_no";
                         btn_no.onclick = function(e) {
-                            reject_suggestion(data.table, currentValue);
+                            reject_suggestion(data.table, suggestion.content);
                             //console.log(this.parentNode.children[0].innerHTML);
                             this.parentNode.remove();
                         }

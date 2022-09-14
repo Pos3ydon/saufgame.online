@@ -21,11 +21,11 @@
     }
 
     try {
-        $statement = $conn->prepare("insert into neverHaveIEver (content) values ( ? )");
+        $statement = $conn->prepare("INSERT INTO neverHaveIEver (content) VALUES ( ? )");
         $statement->execute([$_POST["content"]]);
 
-        $stmt = $conn->prepare("delete from suggestion_neverHaveIEver where content = ? ");
-        $stmt->execute([$_POST["content"]]);
+        $stmt = $conn->prepare("DELETE FROM suggestion_neverHaveIEver WHERE content = ? ");
+        $stmt->execute([$_POST["toRemove"]]);
 
         echo "ok";
 

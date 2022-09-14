@@ -28,17 +28,17 @@
             
             foreach ($contents as $content) {
                 $statement = $conn->prepare("select id from suggestion_neverHaveIEver where content = ? ");
-                $statement->execute([$content]);
+                $statement->execute([trim($content)]);
                 $result = $statement->fetchAll(PDO::FETCH_ASSOC);
                 
                 if (!isset($result[0])) {
                     $statement = $conn->prepare("select id from neverHaveIEver where content = ? ");
-                    $statement->execute([$content]);
+                    $statement->execute([trim($content)]);
                     $result = $statement->fetchAll(PDO::FETCH_ASSOC);
                     
                     if (!isset($result[0])) {
                         $statement = $conn->prepare("insert into suggestion_neverHaveIEver (content) values ( ? )");
-                        $statement->execute([$content]);
+                        $statement->execute([trim($content)]);
 
 
                         
@@ -55,17 +55,17 @@
         }
         else {
             $statement = $conn->prepare("select id from suggestion_neverHaveIEver where content = ? ");
-            $statement->execute([$_POST["suggestion"]]);
+            $statement->execute([trim($_POST["suggestion"])]);
             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
             
             if (!isset($result[0])) {
                 $statement = $conn->prepare("select id from neverHaveIEver where content = ? ");
-                $statement->execute([$_POST["suggestion"]]);
+                $statement->execute([trim($_POST["suggestion"])]);
                 $result = $statement->fetchAll(PDO::FETCH_ASSOC);
                 
                 if (!isset($result[0])) {
                     $statement = $conn->prepare("insert into suggestion_neverHaveIEver (content) values ( ? )");
-                    $statement->execute([$_POST["suggestion"]]);
+                    $statement->execute([trim($_POST["suggestion"])]);
 
                     echo "ok";
                 }

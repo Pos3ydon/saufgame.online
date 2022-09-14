@@ -21,7 +21,7 @@
     }
 
     try {
-        $stmt = $conn->prepare("delete from suggestion_neverHaveIEver where content = ?");
+        $stmt = $conn->prepare("DELETE FROM suggestion_neverHaveIEver WHERE content = ? ");
         $stmt->execute([$_POST["content"]]);
 
         echo "ok";

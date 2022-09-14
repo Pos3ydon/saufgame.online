@@ -28,8 +28,10 @@
         $statement = $conn->prepare("insert into truthOrDare (content, type) values ( ? , ? )");
         $statement->execute([$suggestion, $type]);
 
-        $stmt = $conn->prepare("delete from suggestion_truthOrDare where content = ? ");
-        $stmt->execute([$suggestion]);
+        $stmt = $conn->prepare("DELETE FROM suggestion_truthOrDare WHERE content = ? ");
+        $stmt->execute([$_POST["toRemove"]]);
+
+        echo $_POST["toRemove"];
 
         echo "ok";
 
