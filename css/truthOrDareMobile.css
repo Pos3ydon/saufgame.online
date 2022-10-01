@@ -5,30 +5,28 @@
     }
 
     #main {
-        margin-top: 25%;
-        transform: translate(0%, -50%);
         width: 100%;
         text-align: center;
         align-content: center;
         align-items: center;
+        font-size: 30px;
     }
 
-    #randomText ,
-    #truthOrDareType{
-        /* background-color: lightgray; */
-        width: 100%;
+    #randomTruthOrDareText{
+        width: 95%;
+        margin-top: 100%;
         margin-left: 50%;
         transform: translate(-50%, 0%);
-        width: 100%;
         text-align: center;
-        font-size:  3.8vw;
     }
-
+    #randomTruthOrDareText a{
+        font-size:  25px;
+    }
 
     .randomButtonText {
         margin: auto;
         color: white;
-        font-size: 3.8vw;
+        font-size: 4vw;
         font-family: 'Bahnschrift', Bold;
         border-radius: 150px;
         cursor: pointer;

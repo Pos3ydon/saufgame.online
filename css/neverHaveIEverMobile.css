@@ -5,8 +5,6 @@
     }
     
     #main {
-        margin-top: 25%;
-        transform: translate(0%, -50%);
         width: 100%;
         text-align: center;
         align-content: center;
@@ -16,29 +14,27 @@
     
     #randomNeverHaveIEverText {
         /* background-color: lightgray; */
-        width: 100%;
+        width: 95%;
+        margin-top: 50%;
         margin-left: 50%;
         transform: translate(-50%, 0%);
-        width: 100%;
         text-align: center;
     }
     #randomNeverHaveIEverText a{
-        margin-top: 5%;
-        font-size:  3.8vw;
-    
+        font-size:  25px;
     }
     
     #nextQuestionButton {
         margin: auto;
         color: white;
-        font-size: 3.8vw;
+        font-size: 5vw;
         font-family: 'Bahnschrift', Bold;
         border-radius: 150px;
         cursor: pointer;
         text-align: center;
         padding-top: 5%;
         padding-bottom: 5%;
-        width: 40%;
+        width: 50%;
         margin-top: 5%;
         box-shadow: 20px 20px 26px rgba(0, 0, 0, 0.5);
         background: linear-gradient(to right,#764ba2  0%, #667eea 50%,  #667eea 50%);
