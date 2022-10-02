@@ -5,6 +5,7 @@
     }
     
     #main {
+        height: 500px;
         width: 100%;
         text-align: center;
         align-content: center;
@@ -12,15 +13,14 @@
         font-size:  30px;
     }
     
-    #randomNeverHaveIEverText {
-        /* background-color: lightgray; */
+    #truthOrDareType{
         width: 95%;
         margin-top: 50%;
         margin-left: 50%;
         transform: translate(-50%, 0%);
         text-align: center;
     }
-    #randomNeverHaveIEverText a{
+    #truthOrDareType a{
         font-size:  25px;
     }
     

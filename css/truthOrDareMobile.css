@@ -4,23 +4,17 @@
         padding: 0;
     }
 
-    #main {
+    #randomTruthOrDareTextContainer {
+        height: 100%;
         width: 100%;
         text-align: center;
         align-content: center;
         align-items: center;
         font-size: 30px;
-    }
-
-    #randomTruthOrDareText{
         width: 95%;
-        margin-top: 100%;
         margin-left: 50%;
-        transform: translate(-50%, 0%);
-        text-align: center;
-    }
-    #randomTruthOrDareText a{
-        font-size:  25px;
+        margin-top: 50%;
+        transform: translate(-50%, -25%);
     }
 
     .randomButtonText {
