@@ -23,7 +23,8 @@
 
     .randomButtonText {
         display: inline-table;
-        margin: auto;
+        margin: 50%;
+        transform: translate(-50%, 0);
         color: white;
         font-size: 1.8vw;
         font-family: 'Bahnschrift', Bold;
