@@ -17,11 +17,9 @@
     #truthOrDareType{
         /* background-color: lightgray; */
         width: 100%;
-        width: 100%;
         text-align: center;
         font-size:  30px;
     }
-
 
     .randomButtonText {
         display: inline-table;
