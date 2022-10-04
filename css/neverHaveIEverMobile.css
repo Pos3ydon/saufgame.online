@@ -25,6 +25,7 @@
     }
     
     #nextQuestionButton {
+        margin: auto;
         color: white;
         font-size: 6.4vw;
         font-family: 'Bahnschrift', Bold;
