@@ -1,14 +1,6 @@
-/**********************************/
-/*******       Import       *******/
-/**********************************/
-
-@import url('http://fonts.cdnfonts.com/css/bahnschrift');
-
-
-/*************************************/
-/*******       Main Site       *******/
-/*************************************/
 @media screen and (min-width: 427px) {
+    @import url('http://fonts.cdnfonts.com/css/bahnschrift');
+
     body {
         background-color: #001828;
         margin: 0;
