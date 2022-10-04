@@ -97,11 +97,19 @@
     }
 
     .gameButton {
-        width: 30vw;
-        display: inline-block;
-        font-size: 10px;
-        padding: 7vw 10vw;
-        margin: 0;
-        margin-top: 5vh;
+        margin: auto;
+        color: white;
+        font-size: 6.4vw;
+        font-family: 'Bahnschrift', Bold;
+        border-radius: 150px;
+        cursor: pointer;
+        text-align: center;
+        padding-top: 7.5%;
+        padding-bottom: 7.5%;
+        width: 63%;
+        margin-top: 6.5%;
+        box-shadow: 20px 20px 26px rgba(0, 0, 0, 0.5);
+        background: linear-gradient(to right,#764ba2  0%, #667eea 50%,  #667eea 50%);
+        background-size: 200% 100%;
     }
 }
