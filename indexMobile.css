@@ -1,58 +1,27 @@
-/* @media screen and (max-width: 2048px){
-
-    .gameButton {
-        display: inline-block;
-    }
-
-    #buttons_auto_apperance {
-        margin-top: 25%;
-        margin-left: 15%;
-        margin-right: 15%;
-        transform: translate(0%, -50%);
-    }
-
-} */
-
-@media screen and (max-width: 992px) {
-    #logo {
-        height: 10%;
-        border-radius: 50px;
-        border: solid 10px rgba(255, 255, 255, 0.5);
-    }
-    .gameButton {
-        width: 28%;
-        display: inline-block;
-        font-size: 10px;
-        padding: 7.22%;
-    }
-    #buttons_auto_apperance {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 80%;
-        transform: translate(0%, -50%);
-    }
-}
-
 @media screen and (max-width: 426px) {
     :root {
         touch-action: pan-x pan-y;
         height: 100%;
         overflow: hidden;
     }
-
-
     body {
         width: 100vw;
         height: 100vh;
-
+        background-color: #001828;
         margin: 0;
         padding: 0;
-
+        overflow: hidden;
         position: absolute;
         top: 0;
     }
 
     #logo {
+        background-image: url("./images/logo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: #998115;
+        filter: invert(100%);
+
         position: relative;
         background-size: 22%;
         background-position: 10%;
@@ -69,27 +38,30 @@
         border-radius: 150px;
         /* background-clip: padding-box; */
         border: 0;
+        background-clip: padding-box;
     }
 
     #logo p {
-    
+        position: absolute;
         font-size: 8vw;
         font-weight: bold;
-    
-        /* right: calc(82% - 10% - 50px); */
-        left: 25vw;
+        font-family: 'Bahnschrift', Bold;
+
+        right: calc(85% - 40px - 40px);
         top: 50%;
-        transform: translate(0, -50%);
-    
+        transform: translate(100%, -50%);
+
         margin: 0;
         padding: 0;
+
+        /* color: white; */
     }
 
     
     #buttons_auto_apperance {
         position: absolute;
 
-        width: 50vw;
+        width: 90%;
         top: 25vh;
         left: 50%;
         transform: translate(-50%, 0);
@@ -97,19 +69,20 @@
     }
 
     .gameButton {
-        margin: auto;
         color: white;
-        font-size: 6.4vw;
         font-family: 'Bahnschrift', Bold;
         border-radius: 150px;
         cursor: pointer;
         text-align: center;
-        padding-top: 7.5%;
-        padding-bottom: 7.5%;
-        width: 63%;
-        margin-top: 6.5%;
-        box-shadow: 20px 20px 26px rgba(0, 0, 0, 0.5);
+        box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.5);
         background: linear-gradient(to right,#764ba2  0%, #667eea 50%,  #667eea 50%);
         background-size: 200% 100%;
+        background-position: left;
+        width: 63%;
+        font-size: 3.5vw;
+        padding-top: 7.5%;
+        padding-bottom: 7.5%;
+        margin: auto;
+        margin-top: 5vh;
     }
 }
