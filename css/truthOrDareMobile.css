@@ -24,7 +24,6 @@
     }
 
     .randomButtonText {
-        align-content: center;
         color: white;
         font-size: 4vw;
         font-family: 'Bahnschrift', Bold;
@@ -49,6 +48,11 @@
         color: #fff;
         background-position: right;
         transform: scale(1.1);
+    }
+    #nextTruthButton,
+    #nextDareButton{
+        margin-left: 50%;
+        transform: translate(-50%, 0);
     }
 
     #btn_generateRandom {
