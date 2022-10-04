@@ -47,7 +47,7 @@
         font-weight: bold;
         font-family: 'Bahnschrift', Bold;
 
-        right: calc(85% - 40px - 40px);
+        right: calc(90% - 40px - 40px);
         top: 50%;
         transform: translate(100%, -50%);
 
