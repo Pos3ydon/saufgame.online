@@ -1,4 +1,5 @@
 @media screen and (min-width: 427px) {
+    @import url('http://fonts.cdnfonts.com/css/bahnschrift');
     body {
         margin: 0;
         padding: 0cm;
