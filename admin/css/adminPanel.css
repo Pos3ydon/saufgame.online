@@ -1,6 +1,12 @@
 body {
+    width: 100vw;
+    height: 100vh;
     background-color: #001828;
     margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
 }
 
 #sidebar {
