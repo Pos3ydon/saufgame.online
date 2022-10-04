@@ -5,14 +5,15 @@
     }
 
     #main {
-        width: 100%;
+        width: 95%;
+        margin-left: 50%;
+        transform: translate(-50%, 0);
         text-align: center;
         align-content: center;
         align-items: center;
         font-size: 30px;
     }
     #truthOrDareType{
-        width: 95%;
         margin-left: 50%;
         margin-top: 50%;
         transform: translate(-50%, 0%);
@@ -53,12 +54,5 @@
 
     #btn_generateRandom {
         width: 100%;
-    }
-
-    #nextTruthButton{
-        margin-right: 1.5%;
-    }
-    #nextDareButton{
-        margin-left: 1.5%;
     }
 }
