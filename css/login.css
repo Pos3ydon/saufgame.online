@@ -23,8 +23,8 @@
     padding-left: 10px;
     width: 440px;
     border-radius: 50px;
+    border: 0;
     height: 75px;
-    
 }
 
 #loginSubmit {
@@ -36,6 +36,7 @@
     font-size: 1.8vw;
     font-family: 'Bahnschrift', Bold;
     border-radius: 150px;
+    border: 0;
     cursor: pointer;
     text-align: center;
     box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.5);
