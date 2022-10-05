@@ -17,6 +17,10 @@
         left: -60vw;
     }
 
+    .sidebarButton:hover {
+        box-shadow: 0;
+    }
+
 
     #management_buttons {
         position: fixed;

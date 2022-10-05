@@ -1,104 +1,97 @@
-/**********************************/
-/*******       Import       *******/
-/**********************************/
+@media screen and (min-width: 427px) {
+    @import url('http://fonts.cdnfonts.com/css/bahnschrift');
 
-@import url('http://fonts.cdnfonts.com/css/bahnschrift');
+    body {
+        background-color: #001828;
+        margin: 0;
+        padding: 0;
 
-
-/*************************************/
-/*******       Main Site       *******/
-/*************************************/
-
-body {
-    background-color: #001828;
-    margin: 0;
-    padding: 0;
-
-    overflow: hidden;
-}
+        overflow: hidden;
+    }
 
 
-#logo {
-    background-image: url("./images/logo.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: #998115;
-    background-size: 22%;
-    background-position: 50px;
-    filter: invert(100%);
+    #logo {
+        background-image: url("./images/logo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: #998115;
+        background-size: 22%;
+        background-position: 50px;
+        filter: invert(100%);
 
-    position: absolute;
-    width: 40%;
-    height: 25%;
-    /* min-height: 200px; */
-    margin-top: 2%;
-    top: 2%;
-    margin-left: 50%;
-    transform: translate(-50%, 0%);
+        position: absolute;
+        width: 40%;
+        height: 25%;
+        /* min-height: 200px; */
+        margin-top: 2%;
+        top: 2%;
+        margin-left: 50%;
+        transform: translate(-50%, 0%);
 
-    border-radius: 150px;
-    background-clip: padding-box;
-}
+        border-radius: 150px;
+        background-clip: padding-box;
+    }
 
-#logo p {
-    position: absolute;
+    #logo p {
+        position: absolute;
 
-    font-size: 5vw;
-    font-weight: bold;
-    font-family: 'Bahnschrift', Bold;
+        font-size: 5vw;
+        font-weight: bold;
+        font-family: 'Bahnschrift', Bold;
 
-    right: calc(82% - 50px - 50px);
-    top: 50%;
-    transform: translate(100%, -50%);
+        right: calc(82% - 50px - 50px);
+        top: 50%;
+        transform: translate(100%, -50%);
 
-    margin: 0;
-    padding: 0;
+        margin: 0;
+        padding: 0;
 
-    /* color: white; */
-}
+        /* color: white; */
+    }
 
-#buttons_auto_apperance {
-    /* background-color: black; */
-    position: absolute;
-    width: 50vw;
-    height: min-content;
-    top: 50vh;
-    left: 50vw;
-    transform: translate(-50%, 0);
-    margin: 0;
+    #buttons_auto_apperance {
+        /* background-color: black; */
+        position: absolute;
+        width: 50vw;
+        height: min-content;
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-50%, 0);
+        margin: 0;
 
 
-    
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-}
+        
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+    }
 
-.gameButton {
-    float: left;
-    color: white;
-    font-size: 1.2vw;
-    font-family: 'Bahnschrift', Bold;
-    border-radius: 150px;
-    cursor: pointer;
-    text-align: center;
-    /* height: 50%; */
-    padding: 5vh 0;
-    width: 20vw;
-    /* border: solid;
-    border-width: 1px;
-    border-color: black; */
-    margin: 0 5%;
-    /* transform: translate(-50%, 0%); */
-    box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.5);
-    background: linear-gradient(to right,#764ba2  0%, #667eea 50%,  #667eea 50%);
-    background-size: 200% 100%;
-    background-position: left;
-    transition: all .75s;
-}
+    .gameButton {
+        float: left;
+        color: white;
+        font-size: 1.2vw;
+        font-family: 'Bahnschrift', Bold;
+        border-radius: 150px;
+        cursor: pointer;
+        text-align: center;
+        /* height: 50%; */
+        padding: 5vh 0;
+        width: 20vw;
+        /* border: solid;
+        border-width: 1px;
+        border-color: black; */
+        margin: 0 5%;
+        /* transform: translate(-50%, 0%); */
+        box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.5);
+        background: linear-gradient(to right,#764ba2  0%, #667eea 50%,  #667eea 50%);
+        background-size: 200% 100%;
+        background-position: left;
+        transition: all .75s;
+    }
 
-.gameButton:hover {
-    color: #fff;
-    background-position: right;
-    transform: scale(1.1);
+    .gameButton:hover {
+        color: #fff;
+        background-position: right;
+        transform: scale(1.1);
+    }
 }

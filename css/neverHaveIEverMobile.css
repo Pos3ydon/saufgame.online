@@ -1,11 +1,14 @@
 @media screen and (max-width: 426px) {
+    @import url('http://fonts.cdnfonts.com/css/bahnschrift');
     body {
         margin: 0;
         padding: 0cm;
     }
     
     #main {
-        width: 100%;
+        width: 90%;
+        margin-left: 50%;
+        transform: translate(-50%, 0);
         text-align: center;
         align-content: center;
         align-items: center;
@@ -13,11 +16,7 @@
     }
     
     #randomNeverHaveIEverText{
-        width: 95%;
-        margin-left: 50%;
         margin-top: 50%;
-        transform: translate(-50%, 0%);
-        text-align: center;
     }
     #randomNeverHaveIEverText a{
         font-size:  25px;
@@ -26,20 +25,21 @@
     #nextQuestionButton {
         margin: auto;
         color: white;
-        font-size: 5vw;
+        font-size: 6.4vw;
         font-family: 'Bahnschrift', Bold;
         border-radius: 150px;
         cursor: pointer;
         text-align: center;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        width: 50%;
-        margin-top: 5%;
+        padding-top: 7.5%;
+        padding-bottom: 7.5%;
+        width: 63%;
+        margin-top: 6.5%;
         box-shadow: 20px 20px 26px rgba(0, 0, 0, 0.5);
         background: linear-gradient(to right,#764ba2  0%, #667eea 50%,  #667eea 50%);
         background-size: 200% 100%;
         background-position: left;
         transition: all .75s;
+
     
         -moz-user-select: none;
         -khtml-user-select: none;
