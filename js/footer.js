@@ -1,5 +1,5 @@
-let touchstartX = 0;
-let touchendX = 0;
+let touchstartY = 0;
+let touchendY = 0;
 var scrolledUp = false;
 $(document).ready(function(){
 
@@ -10,11 +10,11 @@ $(document).ready(function(){
         
 
         window.addEventListener('touchstart', e => {
-            touchstartX = e.changedTouches[0].screenX
+            touchstartY = e.changedTouches[0].screenY
         })
 
         window.addEventListener('touchend', e => {
-            touchendX = e.changedTouches[0].screenX
+            touchendY = e.changedTouches[0].screenY
             checkDirection()
         })
         return;
@@ -34,15 +34,15 @@ $(document).ready(function(){
 });  
 
 function checkDirection() {
-    if (touchendX > touchstartX && scrolledUp == true){
+    if (touchendY > touchstartY && scrolledUp == true){
         $("#footer").animate({top: "-=" + $("#footer-container").height() + "px"}, 500);
         scrolledUp = false;
-        touchstartX = 0;
-        touchendX = 0;
-    }else if (touchendX < touchstartX && scrolledUp == false) {
+        touchstartY = 0;
+        touchendY = 0;
+    }else if (touchendY < touchstartY && scrolledUp == false) {
         $("#footer").animate({top: "100%"}, 500);
         scrolledUp = true;
-        touchstartX = 0;
-        touchendX = 0;
+        touchstartY = 0;
+        touchendY = 0;
     }
   }
