@@ -22,7 +22,7 @@
         font-family: 'Bahnschrift', Bold;
     }
     #randomNeverHaveIEverText a{
-        font-size:  25px;
+        font-size:  22.5px;
     }
     
     #nextQuestionButton {
@@ -55,7 +55,7 @@
     }
     
     #button{
-        margin-top: 1%;
+        margin-top: 5%;
         width: 100%;
     }
 }
