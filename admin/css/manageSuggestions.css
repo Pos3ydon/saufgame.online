@@ -3,6 +3,8 @@
 }
 #tabButtons button{
     width: 200px;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 #suggestionScrollDiv {
