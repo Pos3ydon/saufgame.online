@@ -1,4 +1,7 @@
 #tabButtons {
+    width: 100%;
+}
+#tabButtons button{
     width: 400px;
 }
 
