@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     const isMobile = window.matchMedia('only screen and (max-width: 427px)').matches;
     if(isMobile == true){
-        $("#footer").load("../pages/footer.html");
+        $("#footer").load("./../pages/footer.html");
     }else if(isMobile == false){
         var scrolledUp = false;
         window.addEventListener("wheel", function(e) {
