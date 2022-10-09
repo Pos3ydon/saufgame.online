@@ -21,7 +21,8 @@
         font-family: 'Bahnschrift', Bold;
     }
     #truthOrDareType a{
-        font-size:  25px;
+        margin-top: 0.5%;
+        font-size:  22.5px;
     }
     #randomText{
         font-family: 'Bahnschrift', Bold;
@@ -61,5 +62,6 @@
 
     #btn_generateRandom {
         width: 100%;
+        margin-top: 5%;
     }
 }
