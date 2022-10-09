@@ -1,11 +1,10 @@
 $(document).ready(function(){
 
-    const isMobile = window.matchMedia('only screen and (max-width: 768px)').matches;
-    if(isMobile != true){s
-        console.log(isMobile);
-        var scrolledUp = false;
+    const isMobile = window.matchMedia('only screen and (max-width: 427px)').matches;
+    if(isMobile == true){
 
-    
+    }else if(isMobile == false){
+        var scrolledUp = false;
         window.addEventListener("wheel", function(e) {
 
             if (e.wheelDeltaY < 0 && scrolledUp == false) {
