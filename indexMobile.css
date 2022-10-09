@@ -46,7 +46,7 @@
         position: absolute;
         font-size: 8vw;
         font-weight: bold;
-        font-family: 'Bahnschrift', Bold;
+        font-family: Arial, Helvetica, sans-serif;
 
         right: calc(90% - 40px - 40px);
         top: 50%;
