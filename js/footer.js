@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
     const isMobile = window.matchMedia('only screen and (max-width: 768px)').matches;
-    if(isMobile != true){
+    if(isMobile != true){s
+        console.log(isMobile);
         var scrolledUp = false;
 
     
