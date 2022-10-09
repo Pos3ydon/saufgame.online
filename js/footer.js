@@ -1,11 +1,13 @@
+let touchstartX = 0;
+let touchendX = 0;
+var scrolledUp = false;
 $(document).ready(function(){
 
-    var scrolledUp = false;
+    
     const isMobile = window.matchMedia('only screen and (max-width: 427px)').matches;
     console.log(isMobile);
     if(isMobile == true){
-        let touchstartX = 0
-        let touchendX = 0
+        
 
         document.addEventListener('touchstart', e => {
             touchstartX = e.changedTouches[0].screenX
@@ -32,6 +34,11 @@ $(document).ready(function(){
 });  
 
 function checkDirection() {
-    if (touchendX < touchstartX) alert('swiped down!')
-    if (touchendX > touchstartX) alert('swiped up!')
+    if (touchendX > touchstartX && scrolledUp == false){
+        $("#footer").animate({top: "-=" + $("#footer-container").height() + "px"}, 500);
+        scrolledUp = true;
+    }else if (touchendX < touchstartX && scrolledUp == true) {
+        $("#footer").animate({top: "-=" + $("#footer-container").height() + "px"}, 500);
+        scrolledUp = false;
+    }
   }
