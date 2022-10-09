@@ -37,8 +37,12 @@ function checkDirection() {
     if (touchendX > touchstartX && scrolledUp == true){
         $("#footer").animate({top: "-=" + $("#footer-container").height() + "px"}, 500);
         scrolledUp = false;
+        touchstartX = 0;
+        touchendX = 0;
     }else if (touchendX < touchstartX && scrolledUp == false) {
         $("#footer").animate({top: "100%"}, 500);
         scrolledUp = true;
+        touchstartX = 0;
+        touchendX = 0;
     }
   }
