@@ -4,8 +4,8 @@
 
 #suggestionScrollDiv {
     overflow-y: scroll;
-    width: 60vw;
-    height: 80vh;
+    width: 100%;
+    height: 50%;
     max-height: 20%;
     margin-left: 50%;
     transform: translate(-50%, 0);
