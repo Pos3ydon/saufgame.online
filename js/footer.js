@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
     
-    const isMobile = window.matchMedia('only screen and (max-width: 768px)').matches;
-    
+    const isMobile = window.matchMedia('only screen and (max-width: 427px)').matches;
+    console.log(isMobile);
     if(isMobile == true){
         fetch("./footer.html")
             .then(response => {
@@ -13,7 +13,7 @@ $(document).ready(function(){
             });
         return;
     }
-    
+
     var scrolledUp = false;
     window.addEventListener("wheel", function(e) {
 
