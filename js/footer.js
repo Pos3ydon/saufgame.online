@@ -9,11 +9,11 @@ $(document).ready(function(){
     if(isMobile == true){
         
 
-        document.addEventListener('touchstart', e => {
+        window.addEventListener('touchstart', e => {
             touchstartX = e.changedTouches[0].screenX
         })
 
-        document.addEventListener('touchend', e => {
+        window.addEventListener('touchend', e => {
             touchendX = e.changedTouches[0].screenX
             checkDirection()
         })
