@@ -34,12 +34,12 @@ $(document).ready(function(){
 });  
 
 function checkDirection() {
-    if (touchendY > touchstartY && scrolledUp == true){
+    if (touchendY < touchstartY && scrolledUp == true){
         $("#footer").animate({top: "-=" + $("#footer-container").height() + "px"}, 500);
         scrolledUp = false;
         touchstartY = 0;
         touchendY = 0;
-    }else if (touchendY < touchstartY && scrolledUp == false) {
+    }else if (touchendY > touchstartY && scrolledUp == false) {
         $("#footer").animate({top: "100%"}, 500);
         scrolledUp = true;
         touchstartY = 0;
