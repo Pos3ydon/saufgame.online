@@ -34,11 +34,11 @@ $(document).ready(function(){
 });  
 
 function checkDirection() {
-    if (touchendX > touchstartX && scrolledUp == false){
-        $("#footer").animate({top: "-=" + $("#footer-container").height() + "px"}, 500);
-        scrolledUp = true;
-    }else if (touchendX < touchstartX && scrolledUp == true) {
+    if (touchendX > touchstartX && scrolledUp == true){
         $("#footer").animate({top: "-=" + $("#footer-container").height() + "px"}, 500);
         scrolledUp = false;
+    }else if (touchendX < touchstartX && scrolledUp == false) {
+        $("#footer").animate({top: "100%"}, 500);
+        scrolledUp = true;
     }
   }
