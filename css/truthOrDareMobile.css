@@ -22,10 +22,11 @@
     }
     #truthOrDareType a{
         margin-top: 0.5%;
-        font-size:  22.5px;
+        font-size:  23px;
     }
     #randomText{
         font-family: 'Bahnschrift', Bold;
+        font-size:  22.5px;
     }
 
     .randomButtonText {
