@@ -71,7 +71,7 @@
 
     .gameButton {
         color: white;
-        font-family: 'Bahnschrift', Bold;
+        font-family: Arial, Helvetica, sans-serif;
         border-radius: 150px;
         cursor: pointer;
         text-align: center;
