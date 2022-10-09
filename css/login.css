@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/bahnschrift');
+
 #loginWindow {
     position: absolute;
 
@@ -19,6 +21,7 @@
 }
 
 .input {
+    font-family: 'Bahnschrift', Bold;
     border-width: 0;
     font-size: 20px;
     padding-left: 10px;
@@ -66,5 +69,6 @@
 }
 
 .input::placeholder{
+    font-family: 'Bahnschrift', Bold;
     font-size: 20px;
 }

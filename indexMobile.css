@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/bahnschrift');
 @media screen and (max-width: 426px) {
     
     :root {
@@ -46,7 +47,7 @@
         position: absolute;
         font-size: 8vw;
         font-weight: bold;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Bahnschrift', Bold;
 
         right: calc(90% - 40px - 40px);
         top: 50%;
@@ -71,7 +72,7 @@
 
     .gameButton {
         color: white;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Bahnschrift', Bold;
         border-radius: 150px;
         cursor: pointer;
         text-align: center;

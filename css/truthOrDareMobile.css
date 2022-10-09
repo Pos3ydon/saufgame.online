@@ -1,5 +1,6 @@
+@import url('https://fonts.cdnfonts.com/css/bahnschrift');
+
 @media screen and (max-width: 426px) {
-    @import url('http://fonts.cdnfonts.com/css/bahnschrift');
     
     body {
         margin: 0;
@@ -17,6 +18,7 @@
     }
     #truthOrDareType{
         margin-top: 50%;
+        font-family: 'Bahnschrift', Bold;
     }
     #truthOrDareType a{
         font-size:  25px;
