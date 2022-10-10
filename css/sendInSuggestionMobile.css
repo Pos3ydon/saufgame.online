@@ -2,7 +2,6 @@
 @media screen and (max-width: 426px) {
     body {
         background-color: #001828;
-
         margin: 0;
     }
 
@@ -101,13 +100,13 @@
         background-image: url("./../images/cone-striped.svg");
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 50% 50%;
+        background-size: 25% 25%;
         
         position: absolute;
         z-index: 5;
 
-        height: 50%;
-        width: 50%;
+        height: 100%;
+        width: 100%;
         top: 0;
         left: 0;
         padding: auto;
