@@ -25,7 +25,9 @@
 
 
     #management_buttons {
-        /* transform: translateY(-100%); */
+        position: absolute;
+        top: 90.5vh;
+        width: 100%;
     }
 
     #btn_login {

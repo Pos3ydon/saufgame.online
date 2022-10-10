@@ -1,0 +1,124 @@
+@import url('http://fonts.cdnfonts.com/css/bahnschrift');
+@media screen and (max-width: 426px) {
+    body {
+        background-color: #001828;
+
+        margin: 0;
+    }
+
+    #selectGameDiv {
+        position: relative;
+        /* background-color: yellow; */
+
+        width: 30%;
+        height: fit-content;
+        margin-left: 50%;
+        margin-top: 25%;
+        transform: translate(-50%, -50%);
+
+        text-align: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    #selectGame {
+        background-color: white;
+        font-size: 20px;
+        width: 440px;
+        height: 75px;
+        padding: 15px;
+        margin-bottom: 5%;
+
+        border: 0;
+        border-radius: 150px;
+        
+        color: #001016;
+        font-weight: bold;
+
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+    }
+
+    #suggestionText, #username {
+        background-color: white;
+        
+        width: calc(440px - (2*20px));
+        height: 75px;
+        margin-top: 5%;
+        padding: 0 20px;
+
+        border: 0;
+        border-radius: 150px;
+        
+        font-family: 'Bahnschrift';
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .selectGameText{
+        display: none;
+    }
+
+    #submitSuggestion {
+        background-color: #001828;
+
+        width: 440px;
+        height: 75px;
+        margin-top: 5%;
+
+        font-family: 'Bahnschrift';
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+
+        box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.5);
+        background: linear-gradient(to right,#764ba2  0%, #667eea 50%,  #667eea 50%);
+        background-size: 200% 100%;
+        background-position: left;
+        transition: all .75s;
+        border: 0;
+        border-radius: 150px;
+        
+        
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+    }
+
+    #submitSuggestion:hover {
+        /* background-color: #667EEA; */
+        background-position: right;
+        transform: scale(1.1);
+    }
+
+
+    #underConstruction {
+        background-color: rgba(0, 24, 40, 0.8);
+        background-image: url("./../images/cone-striped.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50% 50%;
+        
+        position: absolute;
+        z-index: 5;
+
+        height: 50%;
+        width: 50%;
+        top: 0;
+        left: 0;
+        padding: auto;
+
+        text-align: center;
+    }
+
+    #underConstruction p {
+        margin: auto;
+        margin-top: 25%;
+        font-size: 30px;
+        font-weight: bold;
+    }
+}
