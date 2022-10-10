@@ -4,11 +4,10 @@
     
     :root {
         touch-action: pan-x pan-y;
-        height: 100%;
         overflow: hidden;
     }
 
-    
+    #btn_suggestion,
     #btn_openSidebar {
         top: 5vw;
         left: 5vw;
@@ -17,6 +16,7 @@
     #sidebar {
         width: 60vw;
         left: -60vw;
+        height: 66vh;
     }
 
     .sidebarButton:hover {
@@ -25,9 +25,6 @@
 
 
     #management_buttons {
-        position: fixed;
-        width: 60vw;
-        bottom: 10vh;
         /* transform: translateY(-100%); */
     }
 
