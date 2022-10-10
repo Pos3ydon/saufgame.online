@@ -9,14 +9,14 @@ $(document).ready(function(){
     if(isMobile == true){
         
 
-        window.addEventListener('pointerdown', e => {
+        window.addEventListener('pointerup', e => {
             if (touchendY > touchstartY && scrolledUp == false) {
                 $("#footer").animate({top: "100%"}, 500);
                 scrolledUp = true;
             }
         })
 
-        window.addEventListener('pointerup', e => {
+        window.addEventListener('pointerdown', e => {
             if (touchendY < touchstartY && scrolledUp == true){
                 $("#footer").animate({top: "-=" + $("#footer-container").height() + "px"}, 500);
                 scrolledUp = false;
