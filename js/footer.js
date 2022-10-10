@@ -9,13 +9,18 @@ $(document).ready(function(){
     if(isMobile == true){
         
 
-        window.addEventListener('touchstart', e => {
-            touchstartY = e.changedTouches[0].screenY
+        window.addEventListener('pointerdown', e => {
+            if (touchendY > touchstartY && scrolledUp == false) {
+                $("#footer").animate({top: "100%"}, 500);
+                scrolledUp = true;
+            }
         })
 
-        window.addEventListener('touchend', e => {
-            touchendY = e.changedTouches[0].screenY
-            checkDirection()
+        window.addEventListener('pointerup', e => {
+            if (touchendY < touchstartY && scrolledUp == true){
+                $("#footer").animate({top: "-=" + $("#footer-container").height() + "px"}, 500);
+                scrolledUp = false;
+            }
         })
         return;
     }
@@ -32,17 +37,3 @@ $(document).ready(function(){
         }
     }, {passive: false});
 });  
-
-function checkDirection() {
-    if (touchendY < touchstartY && scrolledUp == true){
-        $("#footer").animate({top: "-=" + $("#footer-container").height() + "px"}, 500);
-        scrolledUp = false;
-        touchstartY = 0;
-        touchendY = 0;
-    }else if (touchendY > touchstartY && scrolledUp == false) {
-        $("#footer").animate({top: "100%"}, 500);
-        scrolledUp = true;
-        touchstartY = 0;
-        touchendY = 0;
-    }
-  }
