@@ -52,12 +52,12 @@
     #beschreibung{
         margin-top: 1%;
         margin-left: 8%;
-        width: 400px;
+        width: 100%;
         padding-right: 2%;
     }
     #kontakte, #nuetzliche-links{
         margin-top: 1%;
-        width: 400px;
+        width: 100%;
         padding-right: 2%;
     }
 
