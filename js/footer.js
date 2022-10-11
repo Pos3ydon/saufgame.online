@@ -1,28 +1,20 @@
 let touchstartY = 0;
 let touchendY = 0;
-var scrolledUp = false;
+let scrolledUps = true;
 $(document).ready(function(){
-
-    
+    var scrolledUp = false;
     const isMobile = window.matchMedia('only screen and (max-width: 427px)').matches;
-    console.log(isMobile);
+
     if(isMobile == true){
-        
 
-        window.addEventListener('pointerup', e => {
-            if (touchendY > touchstartY && scrolledUp == false) {
-                $("#footer").animate({top: "100%"}, 500);
-                scrolledUp = true;
-            }
+        window.addEventListener('touchstart', e => {
+            touchstartY = e.changedTouches[0].screenY;
         })
 
-        window.addEventListener('pointerdown', e => {
-            if (touchendY < touchstartY && scrolledUp == true){
-                $("#footer").animate({top: "-=" + $("#footer-container").height() + "px"}, 500);
-                scrolledUp = false;
-            }
+        window.addEventListener('touchend', e => {
+            touchendY = e.changedTouches[0].screenY;
+            checkDirection()
         })
-        return;
     }
     
     window.addEventListener("wheel", function(e) {
@@ -37,3 +29,13 @@ $(document).ready(function(){
         }
     }, {passive: false});
 });  
+
+function checkDirection() {
+    if (touchendY < touchstartY && scrolledUps == true){
+        $("#footer").animate({top: "-=" + $("#footer-container").height() + "px"}, 500);
+        scrolledUps = false;
+    }else if (touchendY > touchstartY && scrolledUps == false) {
+        $("#footer").animate({top: "100%"}, 500);
+        scrolledUps = true;
+    }
+  }
