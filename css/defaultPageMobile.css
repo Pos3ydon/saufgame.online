@@ -16,7 +16,7 @@
     #sidebar {
         width: 60vw;
         left: -60vw;
-        height: 66vh;
+        height: 100vh;
     }
 
     .sidebarButton:hover {
@@ -26,8 +26,11 @@
 
     #management_buttons {
         position: absolute;
-        top: 90.5vh;
         width: 100%;
+        height: fit-content;
+
+        /* top: 100vh; */
+        transform: translate(0, 0);
     }
 
     #btn_login {

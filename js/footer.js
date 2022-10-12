@@ -1,7 +1,9 @@
 let touchstartY = 0;
 let touchendY = 0;
-let scrolledUps = true;
+let scrolledUp = true;
 $(document).ready(function(){
+    
+    $("#footer").offset({ top: $(window).height(), left: 0 });
     var scrolledUp = false;
     const isMobile = window.matchMedia('only screen and (max-width: 427px)').matches;
 
@@ -24,18 +26,18 @@ $(document).ready(function(){
             scrolledUp = true;
         }
         else if (e.wheelDeltaY > 0 && scrolledUp == true) {
-            $("#footer").animate({top: "100%"}, 500);
+            $("#footer").animate({top: $(window).height()}, 500);
             scrolledUp = false;
         }
     }, {passive: false});
 });  
 
 function checkDirection() {
-    if (touchendY < touchstartY && scrolledUps == true){
+    if (touchendY < touchstartY && scrolledUp == true){
         $("#footer").animate({top: "-=" + $("#footer-container").height() + "px"}, 500);
-        scrolledUps = false;
-    }else if (touchendY > touchstartY && scrolledUps == false) {
-        $("#footer").animate({top: "100%"}, 500);
-        scrolledUps = true;
+        scrolledUp = false;
+    }else if (touchendY > touchstartY && scrolledUp == false) {
+        $("#footer").animate({top: $(window).height()}, 500);
+        scrolledUp = true;
     }
   }
