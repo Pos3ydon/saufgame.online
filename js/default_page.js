@@ -2,6 +2,8 @@ var path = '../pages/default_site.php';
 
 window.onload = function() {
 
+    $("#management_buttons").offset({ top: $(window).height() - $("#management_buttons").height()});
+
     $.getJSON('../json/gamelist.json', function(json) {
         var activePage = window.sessionStorage.getItem("page");
 
