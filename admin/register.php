@@ -1,5 +1,15 @@
 <?php
     die();
+
+    if (!isset($_SESSION["user"])) {
+        header("Location: ./../../index.html");
+        exit;
+    }
+
+    if ($_SESSION["root"] == false) {
+        header("Location: ./../../index.html");
+        exit();
+    }
 ?>
 
 <!DOCTYPE html>
