@@ -1,13 +1,14 @@
 <?php
     session_start();
 
+
     $servername = "rdbms.strato.de";
     $dbname = "dbs11180804";
     $username = "dbu5587866";
     $password = "B3NnY.2012._.";
     
     try {
-        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $dbusername, $dbpassword);
+        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     //   echo "Connected successfully";
@@ -18,8 +19,8 @@
     try {
 
         if (!isset($_SESSION["user"])) {
-            if ($_POST["username"] == $dbusername && $_POST["password"] == $dbpassword) {
-                $_SESSION["user"] = $dbusername;
+            if ($_POST["username"] == $username && $_POST["password"] == $password) {
+                $_SESSION["user"] = $username;
                 $_SESSION["root"] = true;
             }
             else {
