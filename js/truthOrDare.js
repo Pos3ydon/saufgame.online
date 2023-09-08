@@ -27,7 +27,7 @@ function getRecord(type) {
     }).done(function(result) {
         console.log(result);
         
-        result = result.split(",");
+        result = result.split("§");
 
         if (alreadyUsed.length.toString() == result[2] || alreadyUsed.length > 100)
             alreadyUsed = [];
