@@ -15,8 +15,8 @@
     }
 
     try {
-        $stmt = $conn->prepare("select * from neverHaveIEver order by rand() limit 1");
-        $stmt->execute();
+        $stmt = $conn->prepare("SELECT * FROM neverHaveIEver ORDER BY rand() LIMIT 1");
+        $stmt->execute();;
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         // print_r($result);

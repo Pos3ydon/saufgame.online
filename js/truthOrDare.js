@@ -28,27 +28,38 @@ function getRecord(type) {
         console.log(result);
         
         result = result.split(",");
+        console.log(result.length);
 
         if (alreadyUsed.length.toString() == result[2] || alreadyUsed.length > 100)
             alreadyUsed = [];
             
         if (alreadyUsed.find(element => element == result[0]) == undefined) {
             alreadyUsed.push(result[0]);
-            if(result.length != 3){
+            if(result.length == 5){
+                result = result[1] + "," + result[2] + "," + result[3];
+                $("#randomText").html(result);
+
+                if (data.type == "truth")
+                    $("#truthOrDareType").html("Wahrheit");
+                else
+                    $("#truthOrDareType").html("Pflicht");
+            }
+            else if (result.length == 4){
+                result = result[1] + "," + result[2];
+                $("#randomText").html(result);
+
+                if (data.type == "truth")
+                    $("#truthOrDareType").html("Wahrheit");
+                else
+                    $("#truthOrDareType").html("Pflicht");
+            }
+            else if(result.length == 3){
                 $("#randomText").html(result[1]);
 
                 if (data.type == "truth")
                     $("#truthOrDareType").html("Wahrheit");
                 else
                     $("#truthOrDareType").html("Pflicht");
-            }else{
-                result = result[1] + "," + result[2];
-                $("#randomText").html(result);
-
-            if (data.type == "truth")
-                $("#truthOrDareType").html("Wahrheit");
-            else
-                $("#truthOrDareType").html("Pflicht");
             }
         }
         else {

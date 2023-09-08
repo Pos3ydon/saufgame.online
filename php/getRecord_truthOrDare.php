@@ -25,9 +25,8 @@
         echo ",";
         echo $result[0]['content'];
 
-        $stmt = $conn->prepare("SELECT count(id) AS count FROM truthOrDare WHERE type = ? ");
-        $stmt->execute([$_POST["type"]]);
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $result = $conn->prepare("SELECT count(id) AS count FROM truthOrDare WHERE type = ? ");
+        $result->execute([$_POST["type"]]);
 
         echo ",";
         echo $result[0]['count'];
