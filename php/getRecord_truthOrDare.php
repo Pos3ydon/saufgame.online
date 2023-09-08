@@ -28,20 +28,24 @@ try {
     if (strpos($content, ',') !== false) {
         // Wenn ein Komma gefunden wird, teilen wir den Text und geben den Teil nach dem Komma aus
         $parts = explode(',', $content);
-        echo $parts[0]; // Gibt den Text vor dem Komma aus
-        echo ", ";
-        echo $parts[1];
+        $vorKomma = $parts[0];
+        $nachKomma = $parts[1];
+        
+        // Kombinieren der Teile zu einem Satz
+        $satz = $vorKomma + "," + $nachKomma;
+        
+        echo $satz;
     } else {
         // Wenn kein Komma gefunden wird, geben wir den ursprünglichen Text aus
         echo $content;
     }
 
-    $stmt = $conn->prepare("SELECT count(id) AS count FROM truthOrDare WHERE type = ? ");
-    $stmt->execute([$_POST["type"]]);
-    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    // $stmt = $conn->prepare("SELECT count(id) AS count FROM truthOrDare WHERE type = ? ");
+    // $stmt->execute([$_POST["type"]]);
+    // $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    echo ",";
-    echo $result[0]['count'];
+    // echo ",";
+    // echo $result[0]['count'];
 
     exit();
 
