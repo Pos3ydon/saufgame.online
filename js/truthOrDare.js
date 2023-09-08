@@ -27,19 +27,29 @@ function getRecord(type) {
     }).done(function(result) {
         console.log(result);
         
-        result = result.split(":");
+        result = result.split(",");
 
         if (alreadyUsed.length.toString() == result[2] || alreadyUsed.length > 100)
             alreadyUsed = [];
             
         if (alreadyUsed.find(element => element == result[0]) == undefined) {
             alreadyUsed.push(result[0]);
-            $("#randomText").html(result[1]);
+            if(result.length != 3){
+                $("#randomText").html(result[1]);
+
+                if (data.type == "truth")
+                    $("#truthOrDareType").html("Wahrheit");
+                else
+                    $("#truthOrDareType").html("Pflicht");
+            }else{
+                result = result[1] + "," + result[2];
+                $("#randomText").html(result);
 
             if (data.type == "truth")
                 $("#truthOrDareType").html("Wahrheit");
             else
                 $("#truthOrDareType").html("Pflicht");
+            }
         }
         else {
             console.log(type.charAt(0).toUpperCase() + type.slice(1));
