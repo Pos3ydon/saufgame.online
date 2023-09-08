@@ -21,7 +21,7 @@ try {
     // print_r($result);
 
     echo $result[0]['id'];
-    echo "§";
+    echo ".";
 
     // Überprüfen, ob der Text ein Komma enthält
     $content = $result[0]['content'];
@@ -32,7 +32,7 @@ try {
         $nachKomma = $parts[1];
         
         // Kombinieren der Teile zu einem Satz
-        $satz = $vorKomma . ", " . $nachKomma;
+        $satz = $content;
         
         echo $satz;
     } else {
