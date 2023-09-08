@@ -25,16 +25,15 @@ function getRecord(type) {
         type: "POST",
         data: data
     }).done(function(result) {
-        console.log(result);
         
         result = result.split(".");
+        console.log(result[0]);
 
-        if (alreadyUsed.length.toString() == result[2] || alreadyUsed.length > 100)
+        if (alreadyUsed.length.toString() == result[2] || alreadyUsed.length > 100){
             alreadyUsed = [];
-            
+        }
         if (alreadyUsed.find(element => element == result[0]) == undefined) {
             alreadyUsed.push(result[0]);
-            console.log(result[1]);
             $("#randomText").html(result[1]);
 
             if (data.type == "truth")
