@@ -34,6 +34,7 @@ function getRecord(type) {
             
         if (alreadyUsed.find(element => element == result[0]) == undefined) {
             alreadyUsed.push(result[0]);
+            console.log(result[1]);
             $("#randomText").html(result[1]);
 
             if (data.type == "truth")

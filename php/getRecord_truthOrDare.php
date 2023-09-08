@@ -40,12 +40,12 @@ try {
         echo $content;
     }
 
-    // $stmt = $conn->prepare("SELECT count(id) AS count FROM truthOrDare WHERE type = ? ");
-    // $stmt->execute([$_POST["type"]]);
-    // $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt = $conn->prepare("SELECT count(id) AS count FROM truthOrDare WHERE type = ? ");
+    $stmt->execute([$_POST["type"]]);
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    // echo ",";
-    // echo $result[0]['count'];
+    echo ".";
+    echo $result[0]['count'];
 
     exit();
 
