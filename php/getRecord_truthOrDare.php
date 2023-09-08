@@ -28,7 +28,7 @@ try {
     if (strpos($content, ',') !== false) {
         // Wenn ein Komma gefunden wird, teilen wir den Text und geben den Teil nach dem Komma aus
         $parts = explode(',', $content);
-        echo $parts[1]; // Gibt den Text nach dem Komma aus
+        echo $parts[0] + ", " + $parts[1]; // Gibt den Text nach dem Komma aus
     } else {
         // Wenn kein Komma gefunden wird, geben wir den ursprünglichen Text aus
         echo $content;
