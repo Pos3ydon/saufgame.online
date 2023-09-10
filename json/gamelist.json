@@ -1,9 +1,4 @@
 {
-    "neverHaveIEver": {
-      "name": "Ich habe noch nie",
-      "gamePath": "pages/neverHaveIEver.html",
-      "table": "neverHaveIEver"
-    },
     "truthOrDare": {
       "name": "Wahrheit oder Pflicht",
       "gamePath": "pages/truthOrDare.html",
