@@ -3,5 +3,10 @@
       "name": "Wahrheit oder Pflicht",
       "gamePath": "pages/truthOrDare.html",
       "table": "truthOrDare"
+    },
+    "neverHaveIEver": {
+      "name": "Ich hab noch nie",
+      "gamePath": "pages/neverHaveIEver.html",
+      "table": "neverHaveIEver"
     }
 }

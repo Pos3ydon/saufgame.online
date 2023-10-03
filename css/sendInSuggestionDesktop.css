@@ -21,7 +21,7 @@
         align-items: center;
     }
 
-    #selectGame {
+    #selectGame, #appendedSelect {
         background-color: white;
         font-size: 20px;
         width: 440px;
@@ -61,7 +61,7 @@
         display: none;
     }
 
-    #submitSuggestion {
+    #submitQuestion {
         background-color: #001828;
 
         width: 440px;
@@ -89,7 +89,7 @@
         -webkit-user-select: none;
     }
 
-    #submitSuggestion:hover {
+    #submitQuestion:hover {
         /* background-color: #667EEA; */
         background-position: right;
         transform: scale(1.1);
