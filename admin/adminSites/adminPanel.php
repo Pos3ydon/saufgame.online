@@ -17,27 +17,22 @@
     }
 
     try {
+        $statement = $conn->prepare("select * from users where username = ? ");
+        $statement->execute([$_POST["username"]]);
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-        if (!isset($_SESSION["user"])) {
-
-            $statement = $conn->prepare("select * from users where username = ? ");
-            $statement->execute([$_POST["username"]]);
-                $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-                if (!isset($result[0])) {
-                    echo "Benutzer nicht gefunden";
-                    exit();
-                }
-        
-                if (!password_verify($_POST["password"], $result[0]["password"])) {
-                    echo "Falsches Password";
-                    exit();
-                }
-                
-                $_SESSION["user"] = $result[0]["username"];
-                $_SESSION["user_permissions"] = $result[0]["permissions"];
-            
+        if (!isset($result[0])) {
+            echo "Benutzer nicht gefunden";
+            exit();
         }
+        
+        if (!password_verify($_POST["password"], $result[0]["password"])) {
+            echo "Falsches Password";
+            exit();
+        }
+        
+        $_SESSION["user"] = $result[0]["username"];
+        $_SESSION["perms"] = $result[0]["permissions"];
 
         //echo "\nInserted successfully";
     } catch(Exception $e) {
@@ -64,7 +59,7 @@
             </div>
             <div id="sidebarButtons">
                 <?php
-                    if (isset($_SESSION['user_permissions']) && in_array('root', $_SESSION['user_permissions'])) {
+                    if ($_SESSION["perms"]) {
                 ?>
                         <div class="sidebarButton" onclick="$('#content').load('rootPanel.php');"><p>Root Panel</p></div>
                 <?php
