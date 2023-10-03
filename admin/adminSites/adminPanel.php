@@ -61,11 +61,9 @@
         <div id="sidebar">
             <div id="profileDiv">
                 <p><?php echo $_SESSION["user"];?></p>
-                <p><?php echo $_SESSION['user_permissions'];?></p>
             </div>
             <div id="sidebarButtons">
                 <?php
-                    
                     if (isset($_SESSION['user_permissions']) && in_array('root', $_SESSION['user_permissions'])) {
                 ?>
                         <div class="sidebarButton" onclick="$('#content').load('rootPanel.php');"><p>Root Panel</p></div>
