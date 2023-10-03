@@ -48,6 +48,7 @@ $(document).ready(function() {
                             input.disabled = true;
                             div.append(input);
                             var oldValue = value;
+                            var btn_yes = document.createElement('button');
                             var btn_edit = document.createElement('button');
                             btn_edit.className = "btn_edit";
                             btn_edit.onclick = function(e) {
@@ -55,16 +56,22 @@ $(document).ready(function() {
                                     $(this).prop("disabled", true);
                                 });
                                 input.disabled = !(input.disabled);
+                                $(".btn_yes").each(function() {
+                                    $(this).prop("disabled", true);
+                                });
+                                btn_yes.disabled = !(btn_yes.disabled);
+
                             }
                             div.append(btn_edit);
 
                             var btn_yes = document.createElement('button');
                             btn_yes.className = "btn_yes";
+                            btn_yes.disabled = true;
                             btn_yes.onclick = function(e) {
-                                console.log($("#selectGame")[0].value);
-                                console.log( input.value);
-                                console.log(oldValue);
                                 accept_suggestion($("#selectGame")[0].value, input.value, oldValue);
+                                $(".btn_yes").each(function() {
+                                    $(this).prop("disabled", true);
+                                });
                             }
                             div.append(btn_yes);
                         }
