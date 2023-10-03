@@ -1,12 +1,5 @@
 <?php
 
-    session_start();
-        
-    if (!isset($_SESSION["user"])) {
-        header("Location: ./../../index.html");
-        exit;
-    }
-
     $servername = "rdbms.strato.de";
     $dbname = "dbs11180804";
     $username = "dbu5587866";

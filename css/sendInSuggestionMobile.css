@@ -17,8 +17,27 @@
         align-items: center;
     }
 
-    #selectGame, #appendedSelect {
+    #selectGame  {
         margin-top: 40%;
+        background-color: white;
+        font-size: 20px;
+        width: 74%;
+        height: 75px;
+        padding: 15px;
+
+        border: 0;
+        border-radius: 150px;
+        
+        color: #001016;
+        font-weight: bold;
+
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+    }
+
+    #appendedSelect {
+        margin-top: 4%;
         background-color: white;
         font-size: 20px;
         width: 74%;
