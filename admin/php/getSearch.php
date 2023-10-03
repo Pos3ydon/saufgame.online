@@ -6,10 +6,7 @@
         exit;
     }
 
-    if ($_SESSION["root"] == false) {
-        header("Location: ./../../index.html");
-        exit();
-    }
+    
 
     $servername = "rdbms.strato.de";
     $dbname = "dbs11180804";
@@ -26,8 +23,12 @@
     }
 
     try {
-        $statement = $conn->prepare('SELECT * FROM ' . $_POST["table"] . ' WHERE content LIKE ? ');
+
+
+
+        $statement = $conn->prepare('SELECT id, content FROM ' . $_POST["table"] . ' WHERE content LIKE ? ');
         $statement->execute([("%" . $_POST["content"] . "%")]);
+
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
         echo json_encode($result);
