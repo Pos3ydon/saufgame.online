@@ -19,13 +19,9 @@
     try {
 
         if (!isset($_SESSION["user"])) {
-            if ($_POST["username"] == $username && $_POST["password"] == $password) {
-                $_SESSION["user"] = $username;
-                $_SESSION["root"] = true;
-            }
-            else {
-                $statement = $conn->prepare("select * from users where username = ? ");
-                $statement->execute([$_POST["username"]]);
+
+            $statement = $conn->prepare("select * from users where username = ? ");
+            $statement->execute([$_POST["username"]]);
                 $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
                 if (!isset($result[0])) {
@@ -37,13 +33,11 @@
                     echo "Falsches Password";
                     exit();
                 }
-        
+                
                 $_SESSION["user"] = $result[0]["username"];
-                $_SESSION["root"] = false;
-            }
+                $_SESSION["user_permissions"] = $result[0]["permissions"];
             
         }
-
 
         //echo "\nInserted successfully";
     } catch(Exception $e) {
@@ -67,10 +61,12 @@
         <div id="sidebar">
             <div id="profileDiv">
                 <p><?php echo $_SESSION["user"];?></p>
+                <p><?php echo $_SESSION['user_permissions'];?></p>
             </div>
             <div id="sidebarButtons">
                 <?php
-                    if ($_SESSION["root"]) {
+                    
+                    if (isset($_SESSION['user_permissions']) && in_array('root', $_SESSION['user_permissions'])) {
                 ?>
                         <div class="sidebarButton" onclick="$('#content').load('rootPanel.php');"><p>Root Panel</p></div>
                 <?php
