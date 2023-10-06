@@ -24,11 +24,6 @@
         echo $result[0]['id'];
         echo ",";
         echo $result[0]['content'];
-
-        
-        $result = $conn->query("SELECT id FROM neverHaveIEver ORDER BY id DESC LIMIT 1");
-        $result = $result->fetchAll(PDO::FETCH_ASSOC);
-
         echo ",";
         echo $result[0]['id'];
 
