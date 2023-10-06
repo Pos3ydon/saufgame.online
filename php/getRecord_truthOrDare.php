@@ -1,7 +1,7 @@
 <?php
     $servername = "rdbms.strato.de";
-    $dbname = "dbs11985359";
-    $username = "dbu2430013";
+    $dbname = "dbs11180804";
+    $username = "dbu5587866";
     $password = "B3NnY.2012._.";
     
     

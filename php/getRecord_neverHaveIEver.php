@@ -1,7 +1,7 @@
 <?php
     $servername = "rdbms.strato.de";
-    $dbname = "dbs11985359";
-    $username = "dbu2430013";
+    $dbname = "dbs11180804";
+    $username = "dbu5587866";
     $password = "B3NnY.2012._.";
     
     
@@ -25,7 +25,8 @@
         echo ",";
         echo $result[0]['content'];
 
-        $result = $conn->query("SELECT id FROM neverHaveIEver ORDER BY id DESC LIMIT 1;");
+        
+        $result = $conn->query("SELECT id FROM neverHaveIEver ORDER BY id DESC LIMIT 1");
         $result = $result->fetchAll(PDO::FETCH_ASSOC);
 
         echo ",";
