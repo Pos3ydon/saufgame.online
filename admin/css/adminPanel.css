@@ -91,3 +91,21 @@ body {
     height: 100%;
     float: right;
 }
+
+
+@media screen and (max-width: 426px) {
+    #btn_openSidebar {
+        top: 5vw;
+        left: 5vw;
+    }
+    
+    #sidebar {
+        width: 60vw;
+        left: -60vw;
+        height: 100vh;
+    }
+    
+    .sidebarButton:hover {
+        box-shadow: 0;
+    }
+}
