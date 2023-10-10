@@ -94,6 +94,13 @@ body {
 
 
 @media screen and (max-width: 426px) {
+    #content {
+        width: 80vw;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     #btn_openSidebar {
         top: 5vw;
         left: 5vw;

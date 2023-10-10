@@ -1,0 +1,149 @@
+@import url('https://fonts.cdnfonts.com/css/bahnschrift');
+
+#loginWindow {
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+    /* margin-top: 25%;
+    margin-left: 50%; */
+
+    color: black;
+}
+
+.loginDiv {
+    width:440px;
+    font-size: 1.8vw;
+    margin-top: 42px;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+    
+}
+
+.input {
+    font-family: 'Bahnschrift', Bold;
+    border-width: 0;
+    font-size: 20px;
+    padding-left: 10px;
+    width: 440px;
+    border-radius: 50px;
+    border: 0;
+    height: 75px;
+}
+
+#loginSubmit {
+    font-size: 1.8vw;
+    width: 455px;
+    height: 75px;
+    margin: auto;
+    color: white;
+    font-size: 1.8vw;
+    font-family: 'Bahnschrift', Bold;
+    border-radius: 150px;
+    border: 0;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to right,#764ba2  0%, #667eea 50%,  #667eea 50%);
+    border-width: 0;
+    background-size: 200% 100%;
+    background-position: left;
+    transition: all .75s;
+
+
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}
+
+#loginSubmit:hover {
+    color: #fff;
+    background-position: right;
+    transform: scale(1.1);
+}
+
+#loginForm{
+    border-width: 0;
+    margin-top: 25%;
+    transform: translate(0, -50%);
+}
+
+.input::placeholder{
+    font-family: 'Bahnschrift', Bold;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 426px) {
+    #loginWindow {
+        position: absolute;
+    
+        height: 100%;
+        width: 100%;
+        /* margin-top: 25%;
+        margin-left: 50%; */
+    
+        color: black;
+    }
+    
+    .loginDiv {
+        width: 214px;
+        font-size: 1.8vw;
+        margin-top: 42px;
+        margin-left: 50%;
+        transform: translate(-50%, 0);
+        
+    }
+    
+    .input {
+        font-family: 'Bahnschrift', Bold;
+        border-width: 0;
+        font-size: 20px;
+        padding-left: 10px;
+        width: 202px;
+        border-radius: 50px;
+        border: 0;
+        height: 60px;
+    }
+    
+    #loginSubmit {
+        width: 214px;
+        height: 60px;
+        margin: auto;
+        color: white;
+        font-size: 4.8vw;
+        font-family: 'Bahnschrift', Bold;
+        border-radius: 150px;
+        border: 0;
+        cursor: pointer;
+        text-align: center;
+        box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.5);
+        background: linear-gradient(to right,#764ba2  0%, #667eea 50%,  #667eea 50%);
+        border-width: 0;
+        background-size: 200% 100%;
+        background-position: left;
+        transition: all .75s;
+    
+    
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+    }
+    
+    #loginSubmit:hover {
+        color: #fff;
+        background-position: right;
+        transform: scale(1.1);
+    }
+    
+    #loginForm{
+        border-width: 0;
+        margin-top: 75%;
+    }
+    
+    .input::placeholder{
+        font-family: 'Bahnschrift', Bold;
+        font-size: 20px;
+    }
+
+
+}
