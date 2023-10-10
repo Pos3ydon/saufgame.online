@@ -72,6 +72,7 @@ $(document).ready(function() {
                                 $(".btn_yes").each(function() {
                                     $(this).prop("disabled", true);
                                 });
+                                this.parentNode.remove();
                             }
                             div.append(btn_yes);
                         }
