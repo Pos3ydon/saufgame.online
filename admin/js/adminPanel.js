@@ -7,8 +7,7 @@ $(document).ready(function() {
             var child = document.createElement('div');
             child.innerHTML = '<p>' + name + '</p>';
             child.className = 'sidebarButton';
-
-
+            $("#content").load("rootPanel.php")
             child.onclick = function() {
                 $("#content").load(site + ".php");
             }
