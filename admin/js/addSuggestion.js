@@ -24,12 +24,12 @@ $(document).ready(function() {
                 return;
             else if (game == "neverHaveIEver") {
                 data = {
-                    suggestion: $("#questionInput")[0].value
+                    suggestion: $("#suggestionText")[0].value
                 };
             }
             else if (game == "truthOrDare") {
                 data = {
-                    suggestion: $("#questionInput")[0].value,
+                    suggestion: $("#suggestionText")[0].value,
                     type: $("#appendedSelect")[0].value
                 };
             }
@@ -60,7 +60,7 @@ $(document).ready(function() {
                         <option class='appendedOption' value='dare'>Dare</option>
                     </select>`;
 
-                $("#selectGameDiv").append(newContent);
+                $("#selectGameDiv2").append(newContent);
             }
         }
     });

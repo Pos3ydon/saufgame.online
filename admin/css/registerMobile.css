@@ -13,12 +13,9 @@
     }
     
     .loginDiv {
-        width: 214px;
+        width: fit-content;
         font-size: 1.8vw;
         margin-top: 42px;
-        margin-left: 50%;
-        transform: translate(-50%, 0);
-        
     }
     
     .input {
@@ -35,7 +32,7 @@
     #loginSubmit {
         width: 214px;
         height: 60px;
-        margin: auto;
+        margin-top: 42px;
         color: white;
         font-size: 4.8vw;
         font-family: 'Bahnschrift', Bold;
@@ -63,14 +60,19 @@
     }
     
     #loginForm{
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
         border-width: 0;
-        margin-top: 75%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     
     .input::placeholder{
         font-family: 'Bahnschrift', Bold;
         font-size: 20px;
     }
-
 
 }

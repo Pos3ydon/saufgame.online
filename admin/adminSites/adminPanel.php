@@ -54,22 +54,22 @@
 
     <body>
     <div id="btn_openSidebar"></div>
-        <div id="sidebar">
-            <div id="profileDiv">
-                <p><?php echo $_SESSION["user"];?></p>
-            </div>
-            <div id="sidebarButtons">
-                <?php
-                    if ($_SESSION["perms"]) {
-                ?>
-                        <div class="sidebarButton" onclick="$('#content').load('rootPanel.php');"><p>Root Panel</p></div>
-                <?php
-                    }
-                ?>
-            </div>
-            <div id="logoutButton" class="sidebarButton"><p>Logout</p></div>
+    <div id="sidebar">
+        <div id="profileDiv">
+            <p><?php echo $_SESSION["user"];?></p>
         </div>
-        <div id="content"></div>
+        <div id="sidebarButtons">
+            <?php
+                if ($_SESSION["perms"]) {
+            ?>
+                    <div class="sidebarButton" onclick="$('#content').load('rootPanel.php');"><p>Root Panel</p></div>
+            <?php
+                }
+            ?>
+        </div>
+        <div id="logoutButton" class="sidebarButton"><p>Logout</p></div>
+    </div>
+    <div id="content"></div>
     </body>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.js"></script>
