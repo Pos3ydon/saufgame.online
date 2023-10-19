@@ -1,11 +1,12 @@
 <?php
+    session_start();
 ?>
 
 <!DOCTYPE html>
 <html>
     
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" lang="de">
+        <link rel="stylesheet" href="./../css/register.css">
     </head>
 
     <body>
@@ -27,6 +28,5 @@
             </form>
         </div>
     </body>
-    <link rel="stylesheet" type="text/css" href="./css/register.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </html>
