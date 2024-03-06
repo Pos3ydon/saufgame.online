@@ -1,0 +1,29 @@
+RewriteEngine on
+
+
+<IfModule mod_rewrite.c>
+  RewriteCond %{HTTP_HOST} !^www\. [NC]
+  RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # ensure that the `trailing slash` is removed
+  RewriteCond %{REQUEST_FILENAME} truthOrDare\.html [NC]
+  RewriteRule ^ - [L]
+
+  # Weiterleitung von / Verzeichnissen
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} (.+)/$
+  RewriteRule ^ https://%{HTTP_HOST}%1 [L,R=301]
+
+  # Entfernen von .html-Endungen
+  RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+  RewriteRule ^ /%1 [NC,L,R]
+
+  # Hinzufügen von .html-Endungen
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+
+</IfModule>

@@ -1,3 +1,4 @@
+
 @media screen and (min-width: 427px) {
     @import url('http://fonts.cdnfonts.com/css/bahnschrift');
 
@@ -7,46 +8,53 @@
         padding: 0;
 
         overflow: hidden;
+        font-size: 68.8%;
     }
 
-
-    #logo {
-        background-image: url("./images/logo.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-color: #998115;
-        background-size: 22%;
-        background-position: 50px;
-        filter: invert(100%);
-
-        position: absolute;
-        width: 40%;
-        height: 25%;
-        /* min-height: 200px; */
-        margin-top: 2%;
-        top: 2%;
-        margin-left: 50%;
-        transform: translate(-50%, 0%);
-
-        border-radius: 150px;
-        background-clip: padding-box;
+    #heads__container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 7.5em;
+        padding-right: 7.5em;
+        max-width: calc(112em + 7.5em + 7.5em);
     }
 
-    #logo p {
-        position: absolute;
+    #heads__container__wrapper {
+        position: relative;
+        width: 70em;
+        margin-top: 6em;
+        background-color: #667eea;
+        border-radius: 15em;
+        user-select: none;
+    }
 
-        font-size: 5vw;
+    #content {
+        position: relative;
+        margin-left: 7em;
+    }
+
+    #content__wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 8em;
+        filter: invert(1);
+    }
+
+    #heads__logo {
+        width: 20%;
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+    }
+
+    #heads__text {
+        font-size: 7em;
         font-weight: bold;
         font-family: 'Bahnschrift', Bold;
-
-        right: calc(82% - 50px - 50px);
-        top: 50%;
-        transform: translate(100%, -50%);
-
         margin: 0;
-        padding: 0;
-
-        /* color: white; */
     }
 
     #buttons_auto_apperance {

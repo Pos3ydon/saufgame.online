@@ -126,8 +126,8 @@ body {
         position: absolute;
         height: 40px;
         width: 40px;
-        top: 50px;
-        left: 50px;
+        top: 5em;
+        left: 5em;
         cursor: pointer;
     }
 }

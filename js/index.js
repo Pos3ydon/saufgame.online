@@ -1,4 +1,4 @@
-var path = './pages/default_page.html';
+var path = './games.html';
 
 window.onload = function() {
 

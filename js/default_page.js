@@ -1,12 +1,10 @@
-var path = '../pages/default_site.php';
-
 window.onload = function() {
 
     $("#management_buttons").offset({ top: $(window).height() - $("#management_buttons").height()});
 
     $.getJSON('../json/gamelist.json', function(json) {
         var activePage = window.sessionStorage.getItem("page");
-
+        console.log(activePage);
         if(activePage == null) window.location.href = "../index.html";
         if(activePage!= null) $("#content").load(activePage);
 
@@ -17,7 +15,7 @@ window.onload = function() {
             child.innerHTML = '<p>' + data.name + '</p>';
             child.className = 'sidebarButton';
 
-            
+
             if (activePage.search(game) != -1) $(child).addClass("activeButton");
 
             child.onclick = function() {
@@ -58,4 +56,3 @@ function loadPage(path, sender) {
     $("#content").load(path);
     window.sessionStorage.setItem("page", path)
 }
-

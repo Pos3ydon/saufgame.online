@@ -31,7 +31,7 @@ j
         color: white;
         text-align: left;
         padding-left: 3.5%;
-        font-size: 15px;
+        font-size: 1.5em;
         font-family: Verdana;
     }
 
@@ -69,21 +69,21 @@ j
     #description-split, #contakt-split, #link-split{
         font-family: Verdana;
         color: white;
-        font-size: 15px;
+        font-size: 1.5em;
         font-weight:normal;
     }
 
 
     #beschreibung_text, #kontakte_text, #links_text{
-        font-size: 12px;
+        font-size: 1.2em;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         color: white;
     }
 
     #footer-line{
-        border-radius: 50px;
+        border-radius: 5em;
         background-color: #667eea;
-        height: 2px;
+        height: 0.2em;
         width: 17.5%;
         margin-top: 1.5%;
         margin-bottom: 1%;
@@ -91,7 +91,7 @@ j
 
     #links_text{
         cursor: pointer;
-        size: 12px;
+        size: 1.2em;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         color: white;
         display: flex;
@@ -112,7 +112,7 @@ j
 
     #copyright a{
         color: white;
-        font-size: 12px;
+        font-size: 1.2em;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         margin: auto;
     }
