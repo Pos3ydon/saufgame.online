@@ -2,6 +2,7 @@ RewriteEngine on
 
 
 <IfModule mod_rewrite.c>
+
   RewriteCond %{HTTP_HOST} !^www\. [NC]
   RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
@@ -26,4 +27,6 @@ RewriteEngine on
   RewriteCond %{REQUEST_FILENAME}.html -f
   RewriteRule ^ %{REQUEST_URI}.html [NC,L]
 
+  RewriteCond %{THE_REQUEST} \ /index
+  RewriteRule ^index$ / [L,R=301]
 </IfModule>

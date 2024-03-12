@@ -1,14 +1,11 @@
 window.onload = function() {
 
-    $("#management_buttons").offset({ top: $(window).height() - $("#management_buttons").height()});
-
     $.getJSON('../json/gamelist.json', function(json) {
         var activePage = window.sessionStorage.getItem("page");
-        console.log(activePage);
-        if(activePage == null) window.location.href = "../index.html";
+        if(activePage == null) window.location.href = "/";
         if(activePage!= null) $("#content").load(activePage);
 
-        $("#loadFooter").load("../pages/footer.html");
+        $("#loadFooter").load("./pages/footer.html");
 
         $.each( json, function( game, data ) {
             var child = document.createElement('div');
@@ -26,29 +23,38 @@ window.onload = function() {
         });
     });
 
-    var sidebarOpened = false;
-    var sidebarLeft = 0;
-    $("#btn_openSidebar").bind({
-        click: function() {
-            if (!sidebarOpened) {
-                setTimeout(function() {
-                    sidebarLeft = $("#sidebar").offset().left;
-                    $("#sidebar").animate({left: "0%"}, 500);
-                    sidebarOpened = true;
-                }, 50);
-            }
+}
+
+window.addEventListener('resize', function() {
+    document.getElementById('sidebar__wrapper').style.height = window.innerHeight + 'px';
+});
+
+// Initial height adjustment
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('sidebar__wrapper').style.height = window.innerHeight + 'px';
+});
+
+
+$(document).ready(function(){
+    $("#btn_openSidebar").on('click', function() {
+        var btn = $("#sidebar").attr("data-active");
+        if (btn === "0") {
+            $("#sidebar").attr("data-active", "1");
         }
     });
 
-    $(window).bind({
-        click: function() {
-            if (sidebarOpened) {
-                $("#sidebar").animate({left: sidebarLeft}, 500);
-                sidebarOpened = false;
-            }
+    $("#sidebar").on('click', function(event) {
+        // Prevent the event from bubbling up to the document level
+        event.stopPropagation();
+
+        var btn = $("#sidebar").attr("data-active");
+        if (btn === "1") {
+            $("#sidebar").attr("data-active", "0");
         }
-    })
-}
+    });
+});
+
+
 
 function loadPage(path, sender) {
     $(".activeButton").removeClass("activeButton");

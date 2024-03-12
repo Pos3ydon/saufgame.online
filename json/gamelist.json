@@ -1,12 +1,16 @@
 {
-    "truthOrDare": {
+    "pages/truthOrDare": {
       "name": "Wahrheit oder Pflicht",
-      "gamePath": "/pages/truthOrDare.html",
+      "gamePath": "truthOrDare.html",
       "table": "truthOrDare"
     },
-    "neverHaveIEver": {
+    "pages/neverHaveIEver": {
       "name": "Ich hab noch nie",
-      "gamePath": "/pages/neverHaveIEver.html",
+      "gamePath": "neverHaveIEver.html",
       "table": "neverHaveIEver"
+    },
+    "pages/sendInSuggestion": {
+      "name": "Vorschlag einsenden",
+      "gamePath": "neverHaveIEver.html"
     }
 }

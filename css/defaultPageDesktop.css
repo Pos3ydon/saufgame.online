@@ -4,8 +4,6 @@
 }
 
 @import url('https://fonts.cdnfonts.com/css/bahnschrift');
-
-
 body {
     margin: 0;
     background-color: #001828;
@@ -18,10 +16,10 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     filter: invert(100%);
-    
+
     z-index: 10;
     position: absolute;
-    
+
     height: 40px;
     width: 40px;
     top: 5em;
@@ -30,39 +28,51 @@ body {
     cursor: pointer;
 }
 
-
 #sidebar {
+    position: absolute;
+    z-index: 10;
+    user-select: none;
+}
+
+#sidebar[data-active="0"] {
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+#sidebar[data-active="1"] {
+    width: 100%;
+    height: 100%;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+#sidebar__wrapper {
+    width: 16.5em;
+    display: flex;
+    flex-direction: column;
+    position: unset;
+    overflow: hidden;
     background-color: #001016;
-
-    position: fixed;
-    z-index: 20;
-    
-    width: 20%;
-    height: 100vh;
-    left: -20%;
-
-    padding-bottom: 44%;
-    margin-top: 1%;
-    margin-left: 0%;
-    margin-right: auto;
-    margin: 0;
-
     color: white;
 }
+
 .sidebarButton {
     font-family: particle;
     font-size: 20px;
     letter-spacing: 4px;
     cursor: pointer;
     text-align: left;
-    padding: 5% 0;
-    padding-left: 10%;
+    padding: 1.5em 0 1.5em 1.5em;
     width: 90%;
     transition: all .60s;
 
     -moz-user-select: none;
     -khtml-user-select: none;
     -webkit-user-select: none;
+}
+
+.sidebarButton p {
+    margin: 0;
 }
 
 .sidebarButton:hover {
@@ -74,18 +84,6 @@ body {
 .activeButton {
     color: #A7A7A7;
 }
-
-#management_buttons {
-    position: absolute;
-    /* top: 100vh; */
-
-    width: 100%;
-
-    transform: translate(0, -100%);
-}
-
-
-
 #content {
     background-color: #001828;
     color: white;
@@ -95,10 +93,16 @@ body {
     height: 100%;
 }
 
-#btn_openSidebar{
-    transition: all .30s;
-}
-#btn_openSidebar:hover{
+#btn_openSidebar:hover {
     transform: scale(1.2);
 }
 
+.sidebarButton:last-child {
+    position: absolute;
+    bottom: 0;
+}
+
+#buttons_auto_apperance {
+    position: relative;
+    height: 100%;
+}
