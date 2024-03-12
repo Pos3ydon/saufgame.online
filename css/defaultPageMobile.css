@@ -19,7 +19,7 @@
     }
 
     #sidebar[data-active="0"] {
-        transform: translateX(-16em);
+        transform: translateX(-100%);
         transition: transform 0.5s ease-in-out;
     }
 
