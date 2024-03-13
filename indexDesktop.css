@@ -1,6 +1,6 @@
+@import url('https://fonts.cdnfonts.com/css/bahnschrift');
 
 @media screen and (min-width: 427px) {
-    @import url('http://fonts.cdnfonts.com/css/bahnschrift');
 
     body {
         background-color: #001828;
@@ -8,7 +8,6 @@
         padding: 0;
 
         overflow: hidden;
-        font-size: 68.8%;
     }
 
     #saufgames {
@@ -31,10 +30,14 @@
 
     #sg--content--main {
         position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
 
     #heads__container__wrapper {
-        width: 70em;
+        width: 80em;
         margin-top: 6em;
         background-color: #667eea;
         border-radius: 15em;
@@ -55,9 +58,8 @@
     }
 
     #heads__logo {
-        width: 20%;
-        padding-top: 1.5em;
-        padding-bottom: 1.5em;
+        width: 150px;
+        padding: 2em 0;
     }
 
     #heads__text {
@@ -67,8 +69,12 @@
         margin: 0;
     }
 
+    #buttons {
+        width: 100%;
+    }
+
     #buttons__wrapper {
-        width: 70em;
+        width: 100%;
         margin-top: 6em;
         border-radius: 15em;
         user-select: none;
@@ -84,19 +90,14 @@
     .gameButton {
         float: left;
         color: white;
-        font-size: 1.2vw;
+        font-size: 2em;
         font-family: 'Bahnschrift', Bold;
         border-radius: 150px;
         cursor: pointer;
         text-align: center;
-        /* height: 50%; */
-        padding: 5vh 0;
-        width: 20vw;
-        /* border: solid;
-        border-width: 1px;
-        border-color: black; */
+        padding: 2em 0;
+        width: 15em;
         margin: 0 5%;
-        /* transform: translate(-50%, 0%); */
         box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.5);
         background: linear-gradient(to right,#764ba2  0%, #667eea 50%,  #667eea 50%);
         background-size: 200% 100%;
@@ -111,7 +112,10 @@
     }
 }
 
-@import url('https://fonts.cdnfonts.com/css/bahnschrift');
+#links_text {
+    display: none!important;
+}
+
 @media screen and (max-width: 426px) {
 
     :root {
@@ -126,7 +130,6 @@
         padding: 0;
 
         overflow: hidden;
-        font-size: 60%;
     }
 
     #saufgames {
@@ -192,11 +195,17 @@
         user-select: none;
     }
 
-    #buttons_auto_apperance {
-        position: relative;
 
+    #buttons_auto_apperance {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
-        margin: 0;
+        margin-bottom: 3em;
+    }
+
+    .gameButton:nth-child(1) {
+        margin-top: 0;
     }
 
     .gameButton {
@@ -209,11 +218,9 @@
         background: linear-gradient(to right,#764ba2  0%, #667eea 50%,  #667eea 50%);
         background-size: 200% 100%;
         background-position: left;
-        width: 63%;
-        font-size: 3.5vw;
-        padding-top: 7.5%;
-        padding-bottom: 7.5%;
-        margin: auto;
-        margin-top: 5vh;
+        width: 15em;
+        font-size: 1.5em;
+        padding: 1.75em 0;
+        margin-top: 3.15em;
     }
 }

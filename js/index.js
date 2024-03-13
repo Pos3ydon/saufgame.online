@@ -2,20 +2,20 @@ var path = './games.html';
 
 window.onload = function() {
 
-    $("#loadFooter").load("../pages/footer.html");
+    $("#loadFooter").load("../footer.html");
 
-    $.getJSON('./json/gamelist.json', function(json) {
+    $.getJSON('./json/gamelist.json', function (json) {
 
-        $.each( json, function( game, data ) {
+        $.each(json, function (game, data) {
             console.log(game);
 
-            if(game !== "pages/sendInSuggestion") {
+            if (game !== "pages/sendInSuggestion") {
                 var child = document.createElement('div');
                 child.innerHTML = '<b>' + data.name + '</b>';
                 child.className = 'gameButton btns';
 
 
-                child.onclick = function() {
+                child.onclick = function () {
                     window.sessionStorage.setItem("page", game + ".html");
                     window.location.href = path/* + '?game=' + game*/;
                 }

@@ -1,0 +1,44 @@
+body {
+    font-size: 68.8%;
+}
+
+@media (max-width: 1920px) {
+    body {
+        font-size: 62.5%;
+    }
+}
+@media (max-width: 1600px) {
+    body {
+        font-size: 56.3%;
+    }
+}
+@media (max-width: 1366px) {
+    body {
+        font-size: 50%;
+    }
+}
+@media (max-width: 1024px) {
+    body {
+        font-size: 62.5%;
+    }
+}
+@media (max-width: 767px) {
+    body {
+        font-size: 62.5%;
+    }
+}
+@media (max-width: 480px) {
+    body {
+        font-size: 60%;
+    }
+}
+@media (max-width: 350px) {
+    body {
+        font-size: 50%;
+    }
+}
+@media (max-width: 320px) {
+    body {
+        font-size: 48%;
+    }
+}

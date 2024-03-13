@@ -5,7 +5,7 @@ window.onload = function() {
         if(activePage == null) window.location.href = "/";
         if(activePage!= null) $("#content").load(activePage);
 
-        $("#loadFooter").load("./pages/footer.html");
+        $("#loadFooter").load("./footer.html");
 
         $.each( json, function( game, data ) {
             var child = document.createElement('div');

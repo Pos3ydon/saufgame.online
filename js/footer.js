@@ -2,8 +2,7 @@ let touchstartY = 0;
 let touchendY = 0;
 let scrolledUp = true;
 $(document).ready(function(){
-    
-    $("#footer").offset({ top: $(window).height(), left: 0 });
+    $("#footer").removeAttr("style");
     var scrolledUp = false;
     const isMobile = window.matchMedia('only screen and (max-width: 427px)').matches;
 
@@ -21,23 +20,26 @@ $(document).ready(function(){
     
     window.addEventListener("wheel", function(e) {
 
-        if (e.wheelDeltaY < 0 && scrolledUp == false) {
-            $("#footer").animate({top: "-=" + $("#footer-container").height() + "px"}, 500);
-            scrolledUp = true;
+        $("#btn_openSidebar").on('click', function() {
+            var btn = $("#sidebar").attr("data-active");
+            if (btn === "0") {
+
+            }
+        });
+
+        if (e.wheelDeltaY > 0 && $("#footer").attr("data-open") === "1") {
+            $("#footer").attr("data-open", "0");
         }
-        else if (e.wheelDeltaY > 0 && scrolledUp == true) {
-            $("#footer").animate({top: $(window).height()}, 500);
-            scrolledUp = false;
+        else if (e.wheelDeltaY < 0 && $("#footer").attr("data-open") === "0") {
+            $("#footer").attr("data-open", "1");
         }
     }, {passive: false});
 });  
 
 function checkDirection() {
-    if (touchendY < touchstartY && scrolledUp == true){
-        $("#footer").animate({top: "-=" + $("#footer-container").height() + "px"}, 500);
-        scrolledUp = false;
-    }else if (touchendY > touchstartY && scrolledUp == false) {
-        $("#footer").animate({top: $(window).height()}, 500);
-        scrolledUp = true;
+    if (touchendY > touchstartY && $("#footer").attr("data-open") === "1"){
+        $("#footer").attr("data-open", "0");
+    }else if (touchendY < touchstartY && $("#footer").attr("data-open") === "0") {
+        $("#footer").attr("data-open", "1");
     }
   }
