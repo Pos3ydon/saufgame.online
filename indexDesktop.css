@@ -10,14 +10,6 @@
         overflow: hidden;
     }
 
-    #saufgames {
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 7.5em;
-        padding-right: 7.5em;
-        max-width: calc(112em + 7.5em + 7.5em);
-    }
-
     #sg--section-main {
         position: relative;
         z-index: 10;

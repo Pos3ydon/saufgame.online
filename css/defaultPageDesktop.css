@@ -16,7 +16,6 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     filter: invert(100%);
-
     z-index: 10;
     position: absolute;
 

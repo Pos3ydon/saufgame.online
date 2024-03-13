@@ -42,3 +42,11 @@ body {
         font-size: 48%;
     }
 }
+
+[data-wrap-width="medium"] {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 6em;
+    padding-right: 6em;
+    max-width: calc(138.5em + 6em + 6em);
+}
