@@ -31,7 +31,7 @@
     }
 
     #sidebar__wrapper {
-        width: 17em;
+        width: 18em;
         display: flex;
         flex-direction: column;
         position: unset;
@@ -40,6 +40,10 @@
 
     .sidebarButton:hover {
         box-shadow: none;
+    }
+
+    .sidebarButton p{
+        padding-right: 1em;;
     }
 
     #buttons_auto_apperance {
