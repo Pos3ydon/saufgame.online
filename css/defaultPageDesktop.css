@@ -47,7 +47,7 @@ body {
 }
 
 #sidebar__wrapper {
-    width: 16.5em;
+    width: 27em;
     display: flex;
     flex-direction: column;
     position: unset;
@@ -58,11 +58,11 @@ body {
 
 .sidebarButton {
     font-family: particle;
-    font-size: 20px;
+    font-size: 2em;
     letter-spacing: 4px;
     cursor: pointer;
     text-align: left;
-    padding: 1.5em 0 1.5em 1.5em;
+    padding: 1.5em 0 1.5em 1em;
     width: 90%;
     transition: all .60s;
 

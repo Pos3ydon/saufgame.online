@@ -25,7 +25,7 @@ body {
 }
 .sidebarButton {
     font-family: particle;
-    font-size: 20px;
+    font-size: 1.75em;
     letter-spacing: 4px;
     cursor: pointer;
     text-align: left;
@@ -64,7 +64,7 @@ body {
     transform: translate(-50%, 0);
 }
 .sidebarButton  p {
-    font-size: 23px;
+    font-size: 1.75em;
     width: 100%;
     height: fit-content;
     text-align: center;
