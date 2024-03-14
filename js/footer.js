@@ -7,12 +7,7 @@ $(document).ready(function(){
     const isMobile = window.matchMedia('only screen and (max-width: 767px)').matches;
 
 
-
     if(isMobile === true){
-        $("#top-footer__wrapper").attr("data-wrap-width", "small");
-
-
-
         window.addEventListener('touchstart', e => {
             touchstartY = e.changedTouches[0].screenY;
         })

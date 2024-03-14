@@ -11,6 +11,29 @@ $(document).ready(function() {
             getRecord("dare");
         }
     });
+
+    const isMobile = window.matchMedia('only screen and (max-width: 480px)').matches;
+    console.log(isMobile);
+    if(isMobile) {
+        console.log(1);
+        $("#main").attr("data-wrap-width", "game-large");
+    } else {
+        console.log(2);
+        $("#main").attr("data-wrap-width", "medium");
+    }
+});
+
+
+window.addEventListener('resize', function(event){
+    const isMobile = window.matchMedia('only screen and (max-width: 480px)').matches;
+    console.log(isMobile);
+    if(isMobile) {
+        console.log(1);
+        $("#main").attr("data-wrap-width", "game-large");
+    } else {
+        console.log(2);
+        $("#main").attr("data-wrap-width", "medium");
+    }
 });
 
 

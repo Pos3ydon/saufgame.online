@@ -114,3 +114,13 @@ body {
         max-width: calc(83em + 2em + 2em);
     }
 }
+
+@media screen and (max-width: 480px) {
+    [data-wrap-width="game-large"] {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1em;
+        padding-right: 1em;
+        max-width: calc(180em + 1em + 1em);
+    }
+}
