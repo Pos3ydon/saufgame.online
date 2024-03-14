@@ -1,3 +1,4 @@
 # saufgame.com
 This is the first SouthTyrolean Drinking website.
-This Project is made by 2 programmers after drinking something in the club. The idea behind thid website is that if you play a game like truth or dare that you will never get out of Questions.
+This Project is now almost 2 years old. We started this Project with 2 People but the other Programmer didn't had time left to work on this.
+It should be finished a lot earlier but now i am here where i want to be, at **the first full release** of this website.
