@@ -1,120 +1,132 @@
 @import url('https://fonts.cdnfonts.com/css/bahnschrift');
 
-@media screen and (min-width: 427px) {
+:root {
+    touch-action: pan-x pan-y;
+    height: 100%;
+}
 
-    body {
-        background-color: #001828;
-        margin: 0;
-        padding: 0;
+body {
+    background-color: #001828;
+    margin: 0;
+    padding: 0;
 
-        overflow: hidden;
-    }
+    overflow: hidden;
+}
 
-    #sg--section-main {
-        position: relative;
-        z-index: 10;
-    }
+#sg--section-main {
+    position: relative;
+    z-index: 10;
+}
 
-    #sg--content {
-        display: flex;
-        justify-content: center;
-    }
+#sg--content {
+    display: flex;
+    justify-content: center;
+}
 
-    #sg--content--main {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
+#sg--content--main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
 
-    #heads__container__wrapper {
-        width: 80em;
-        margin-top: 6em;
-        background-color: #667eea;
-        border-radius: 15em;
-        user-select: none;
-    }
+#heads__container__wrapper {
+    width: 80em;
+    margin-top: 6em;
+    background-color: #667eea;
+    border-radius: 15em;
+    user-select: none;
+}
 
-    #content {
-        position: relative;
-        margin-left: 7em;
-    }
+#content {
+    position: relative;
+    margin-left: 7em;
+}
 
-    #content__wrapper {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        gap: 8em;
-        filter: invert(1);
-    }
+#content__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 8em;
+    filter: invert(1);
+}
 
-    #heads__logo {
-        width: 150px;
-        padding: 2em 0;
-    }
+#heads__logo {
+    width: 150px;
+    padding: 2em 0;
+}
 
-    #heads__text {
-        font-size: 7em;
-        font-weight: bold;
-        font-family: 'Bahnschrift', Bold;
-        margin: 0;
-    }
+#heads__text {
+    font-size: 7em;
+    font-weight: bold;
+    font-family: 'Bahnschrift', Bold;
+    margin: 0;
+}
 
-    #buttons {
-        width: 100%;
-    }
+#buttons {
+    width: 100%;
+}
 
-    #buttons__wrapper {
-        width: 100%;
-        margin-top: 6em;
-        border-radius: 15em;
-        user-select: none;
-    }
+#buttons__wrapper {
+    width: 100%;
+    margin-top: 6em;
+    border-radius: 15em;
+    user-select: none;
+}
 
-    #buttons_auto_apperance {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        row-gap: 5em;
-    }
+#buttons_auto_apperance {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 5em;
+}
 
-    .gameButton {
-        float: left;
-        color: white;
-        font-size: 2em;
-        font-family: 'Bahnschrift', Bold;
-        border-radius: 150px;
-        cursor: pointer;
-        text-align: center;
-        padding: 2em 0;
-        width: 15em;
-        margin: 0 5%;
-        box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.5);
-        background: linear-gradient(to right,#764ba2  0%, #667eea 50%,  #667eea 50%);
-        background-size: 200% 100%;
-        background-position: left;
-        transition: all .75s;
-    }
+.gameButton {
+    float: left;
+    color: white;
+    font-size: 2em;
+    font-family: 'Bahnschrift', Bold;
+    border-radius: 150px;
+    cursor: pointer;
+    text-align: center;
+    padding: 2em 0;
+    width: 15em;
+    margin: 0 5%;
+    box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to right,#764ba2  0%, #667eea 50%,  #667eea 50%);
+    background-size: 200% 100%;
+    background-position: left;
+    transition: all .75s;
+}
 
-    .gameButton:hover {
-        color: #fff;
-        background-position: right;
-        transform: scale(1.1);
-    }
+.gameButton:hover {
+    color: #fff;
+    background-position: right;
+    transform: scale(1.1);
 }
 
 #links_text {
     display: none!important;
 }
 
-@media screen and (max-width: 426px) {
-
-    :root {
-        touch-action: pan-x pan-y;
-        height: 100%;
-        overflow: hidden;
+@media screen and (max-width: 850px) {
+    #heads__container__wrapper {
+        width: 70em;
     }
+
+    #content {
+        margin-left: 6em;
+    }
+
+    #heads__logo {
+        width: 125px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+
 
     body {
         background-color: #001828;
@@ -180,6 +192,11 @@
         margin: 0;
     }
 
+    #buttons {
+        display: flex;
+        justify-content: center;
+    }
+
     #buttons__wrapper {
         width: 35em;
         margin-top: 6em;
@@ -213,6 +230,5 @@
         width: 15em;
         font-size: 1.5em;
         padding: 1.75em 0;
-        margin-top: 3.15em;
     }
 }
