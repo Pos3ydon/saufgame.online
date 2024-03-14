@@ -40,3 +40,20 @@ Create table suggestion_truthOrDare (
     username varchar(255),
     primary key(id)
 );
+
+#Check for Duplicates
+SELECT content, COUNT(*) FROM neverHaveIEver GROUP BY content HAVING COUNT(*) > 1
+
+#Delete Duplicates
+CREATE TEMPORARY TABLE temp_duplicates AS (
+    SELECT MIN(id) AS min_id
+    FROM neverHaveIEver
+    GROUP BY content
+    HAVING COUNT(*) > 1
+);
+
+DELETE FROM neverHaveIEver
+WHERE id NOT IN (
+    SELECT min_id
+    FROM temp_duplicates
+);

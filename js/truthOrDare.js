@@ -13,12 +13,9 @@ $(document).ready(function() {
     });
 
     const isMobile = window.matchMedia('only screen and (max-width: 480px)').matches;
-    console.log(isMobile);
     if(isMobile) {
-        console.log(1);
         $("#main").attr("data-wrap-width", "game-large");
     } else {
-        console.log(2);
         $("#main").attr("data-wrap-width", "medium");
     }
 });
@@ -26,12 +23,9 @@ $(document).ready(function() {
 
 window.addEventListener('resize', function(event){
     const isMobile = window.matchMedia('only screen and (max-width: 480px)').matches;
-    console.log(isMobile);
     if(isMobile) {
-        console.log(1);
         $("#main").attr("data-wrap-width", "game-large");
     } else {
-        console.log(2);
         $("#main").attr("data-wrap-width", "medium");
     }
 });
@@ -48,46 +42,43 @@ function getRecord(type) {
         type: "POST",
         data: data
     }).done(function(result) {
-        console.log(result);
-        
-        result = result.split(",");
-        console.log(result.length);
 
-        if (alreadyUsed.length.toString() == result[2] || alreadyUsed.length > 100)
-            alreadyUsed = [];
-            
-        if (alreadyUsed.find(element => element == result[0]) == undefined) {
-            alreadyUsed.push(result[0]);
-            if(result.length == 5){
+        result = result.split(",");
+
+
+        var item = sessionStorage.getItem('tod_' + result[0]);
+
+
+        if (item !== null) {
+            $("#next" + (type.charAt(0).toUpperCase() + type.slice(1)) + "Button").click();
+        } else {
+            sessionStorage.setItem('tod_' + result[0], result[1]);
+            if(result.length === 5){
                 result = result[1] + "," + result[2] + "," + result[3];
                 $("#randomText").html(result);
 
-                if (data.type == "truth")
+                if (data.type === "truth")
                     $("#truthOrDareType").html("Wahrheit");
                 else
                     $("#truthOrDareType").html("Pflicht");
             }
-            else if (result.length == 4){
+            else if (result.length === 4){
                 result = result[1] + "," + result[2];
                 $("#randomText").html(result);
 
-                if (data.type == "truth")
+                if (data.type === "truth")
                     $("#truthOrDareType").html("Wahrheit");
                 else
                     $("#truthOrDareType").html("Pflicht");
             }
-            else if(result.length == 3){
+            else if(result.length === 3){
                 $("#randomText").html(result[1]);
 
-                if (data.type == "truth")
+                if (data.type === "truth")
                     $("#truthOrDareType").html("Wahrheit");
                 else
                     $("#truthOrDareType").html("Pflicht");
             }
-        }
-        else {
-            console.log(type.charAt(0).toUpperCase() + type.slice(1));
-            $("#next" + (type.charAt(0).toUpperCase() + type.slice(1)) + "Button").click();
         }
     });
 }
