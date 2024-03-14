@@ -107,62 +107,6 @@ body {
     height: 100%;
 }
 
-body {
-    width: 100vw;
-    height: 100vh;
-    background-color: #001828;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-}
-
-#sidebar {
-    position: absolute;
-    top: 0;
-    z-index: 10;
-    transition: transform .5s ease-in-out;
-}
-
-#sidebar[data-active="0"] {
-    transform: translateX(-100%);
-    transition: transform 0.5s ease-in-out;
-}
-
-#sidebar[data-active="1"] {
-    width: 100%;
-    height: 100%;
-    transform: translateX(0);
-    transition: transform 0.5s ease-in-out;
-}
-
-.sidebarButton {
-    font-family: particle;
-    font-size: 1.75em;
-    letter-spacing: 4px;
-    cursor: pointer;
-    text-align: left;
-    padding: 5% 0;
-    padding-left: 10%;
-    width: 90%;
-    transition: all .60s;
-
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-}
-
-.sidebarButton:hover {
-    background-color: #667eea;
-    transform: scaleY(1.1);
-    box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.5);
-}
-
-.activeButton {
-    color: #A7A7A7;
-}
-
 #profileDiv {
     background-color: rgb(76, 76, 76);
     padding: 20px 0;
@@ -177,26 +121,15 @@ body {
     margin-left: 50%;
     transform: translate(-50%, 0);
 }
-.sidebarButton  p {
-    font-size: 1.75em;
-    width: 100%;
-    height: fit-content;
-    text-align: center;
-    margin: 0;
-}
-
 
 #logoutButton {
     position: absolute;
     bottom: 0;
 }
 
-
 #selected {
     border: 2px black;
 }
-
-
 
 #content {
     position: absolute;

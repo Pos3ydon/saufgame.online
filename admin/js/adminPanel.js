@@ -41,3 +41,12 @@ $(document).ready(function(){
         }
     });
 });
+
+window.addEventListener('resize', function() {
+    document.getElementById('sidebar__wrapper').style.height = window.innerHeight + 'px';
+});
+
+// Initial height adjustment
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('sidebar__wrapper').style.height = window.innerHeight + 'px';
+});
