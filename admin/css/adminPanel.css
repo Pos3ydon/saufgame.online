@@ -1,3 +1,112 @@
+@font-face {
+    font-family: "particle";
+    src: url("../../fonts/Particle-Regular.otf");
+}
+
+@import url('https://fonts.cdnfonts.com/css/bahnschrift');
+body {
+    margin: 0;
+    background-color: #001828;
+}
+
+
+#btn_openSidebar {
+    background-image: url("../../images/menu_icon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(100%);
+    z-index: 10;
+    position: absolute;
+
+    height: 40px;
+    width: 40px;
+    top: 5em;
+    left: 5em;
+
+    cursor: pointer;
+}
+
+#sidebar {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    user-select: none;
+}
+
+#sidebar[data-active="0"] {
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+#sidebar[data-active="1"] {
+    width: 100%;
+    height: 100%;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+#sidebar__wrapper {
+    width: 27em;
+    display: flex;
+    flex-direction: column;
+    position: unset;
+    overflow: hidden;
+    background-color: #001016;
+    color: white;
+}
+
+.sidebarButton {
+    font-family: particle;
+    font-size: 2em;
+    letter-spacing: 4px;
+    cursor: pointer;
+    text-align: left;
+    padding: 1.5em 0 1.5em 1em;
+    transition: all .60s;
+
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}
+
+.sidebarButton p {
+    margin: 0;
+}
+
+.sidebarButton:hover {
+    background-color: #667eea;
+    transform: scaleY(1.1);
+    box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.5);
+}
+
+.activeButton {
+    color: #A7A7A7;
+}
+
+#content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    color: white;
+    background-color: #001828;
+}
+
+#btn_openSidebar:hover {
+    transform: scale(1.2);
+}
+
+.sidebarButton:last-child {
+    position: absolute;
+    bottom: 0;
+}
+
+#buttons_auto_apperance {
+    position: relative;
+    height: 100%;
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -10,19 +119,24 @@ body {
 }
 
 #sidebar {
-    background-color: #001016;
-    position: fixed;
-    z-index: 30;
-    width: 20vw;
-    height: 40vh;
-    padding-bottom: 30%;
-    margin-top: 1%;
-    margin-left: 0%;
-    margin-right: auto;
-    margin: 0;
-
-    color: white;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    transition: transform .5s ease-in-out;
 }
+
+#sidebar[data-active="0"] {
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+#sidebar[data-active="1"] {
+    width: 100%;
+    height: 100%;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+}
+
 .sidebarButton {
     font-family: particle;
     font-size: 1.75em;
@@ -105,13 +219,13 @@ body {
         top: 5vw;
         left: 5vw;
     }
-    
+
     #sidebar {
         width: 60vw;
         left: -60vw;
         height: 100vh;
     }
-    
+
     .sidebarButton:hover {
         box-shadow: 0;
     }

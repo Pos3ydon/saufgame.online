@@ -54,7 +54,7 @@
 
     <body>
     <div id="btn_openSidebar"></div>
-    <div id="sidebar">
+    <div id="sidebar" data-active="0">
         <div id="profileDiv">
             <p><?php echo $_SESSION["user"];?></p>
         </div>
