@@ -4,10 +4,10 @@ let scrolledUp = true;
 $(document).ready(function(){
     $("#footer").removeAttr("style");
     var scrolledUp = false;
-    const isMobile = window.matchMedia('only screen and (max-width: 427px)').matches;
+    const isMobile = window.matchMedia('only screen and (max-width: 767px)').matches;
 
-    if(isMobile == true){
 
+    if(isMobile === true){
         window.addEventListener('touchstart', e => {
             touchstartY = e.changedTouches[0].screenY;
         })

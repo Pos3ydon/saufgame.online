@@ -49,27 +49,40 @@
         <title>Saufgame Admin</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" lang="de">
 
+        <link rel="stylesheet" href="./../../default.css">
         <link rel="stylesheet" href="./../css/adminPanel.css">
     </head>
 
     <body>
-    <div id="btn_openSidebar"></div>
-    <div id="sidebar">
-        <div id="profileDiv">
-            <p><?php echo $_SESSION["user"];?></p>
+        <div id="saufgames">
+            <main id="sg--section-main">
+                <div id="sg--content">
+                    <div id="sg--content--main">
+                        <div id="btn_openSidebar"></div>
+                        <div id="sidebar" data-active="0">
+                            <div id="sidebar__wrapper">
+                                <div id="profileDiv">
+                                    <p><?php echo $_SESSION["user"];?></p>
+                                </div>
+                                <div id="sidebarButtons">
+                                    <div id="sidebarBottom">
+                                        <?php
+                                            if ($_SESSION["perms"]) {
+                                        ?>
+                                            <div class="sidebarButton" onclick="$('#content').load('rootPanel.php');"><p>Root Panel</p></div>
+                                        <?php
+                                            }
+                                        ?>
+                                        <div id="logoutButton" class="sidebarButton"><p>Logout</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="content"></div>
+                    </div>
+                </div>
+            </main>
         </div>
-        <div id="sidebarButtons">
-            <?php
-                if ($_SESSION["perms"]) {
-            ?>
-                    <div class="sidebarButton" onclick="$('#content').load('rootPanel.php');"><p>Root Panel</p></div>
-            <?php
-                }
-            ?>
-        </div>
-        <div id="logoutButton" class="sidebarButton"><p>Logout</p></div>
-    </div>
-    <div id="content"></div>
     </body>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.js"></script>

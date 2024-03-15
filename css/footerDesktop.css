@@ -1,82 +1,164 @@
-@media screen and (min-width: 426px) {
+body {
+    overflow-y: hidden;
+}
 
-    body {
-        overflow-y: hidden;
+#footer {
+    position: absolute;
+    transform: translate(0, 100%);
+    width: 100%;
+    z-index: 30;
+    left: 0;
+    bottom: 0;
+    transition: transform .5s ease-in-out;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#footer[data-open="1"] {
+    transform: translate(0, 0);
+}
+
+#footer-container{
+    height: 100%;
+    background-color: #001828;
+}
+
+/**************************************/
+/*******       Footer Top       *******/
+/**************************************/
+
+#top-footer{
+    background-color: #667eea;
+    width: 100%;
+    padding: 1em 0;
+}
+
+#top-footer a{
+    color: white;
+    text-align: left;
+    font-size: 2em;
+    font-family: Verdana, serif;
+}
+
+
+/**************************************/
+/*******       Footer Mid       *******/
+/**************************************/
+
+#mid-footer{
+    display: flex;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    gap: 43em;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+
+#description-split, #contakt-split, #link-split{
+    font-family: Verdana, serif;
+    color: white;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+
+
+#beschreibung_text, #kontakte_text, #links_text {
+    font-size: 1.8em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+#footer-line{
+    border-radius: 5em;
+    background-color: #667eea;
+    height: 2px;
+    width: 7em;
+    margin-top: 0.75em;
+    margin-bottom: 1.75em;
+}
+
+#links_text {
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 1em;
+}
+
+#links_text:last-child {
+    display: flex!important;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+/********************************************/
+/*******       Footer Copyright       *******/
+/********************************************/
+
+#copyright{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1em 0;
+    background-color: #030f16;
+}
+
+#copyright a{
+    color: white;
+    font-size: 1.3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media screen and (max-width: 1157px) {
+    #mid-footer {
+        gap: 34em;
     }
+}
 
-    #footer {
-        position: absolute;
-        transform: translate(0, 100%);
-        width: 100%;
-        z-index: 30;
-        left: 0;
-        bottom: 0;
-        transition: transform .5s ease-in-out;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+@media screen and (max-width: 1024px) {
+    #mid-footer {
+        gap: 14em;
     }
+}
 
-    #footer[data-open="1"] {
-        transform: translate(0, 0);
-    }
-
-    #footer-container{
-        height: 100%;
-        background-color: #001828;
-    }
-
-    /**************************************/
-    /*******       Footer Top       *******/
-    /**************************************/
+@media screen and (max-width: 767px) {
 
     #top-footer{
-        background-color: #667eea;
-        width: 100%;
-        padding: 1em 0;
-    }
-
-    #top-footer__wrapper {
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0 7.5em;
-        max-width: calc(123em + 7.5em + 7.5em);
+        padding: 0.5em 0;
     }
 
     #top-footer a{
-        color: white;
-        text-align: left;
-        font-size: 2em;
-        font-family: Verdana, serif;
+        font-size: 1.5em;
     }
-
-
-    /**************************************/
-    /*******       Footer Mid       *******/
-    /**************************************/
 
     #mid-footer{
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 2.5em 7.5em;
-        max-width: calc(123em + 7.5em + 7.5em);
-        gap: 37em;
-        justify-content: center;
-        overflow: hidden;
+        display: block;
+        padding-top: 1.25em;
+        padding-bottom: 1.25em;
     }
 
+    #beschreibung{
+        margin-bottom: 3%;
+        width: 100%;
+    }
 
+    #nuetzliche-links{
+        margin: 1em 0;
+    }
+    #kontakte {
+        margin-bottom: 1em;
+    }
 
     #description-split, #contakt-split, #link-split{
-        font-family: Verdana, serif;
+        font-family: Verdana;
         color: white;
-        font-size: 1.8em;
-        font-weight: bold;
+        font-size: 1.5em;
+        font-weight:normal;
     }
 
 
-
-    #beschreibung_text, #kontakte_text, #links_text {
-        font-size: 1.8em;
+    #beschreibung_text, #kontakte_text, #links_text{
+        font-size: 1.2em;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         color: white;
     }
@@ -84,15 +166,16 @@
     #footer-line{
         border-radius: 5em;
         background-color: #667eea;
-        height: 2px;
-        width: 7em;
-        margin-top: 0.75em;
-        margin-bottom: 1.75em;
+        height: 0.2em;
+        width: 17.5%;
+        margin-top: 1.5%;
+        margin-bottom: 1%;
     }
 
     #links_text {
         display: flex;
         cursor: pointer;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
         margin-bottom: 1em;
     }
 
@@ -107,16 +190,17 @@
     /********************************************/
 
     #copyright{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        padding: 1em 0;
+        padding-top: 1.5%;
+        padding-bottom: 1.5%;
         background-color: #030f16;
+        width: 100%;
+        display: flex;
     }
 
     #copyright a{
         color: white;
-        font-size: 1.3em;
+        font-size: 1.2em;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: auto;
     }
 }

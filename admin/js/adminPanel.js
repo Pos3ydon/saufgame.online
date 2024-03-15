@@ -23,27 +23,30 @@ $(document).ready(function() {
     });
 });
 
-window.onload = function(){
-    var sidebarOpened = false;
-    var sidebarLeft = 0;
-    $("#btn_openSidebar").bind({
-        click: function() {
-            if (!sidebarOpened) {
-                setTimeout(function() {
-                    sidebarLeft = $("#sidebar").offset().left;
-                    $("#sidebar").animate({left: "0%"}, 500);
-                    sidebarOpened = true;
-                }, 50);
-            }
+$(document).ready(function(){
+    $("#btn_openSidebar").on('click', function() {
+        var btn = $("#sidebar").attr("data-active");
+        if (btn === "0") {
+            $("#sidebar").attr("data-active", "1");
         }
     });
 
-    $(window).bind({
-        click: function() {
-            if (sidebarOpened) {
-                $("#sidebar").animate({left: sidebarLeft}, 500);
-                sidebarOpened = false;
-            }
+    $("#sidebar").on('click', function(event) {
+        // Prevent the event from bubbling up to the document level
+        event.stopPropagation();
+
+        var btn = $("#sidebar").attr("data-active");
+        if (btn === "1") {
+            $("#sidebar").attr("data-active", "0");
         }
-    })
-}
+    });
+});
+
+window.addEventListener('resize', function() {
+    document.getElementById('sidebar__wrapper').style.height = window.innerHeight + 'px';
+});
+
+// Initial height adjustment
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('sidebar__wrapper').style.height = window.innerHeight + 'px';
+});

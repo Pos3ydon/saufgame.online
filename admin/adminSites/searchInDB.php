@@ -17,12 +17,13 @@
     </head>
 
     <body>
-        
-        <select id="selectGame">
-            <option class="gameOption">Select Game</option>
-        </select>
-        <input id="searchBar"></div>
-        <button id="searchButton"></button>
+        <div id="search__content__wrapper">
+            <select id="selectGame">
+                <option class="gameOption">Select Game</option>
+            </select>
+            <input id="searchBar"/>
+            <button id="searchButton">Search</button>
+        </div>
         <div id="resultsScrollDiv"></div>
     </body>
 
