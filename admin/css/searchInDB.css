@@ -1,3 +1,11 @@
+
+#search__content__wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+    gap: 3em;
+}
+
 #resultsScrollDiv {
     margin-top: 2%;
     overflow-y: scroll;
@@ -6,6 +14,10 @@
     height: 600px;
     margin-left: 50%;
     transform: translate(-50%, 0);
+}
+
+#searchBar {
+    width: 34em;
 }
 
 .singleResult {
@@ -23,6 +35,25 @@
     margin-top: 1.5%;
     margin-bottom: 1.5%;
     margin-left: 3%;
+}
+
+#searchButton {
+    width: 8em;
+    padding: 0.5em 1em;
+    font-size: 1.5em;
+    color: white;
+    font-family: 'Bahnschrift', Bold;
+    cursor: pointer;
+    text-align: center;
+    background: linear-gradient(to right, #764ba2 0%, #667eea 50%, #667eea 50%);
+    background-size: 200% 100%;
+    background-position: left;
+    transition: all .75s;
+    user-select: none;
+}
+
+#searchButton:hover {
+    background-position: right;
 }
 
 .btn_edit {

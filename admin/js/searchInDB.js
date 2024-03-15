@@ -4,13 +4,15 @@ $(document).ready(function() {
         var selector = $("#selectGame");
         
         $.each( json, function( game, data ) {
-            var child = document.createElement('option');
-            child.innerHTML = '<p>' + data.name + '</p>';
-            child.value = data.table;
-            child.className = 'gameOption';
-            child.id = "btn_" + data.table;
+            if(data.name !== 'Vorschlag einsenden') {
+                var child = document.createElement('option');
+                child.innerHTML = '<p>' + data.name + '</p>';
+                child.value = data.table;
+                child.className = 'gameOption';
+                child.id = "btn_" + data.table;
 
-            selector.append(child);
+                selector.append(child);
+            }
         });
     });
 
