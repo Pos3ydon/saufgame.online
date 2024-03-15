@@ -47,7 +47,7 @@ body {
 }
 
 #sidebar__wrapper {
-    width: 27em;
+    width: 30em;
     display: flex;
     flex-direction: column;
     position: unset;
@@ -58,7 +58,7 @@ body {
 
 .sidebarButton {
     font-family: particle;
-    font-size: 2em;
+    font-size: 1.8em;
     letter-spacing: 4px;
     cursor: pointer;
     text-align: left;
@@ -80,6 +80,12 @@ body {
     box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.5);
 }
 
+#sidebarBottom {
+    position: absolute;
+    bottom: 0;
+    width: 30em;
+}
+
 .activeButton {
     color: #A7A7A7;
 }
@@ -95,11 +101,6 @@ body {
 
 #btn_openSidebar:hover {
     transform: scale(1.2);
-}
-
-.sidebarButton:last-child {
-    position: absolute;
-    bottom: 0;
 }
 
 #buttons_auto_apperance {
@@ -120,11 +121,6 @@ body {
     margin: 0;
     margin-left: 50%;
     transform: translate(-50%, 0);
-}
-
-#logoutButton {
-    position: absolute;
-    bottom: 0;
 }
 
 #selected {

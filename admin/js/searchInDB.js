@@ -38,7 +38,8 @@ $(document).ready(function() {
                             input.value = value;
                             input.disabled = true;
                             div.append(input);
-                        }else if(key == "content"){
+                        }
+                        else if(key == "content"){
                             
                             var input = document.createElement('input');
                             input.type = "text";

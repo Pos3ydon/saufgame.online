@@ -23,7 +23,7 @@
                 <option class="gameOption">Select Game</option>
             </select>
             <div id="selectGameDiv2"></div>
-            <input id="suggestionText" class="suggestionInput" type="text" placeholder="Write Here your Suggestion ..."></input>
+            <input id="suggestionText" class="suggestionInput" type="text" placeholder="Write Here your Suggestion..."></input>
             <button id="submitQuestion">Submit</button>
         </div>
     </body>

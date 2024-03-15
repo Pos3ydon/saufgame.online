@@ -65,15 +65,17 @@
                                     <p><?php echo $_SESSION["user"];?></p>
                                 </div>
                                 <div id="sidebarButtons">
-                                    <?php
-                                    if ($_SESSION["perms"]) {
-                                        ?>
-                                        <div class="sidebarButton" onclick="$('#content').load('rootPanel.php');"><p>Root Panel</p></div>
+                                    <div id="sidebarBottom">
                                         <?php
-                                    }
-                                    ?>
+                                            if ($_SESSION["perms"]) {
+                                        ?>
+                                            <div class="sidebarButton" onclick="$('#content').load('rootPanel.php');"><p>Root Panel</p></div>
+                                        <?php
+                                            }
+                                        ?>
+                                        <div id="logoutButton" class="sidebarButton"><p>Logout</p></div>
+                                    </div>
                                 </div>
-                                <div id="logoutButton" class="sidebarButton"><p>Logout</p></div>
                             </div>
                         </div>
                         <div id="content"></div>

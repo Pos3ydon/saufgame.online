@@ -26,7 +26,8 @@
 }
 
 .btn_edit {
-    background-image: url("./../../images/pencil-square.svg");
+    background-image: url("./../../pencil-square.svg");
+    filter: invert(1);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 70%;
