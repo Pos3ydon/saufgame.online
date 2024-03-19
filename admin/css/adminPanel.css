@@ -30,7 +30,7 @@ body {
 #sidebar {
     position: absolute;
     top: 0;
-    z-index: 10;
+    z-index: 25;
     user-select: none;
 }
 
@@ -147,12 +147,6 @@ body {
     #btn_openSidebar {
         top: 5vw;
         left: 5vw;
-    }
-
-    #sidebar {
-        width: 60vw;
-        left: -60vw;
-        height: 100vh;
     }
 
     .sidebarButton:hover {
