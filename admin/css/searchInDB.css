@@ -7,13 +7,13 @@
 }
 
 #resultsScrollDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
     margin-top: 2%;
     overflow-y: scroll;
     overflow-x: hidden;
-    width: 100%;
     height: 600px;
-    margin-left: 50%;
-    transform: translate(-50%, 0);
 }
 
 #searchBar {
@@ -21,20 +21,18 @@
 }
 
 .singleResult {
-    display: block;
+    display: flex;
     width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 .singleText {
     width: 50%;
-    margin-top: 1.5%;
-    margin-bottom: 1.5%;
-    margin-left: 1%;
+    margin-left: 0.5em;
 }
+
 .idText{
     width: 5em;
-    margin-top: 1.5%;
-    margin-bottom: 1.5%;
-    margin-left: 3%;
 }
 
 #searchButton {
@@ -66,11 +64,31 @@
 
     height: 30px;
     width: 30px;
-    margin-top: 1.5%;
-    margin-bottom: 1.5%;
-    margin-left: 5%;
+    margin-left: 2em;
 
     border: 0;
 
     cursor: pointer;
+}
+
+.btn_yes {
+    background-image: url("./../../images/check.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    background-color: green;
+    float: left;
+
+    height: 30px;
+    width: 30px;
+    margin-left: 2em;
+    opacity: 1;
+
+    cursor: pointer;
+}
+
+.btn_yes:disabled {
+    opacity: .5;
+    user-select: none;
+    transition: opacity .5s ease-in-out;
 }

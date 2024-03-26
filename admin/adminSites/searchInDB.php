@@ -24,7 +24,7 @@
             <input id="searchBar"/>
             <button id="searchButton">Search</button>
         </div>
-        <div id="resultsScrollDiv"></div>
+        <div id="resultsScrollDiv" data-wrap-width="large"></div>
     </body>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.js"></script>
