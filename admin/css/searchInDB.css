@@ -26,8 +26,8 @@
     justify-content: center;
     align-items: center;
 }
+
 .singleText {
-    width: 50%;
     margin-left: 0.5em;
 }
 
@@ -91,4 +91,101 @@
     opacity: .5;
     user-select: none;
     transition: opacity .5s ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+
+    #search__content__wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 5em;
+        gap: 3em;
+    }
+
+    #resultsScrollDiv {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        margin-top: 2%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height: 600px;
+    }
+
+    #searchBar {
+        width: 34em;
+    }
+
+    .singleResult {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .singleText {
+        width: 15em;
+        margin-left: 0.5em;
+    }
+
+    .idText{
+        width: 2.25em;
+    }
+
+    #searchButton {
+        width: 8em;
+        padding: 0.5em 1em;
+        font-size: 1.5em;
+        color: white;
+        font-family: 'Bahnschrift', Bold;
+        cursor: pointer;
+        text-align: center;
+        background: linear-gradient(to right, #764ba2 0%, #667eea 50%, #667eea 50%);
+        background-size: 200% 100%;
+        background-position: left;
+        transition: all .75s;
+        user-select: none;
+    }
+
+    #searchButton:hover {
+        background-position: right;
+    }
+
+    .btn_edit {
+        background-image: url("./../../pencil-square.svg");
+        filter: invert(1);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 70%;
+        background-color: transparent;
+
+        height: 30px;
+        width: 30px;
+        margin-left: 2em;
+
+        border: 0;
+
+        cursor: pointer;
+    }
+
+    .btn_yes {
+        background-image: url("./../../images/check.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 80%;
+        background-color: green;
+        float: left;
+
+        height: 30px;
+        width: 30px;
+        margin-left: 2em;
+        opacity: 1;
+
+        cursor: pointer;
+    }
+
+    .btn_yes:disabled {
+        opacity: .5;
+        user-select: none;
+        transition: opacity .5s ease-in-out;
+    }
 }

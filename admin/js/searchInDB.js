@@ -112,7 +112,12 @@ $(document).ready(function() {
     
 });
 
-
+$(window).resize(function() {
+    $(".singleText").each(function() {
+        this.style.height = "auto";
+        this.style.height = (this.scrollHeight) + "px";
+    });
+});
 
 function accept_suggestion(table, content, value) {
     $.ajax({
