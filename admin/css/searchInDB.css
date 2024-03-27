@@ -1,8 +1,8 @@
 
-#search__content__wrapper {
+#search__wrapper {
     display: flex;
     justify-content: center;
-    margin-top: 5em;
+    margin-top: 6em;
     gap: 3em;
 }
 
@@ -93,13 +93,35 @@
     transition: opacity .5s ease-in-out;
 }
 
+@media screen and (max-width: 1000px) {
+    #search__wrapper {
+        flex-wrap: wrap;
+    }
+
+    #selectGame {
+        font-size: 1.5em;
+        max-width: calc(25% - 20px);
+    }
+
+    #searchBar {
+        font-size: 1.5em;
+        height: 2em;
+        max-width: calc(50% - 76px);
+        width: unset;
+    }
+
+    #searchButton {
+        height: 2.25em;
+        font-size: 1.5em;
+    }
+}
+
 @media screen and (max-width: 767px) {
 
-    #search__content__wrapper {
+    #search__wrapper {
         display: flex;
         justify-content: center;
-        margin-top: 5em;
-        gap: 3em;
+        margin-top: 6em;
     }
 
     #resultsScrollDiv {

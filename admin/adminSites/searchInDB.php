@@ -11,20 +11,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" lang="de">
-
         <link rel="stylesheet" href="./../css/searchInDB.css">
     </head>
 
     <body>
-        <div id="search__content__wrapper">
-            <select id="selectGame">
-                <option class="gameOption">Select Game</option>
-            </select>
-            <input id="searchBar"/>
-            <button id="searchButton">Search</button>
+        <div class="main">
+            <div id="search__wrapper" data-wrap-width="xsmall">
+                <select id="selectGame">
+                    <option class="gameOption">Select Game</option>
+                </select>
+                <input id="searchBar"/>
+                <button id="searchButton">Search</button>
+            </div>
+            <div id="resultsScrollDiv" data-wrap-width="large"></div>
         </div>
-        <div id="resultsScrollDiv" data-wrap-width="large"></div>
     </body>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.js"></script>

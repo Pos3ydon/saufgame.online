@@ -115,6 +115,30 @@ body {
     }
 }
 
+[data-wrap-width="xsmall"] {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 6em;
+    padding-right: 6em;
+    max-width: calc(60em + 6em + 6em);
+}
+
+@media screen and (max-width: 1024px) {
+    [data-wrap-width="xsmall"] {
+        padding-left: 2.5em;
+        padding-right: 2.5em;
+        max-width: calc(60em + 2.5em + 2.5em);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    [data-wrap-width="xsmall"] {
+        padding-left: 2em;
+        padding-right: 2em;
+        max-width: calc(60em + 2em + 2em);
+    }
+}
+
 @media screen and (max-width: 480px) {
     [data-wrap-width="game-large"] {
         margin-left: auto;
